@@ -1,0 +1,14 @@
+/**
+ * Front-End Print Style File
+ *
+ * @package     SUPPAMENU
+ * @author      Sabri Taieb ( codezag )
+ * @copyright   Copyright (c) Sabri Taieb
+ * @link        http://codetemp.com
+ * @since       Version 2.0.4
+ *
+ */
+
+.suppaMenu {
+    border : 15px solid red;
+}

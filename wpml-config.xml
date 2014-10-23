@@ -1,0 +1,7 @@
+<wpml-config>
+	<admin-texts>
+		<key name="CTF_suppa_menu_settings">
+			<key name="settings-responsive_text" />
+		</key>
+	</admin-texts>
+</wpml-config>

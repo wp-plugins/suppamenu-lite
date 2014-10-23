@@ -1,0 +1,16 @@
+// group ID  => options
+0 =>  array( 
+			'menu-title' => 'Title here' , 
+			'menu-color' => '010101' 
+	) 
+);
+
+
+1 =>  array( 
+			'menu-title' => 'Title here' , 
+			'menu-color' => '010101' 
+	) 
+);
+
+
+Every Group is on one wordpress option
