@@ -84,6 +84,10 @@ you can play with :
 </div>
 
 <div>
+  https://www.youtube.com/watch?v=DDQKtHaUyMY
+</div>
+
+<div>
   <br />
 </div>
 
@@ -130,7 +134,10 @@ you can play with :
 </div>
 
 == Installation ==
-
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page. `[youtube https://www.youtube.com/watch?v=Or5jkwX_ebM&index=1&list=PLDhHzV29WQTllqpM_6_-xfCIsL6l9sOrI]`
+
+== Screenshots ==
+1. Suppamenu Preview
+
 == Changelog ==
 <pre style="word-wrap: break-word; white-space: pre-wrap;">1.0.0 First Release</pre>
