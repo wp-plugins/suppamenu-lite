@@ -9,25 +9,25 @@ Wordpress mega menu, that allow you to build unlimited mega menus on the same pa
 
 == Description ==
 An excellent responsive, Customizable, Powerfull and User-Friendly WordPress Mega Menus plugin, That Allows you to create unlimited mega menus with different sub-menus types :
-*   Recent Posts
-*   Dropdowns ( 3 Levels )
-*   Search Box
-*   Logo
+* Recent Posts
+* Dropdowns ( 3 Levels )
+* Search Box
+* Logo
 
 **Customization**
 
 Suppa comes with more than 10 skin, you can choose from these skins or you can create your own skin from the admin panel and save it ( no code / just options ) !
 you can play with :
-*   Background ( Colors, Images, Positions …)
-*   Colors
-*   Box Shadow
-*   Borders
-*   Border Radius
-*   Gradient ( Colors & Directions )
-*   Font ( Select Google Fonts, Sizes, Weights & Colors )
-*   Icon ( Sizes, Colors )
-*   Arrow ( Sizes, Colors, Margins )
-*   And More !
+* Background ( Colors, Images, Positions …)
+* Colors
+* Box Shadow
+* Borders
+* Border Radius
+* Gradient ( Colors & Directions )
+* Font ( Select Google Fonts, Sizes, Weights & Colors )
+* Icon ( Sizes, Colors )
+* Arrow ( Sizes, Colors, Margins )
+* And More !
 
 **Easy to use ( User Friendly )**
 
