@@ -3,7 +3,7 @@ Contributors: codezag
 Tags: menus,dropdown,wordpress mega menu, wordpress menu, drag-and-drop, dropdown menu, icons, mega menu, megamenu, menu, menu icons, menu style, navigation, responsive, responsive menu, retina
 Requires at least: 3.8
 Tested up to: 4.0
-Stable tag: 1.0
+Stable tag: 1.1.0
 
 Wordpress mega menu, that allow you to build unlimited mega menus on the same page/site. Select a skin for each menu and you can create your own skin!
 
@@ -18,6 +18,7 @@ An excellent responsive, Customizable, Powerfull and User-Friendly WordPress Meg
 **Customization**
 
 Suppa comes with more than 10 skin, you can choose from these skins or you can create your own skin from the admin panel and save it ( no code / just options ) !
+
 you can play with :
 
 * Background ( Colors, Images, Positions …)
@@ -46,6 +47,7 @@ you can play with :
 
 * Layout
 * Sticky Menu
+* Woocommerce Cart
 * Mega Posts : [Sub Type]
 * Mega Links : [Sub Type]
 * Mega Links Type {2} : [Sub Type]
@@ -54,7 +56,7 @@ you can play with :
 * Ability To Style all of these submenu types
 * Add Description to Links
 * Effects for Thumbnail ( Recent Posts/Mega Posts )
-* More jQuery Animations ( 26 More Easing\'s )
+* More jQuery Easings ( 26 More ! )
 * Life Time Support
 * Documentation : http://vamospace.com/docs/suppa
 
@@ -69,6 +71,13 @@ https://www.youtube.com/watch?v=IelbFcyL7sM
 1. Suppamenu
 
 == Changelog ==
+
+= 1.1.0 [5/11/2014] =
+
+* New: Choose the dropdown submenu open direction ( left or right ) : http://goo.gl/M5XNqI
+* Update: Language Files
+* Improve: Link Settings : "Show Link when user" logged in/out/both
+* Improve: Performance
 
 = 1.0 [5/11/2014] =
 

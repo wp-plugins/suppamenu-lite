@@ -521,7 +521,17 @@ if( !class_exists('suppa_customs2files') )
                     width : '.$skin_data['submenu_dropdown_links_uploaded_icons_width'].' !important;
                     height : '.$skin_data['submenu_dropdown_links_uploaded_icons_height'].' !important;
                     margin-top: '.$skin_data['submenu_dropdown_links_normal_icon_margin_top'].' !important;
-                    padding-right: '.$skin_data['submenu_dropdown_links_normal_icon_margin_right'].' !important;
+                    padding-right: '.$skin_data['submenu_dropdown_links_normal_icon_margin_right'].';
+                }
+
+                /** Open Sub Right **/
+                .'.$location_info[0].' .suppa_submenu.suppa_submenu_pos_right .suppa_FA_icon{
+                    padding-right: 0 !important;
+                    padding-left: '.$skin_data['submenu_dropdown_links_fontawesome_icon_margin_right'].' !important;
+                }
+                .'.$location_info[0].' .suppa_submenu.suppa_submenu_pos_right .suppa_UP_icon{
+                    padding-right: 0 !important;
+                    padding-left: '.$skin_data['submenu_dropdown_links_normal_icon_margin_right'].' !important;
                 }
 
 
@@ -530,7 +540,7 @@ if( !class_exists('suppa_customs2files') )
                  ---------------------------------------------------------------- **/
                 .'.$location_info[0].' .suppa_menu_dropdown .suppa_submenu a .era_suppa_arrow_box {
                     top:'.$skin_data['dropdown-links-arrow_position_top'].' !important;
-                    right:'.$skin_data['dropdown-links-arrow_position_right'].' !important;
+                    right:'.$skin_data['dropdown-links-arrow_position_right'].';
                 }
                 .'.$location_info[0].' .suppa_menu_dropdown .suppa_submenu a .era_suppa_arrow_box span {
                     font-size:'.$skin_data['dropdown-links-arrow_width'].' !important;
@@ -546,6 +556,19 @@ if( !class_exists('suppa_customs2files') )
                     color:'.$skin_data['dropdown-links_arrow_color_hover'].' !important;
                 }
 
+                /** Open Sub Right **/
+                .'.$location_info[0].' .suppa_submenu.suppa_submenu_pos_right .suppa_fa_carret_left{
+                    right: auto !important;
+                    left: '.$skin_data['dropdown-links-arrow_position_right'].';
+                }
+                .'.$location_info[0].' .suppa_submenu.suppa_submenu_pos_right .suppa_fa_carret_right {
+                    display:none !important;
+                }
+
+                /** Open Sub Left **/
+                .'.$location_info[0].' .suppa_submenu.suppa_submenu_pos_left .suppa_fa_carret_left{
+                    display: none !important;
+                }
                 /** ----------------------------------------------------------------
                  ******** Current Top Level Style
                  ---------------------------------------------------------------- **/

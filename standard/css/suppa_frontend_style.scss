@@ -362,6 +362,18 @@ html,body{
 		display: inline-block !important;
 		float: left;
 	}
+
+	.suppa_submenu.suppa_submenu_pos_right{
+		text-align: right;
+
+		.suppa_FA_icon_only,
+		.suppa_FA_icon,
+		.suppa_UP_icon_only,
+		.suppa_UP_icon {
+			float: right !important;
+		}
+	}
+
 }
 
 

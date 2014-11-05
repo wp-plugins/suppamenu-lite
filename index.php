@@ -3,8 +3,8 @@
 /*
 Plugin Name: .SuppaMenu ( Lite )
 Plugin URI: http://vamospace.com
-Description: A Lite Mega Menu Version of <a href="http://suppamegamenu.com">Suppamenu</a>. Please read the <a href="http://vamospace.com/docs/suppa">Guide</a>
-Version: 1
+Description: A Lite Mega Menu Version of <a href="http://suppamegamenu.com">Suppamenu Pro</a>. Please read the <a href="http://vamospace.com/docs/suppa">Guide</a>
+Version: 1.1.0
 Author: Sabri Taieb
 Author URI: http://vamospace.com
 Copyright 2014  Sabri Taieb , Codezag http://vamospace.com
@@ -16,9 +16,9 @@ $suppa_settings = array
 				(
 					// Plugin Settings
 					'plugin_id'			=> 'CTF_suppa_menu', // Don't ever ever ever change it
-					'version'			=> '1',
+					'version'			=> '1.0',
 					'guide'				=> 'http://vamospace.com/docs/suppa/',
-					'support_forum'		=> 'http://vamospace.com/support/',
+					'support_forum'	=> 'http://vamospace.com/support/',
 					'image_resize'		=> true, // false to disable the image resizing
 					'plugin_url'		=> plugins_url( '' , __FILE__ ) . '/' ,
 					'uploads_url'		=> $upload_dir['baseurl'],
@@ -29,8 +29,8 @@ $suppa_settings = array
 
 					// Add Menu Page , Submenu Page Settins
 					'menu_type'			=> 'menu_page',				// menu_page or submenu_page
-					'page_title'		=> 'Suppa Menu Settings' ,	// page_title
-					'menu_title'		=> 'Suppamenu (Lite)' ,			// menu_title
+					'page_title'		=> 'Suppamenu Settings' ,	// page_title
+					'menu_title'		=> 'Suppamenu( Lite )' ,		// menu_title
 					'capability'		=> 'manage_options'	,		// capability
 
 					// Framework Settings
@@ -139,16 +139,18 @@ class codetemp_suppa_menu extends ctf_setup {
 				'width'		=> '800px',
 				'desc'		=> '<p>Go Pro Now and Get these Awesome Features:</p>
 								<ol>
-									<li> Sticky Menu
+									<li> Layout
+									<li> Sticky
+									<li> Woocommerce Cart
 									<li> Mega Posts : [Sub Type]
 									<li> Mega Links : [Sub Type]
 									<li> Mega Links Type {2} : [Sub Type]
 									<li> Social Media : [Sub Type]
 									<li> HTML &amp; Shotcodes : [Sub Type]
-									<li> Ability To Style all of these submenu types
+									<li> Ability To Style all of these new submenu types
 									<li> Add Description to Links
 									<li> Effects for Thumbnail ( Recent Posts/Mega Posts )
-									<li> More jQuery Animations ( 26 More Easing\'s )
+									<li> More jQuery Easings ( 26 More )
 									<li> Life Time Support
 								</ol>
 

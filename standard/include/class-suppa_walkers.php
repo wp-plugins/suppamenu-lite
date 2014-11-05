@@ -443,7 +443,8 @@ if( !class_exists( 'suppa_walkers' ) )
 								'mega_posts_number',
 								'linksTwoSubmenuWidth',
 								'linksTwoSubmenuAlign',
-								'linksTwo_categoriesWidth'
+								'linksTwo_categoriesWidth',
+								'dropdown_open_pos'
 							);
 
 			foreach ( $all_keys as $key )

@@ -234,6 +234,18 @@ if( !class_exists( 'suppa_menu_backend_walker' ) )
                                     <span class="fl" ><?php echo $title; ?></span>
                                     <input type="text" value="<?php echo $value; ?>" id="edit-<?php echo $key.'-'.$item_id; ?>" class="fr <?php echo $key; ?>" name="<?php echo $key . "[". $item_id ."]";?>" />
 
+                                    <?php
+                                        // Open Sub Postion
+                                        $title  = __( 'Open Submenu To Right ?' , 'suppa_menu' );
+                                        $key    = "menu-item-suppa-dropdown_open_pos";
+                                        $value  = @$item_meta['_menu-item-suppa-dropdown_open_pos'][0];
+                                        $checked = ( $value != '' ) ? 'checked' : '' ;
+                                    ?>
+                                    <div class="admin_suppa_clearfix"></div>
+                                    <br/>
+                                    <span class="fl" ><?php echo $title; ?></span>
+                                    <input <?php echo $checked; ?> type="checkbox" value="on" id="edit-<?php echo $key.'-'.$item_id; ?>" class="fr <?php echo $key; ?>" name="<?php echo $key . "[". $item_id ."]";?>" />
+
                                     <div class="admin_suppa_clearfix"></div>
                                 </div>
 

@@ -38,6 +38,7 @@ if( !class_exists( 'suppa_menu_walker' ) )
         var $column                         = 0;
         var $dropdown_width                 = "180px";
         var $dropdown_position              = "left";
+        var $dropdown_sub_open_pos          = '';
         var $links_column_width             = "180px";
         var $mega_posts_items               = array();
         var $suppa_item_id                  = 0;
@@ -63,23 +64,14 @@ if( !class_exists( 'suppa_menu_walker' ) )
             // DropDown
             if( $this->menu_type == 'dropdown' )
             {
-                if( $depth == 0 )
-                    $output = str_replace("<span class=\"suppa_ar_arrow_down_".$this->top_level_counter."\"></span>", '<span class="era_suppa_arrow_box ctf_suppa_fa_box_top_arrow"><span aria-hidden="true" class="suppa-caret-down"></span></span>' , $output );
+                if( $depth >= 1 )
+                    $output = str_replace("<span class=\"suppa_ar_arrow_right_".$this->dropdown_first_level_conuter.'_'.$depth."\"></span>", '<span class="era_suppa_arrow_box suppa_fa_carret_right"><span aria-hidden="true" class="suppa-caret-right"></span></span><span class="era_suppa_arrow_box suppa_fa_carret_left"><span aria-hidden="true" class="suppa-caret-left"></span></span>' , $output );
 
                 $css_left = '0px';
                 if( $depth != 0 )
                     $css_left = $this->dropdown_width;
 
-                if( $depth == 1 )
-                    $output = str_replace("<span class=\"suppa_ar_arrow_right_".$this->dropdown_first_level_conuter.'_'.$depth."\"></span>", '<span class="era_suppa_arrow_box"><span aria-hidden="true" class="suppa-caret-right"></span></span>' , $output );
-
-                if( $depth == 2 )
-                    $output = str_replace("<span class=\"suppa_ar_arrow_right_".$this->dropdown_second_level_conuter.'_'.$depth."\"></span>", '<span class="era_suppa_arrow_box"><span aria-hidden="true" class="suppa-caret-right"></span></span>' , $output );
-
-                if( $this->dropdown_position == "none" )
-                    $this->dropdown_position = "left";
-
-                $output .= '<div class="suppa_submenu suppa_submenu_'.$depth.'" style="width:'.$this->dropdown_width.';'.$this->dropdown_position.':'.$css_left.';" >';
+                $output .= '<div class="suppa_submenu suppa_submenu_'.$depth.' '.$this->dropdown_sub_open_pos.'" style="width:'.$this->dropdown_width.';'.$this->dropdown_position.':'.$css_left.';" >';
             }
 
         }
@@ -192,20 +184,28 @@ if( !class_exists( 'suppa_menu_walker' ) )
 
                 $this_item_position_css = ( $this_item_position == "right" || $this_item_position == "none" ) ? ' float:none; ' : ' float:left; ';
 
+                // Display menu item when user log in/out/both
+                $user_logged_in_out =  @$item_meta[$this->menu_key.'link_user_logged'][0];
+                $display_item = ' display:none !important; ';
+                if( $user_logged_in_out == 'both' )
+                    { $display_item = ''; }
+                else if ( $user_logged_in_out == 'logged_in' && is_user_logged_in() )
+                    { $display_item = ''; }
+                else if ( $user_logged_in_out == 'logged_out' && !is_user_logged_in() )
+                    { $display_item = ''; }
+
                 // Dropdown
                 if( 'dropdown' == $this->menu_type )
                 {
-                    $user_logged_in_out =  @$item_meta[$this->menu_key.'link_user_logged'][0];
-                    $display_item = ' display:none !important; ';
-                    if( $user_logged_in_out == 'both' )
-                        { $display_item = ''; }
-                    else if ( $user_logged_in_out == 'logged_in' && is_user_logged_in() )
-                        { $display_item = ''; }
-                    else if ( $user_logged_in_out == 'logged_out' && !is_user_logged_in() )
-                        { $display_item = ''; }
-
                     $this->dropdown_width =  @$item_meta[$this->menu_key.'dropdown_width'][0];
-                    $this->dropdown_position =  @$item_meta[$this->menu_key.'link_position'][0];
+                    if( @$item_meta[$this->menu_key.'dropdown_open_pos'][0] != '' ){
+                        $this->dropdown_position =  'right';
+                        $this->dropdown_sub_open_pos = 'suppa_submenu_pos_right';
+                    }
+                    else{
+                        $this->dropdown_position =  'left';
+                        $this->dropdown_sub_open_pos = 'suppa_submenu_pos_left';
+                    }
 
                     $arrow = '';
                     $has_arrow = '';
@@ -224,15 +224,6 @@ if( !class_exists( 'suppa_menu_walker' ) )
                 // Links
                 else if( 'links' == $this->menu_type )
                 {
-                    // options
-                    $user_logged_in_out =  @$item_meta[$this->menu_key.'link_user_logged'][0];
-                    $display_item = ' display:none !important; ';
-                    if( $user_logged_in_out == 'both' )
-                        { $display_item = ''; }
-                    else if ( $user_logged_in_out == 'logged_in' && is_user_logged_in() )
-                        { $display_item = ''; }
-                    else if ( $user_logged_in_out == 'logged_out' && !is_user_logged_in() )
-                        { $display_item = ''; }
 
                     $this->links_column_width =  @$item_meta[$this->menu_key.'links_column_width'][0];
                     $links_fullwidth =  @$item_meta[$this->menu_key.'links_fullwidth'][0];
@@ -278,17 +269,6 @@ if( !class_exists( 'suppa_menu_walker' ) )
                 // Posts
                 else if( 'posts' == $this->menu_type )
                 {
-
-                    /** Logged in/out **/
-                    $user_logged_in_out =  @$item_meta[$this->menu_key.'link_user_logged'][0];
-                    $display_item = ' display:none !important; ';
-                    if( $user_logged_in_out == 'both' )
-                        { $display_item = ''; }
-                    else if ( $user_logged_in_out == 'logged_in' && is_user_logged_in() )
-                        { $display_item = ''; }
-                    else if ( $user_logged_in_out == 'logged_out' && !is_user_logged_in() )
-                        { $display_item = ''; }
-
                     $output .= '<div style="'.$this_item_position_css.$display_item.'" class="'.$item->classes[0].' suppa_menu suppa_menu_posts suppa_menu_'.$this->top_level_counter.'">';
 
                     // Reset the query
@@ -413,15 +393,6 @@ if( !class_exists( 'suppa_menu_walker' ) )
                 // Search Form
                 else if( 'search' == $this->menu_type )
                 {
-                    $user_logged_in_out =  @$item_meta[$this->menu_key.'link_user_logged'][0];
-                    $display_item = ' display:none !important; ';
-                    if( $user_logged_in_out == 'both' )
-                        { $display_item = ''; }
-                    else if ( $user_logged_in_out == 'logged_in' && is_user_logged_in() )
-                        { $display_item = ''; }
-                    else if ( $user_logged_in_out == 'logged_out' && !is_user_logged_in() )
-                        { $display_item = ''; }
-
                     $search_text =  @$item_meta[$this->menu_key.'search_text'][0];
                     $output .= '<div style="'.$this_item_position_css.$display_item.'" class="'.$item->classes[0].' suppa_menu suppa_menu_search suppa_menu_'.$this->top_level_counter.'">';
                     $output .= '    <span class="suppa_search_icon '.$this_item_position_class.'">
