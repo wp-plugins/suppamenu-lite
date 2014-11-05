@@ -4,7 +4,7 @@
 Plugin Name: .SuppaMenu ( Lite )
 Plugin URI: http://vamospace.com
 Description: A Lite Mega Menu Version of <a href="http://suppamegamenu.com">Suppamenu</a>. Please read the <a href="http://vamospace.com/docs/suppa">Guide</a>
-Version: 1
+Version: 1.0
 Author: Sabri Taieb
 Author URI: http://vamospace.com
 Copyright 2014  Sabri Taieb , Codezag http://vamospace.com
