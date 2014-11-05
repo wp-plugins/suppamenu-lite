@@ -3,7 +3,7 @@ Contributors: codezag
 Tags: menus,dropdown,wordpress mega menu, wordpress menu, drag-and-drop, dropdown menu, icons, mega menu, megamenu, menu, menu icons, menu style, navigation, responsive, responsive menu, retina
 Requires at least: 3.8
 Tested up to: 4.0
-Stable tag: 1.0.0
+Stable tag: 1.0
 
 Wordpress mega menu, that allow you to build unlimited mega menus on the same page/site. Select a skin for each menu and you can create your own skin!
 
@@ -64,5 +64,12 @@ you can play with :
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
 https://www.youtube.com/watch?v=IelbFcyL7sM
 
+== Screenshots ==
+
+1. Suppamenu
+
 == Changelog ==
-* 1.0.0 First Release
+
+= 1.0 [5/11/2014] =
+
+* First Release
