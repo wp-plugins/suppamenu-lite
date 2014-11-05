@@ -9,6 +9,7 @@ Wordpress mega menu, that allow you to build unlimited mega menus on the same pa
 
 == Description ==
 An excellent responsive, Customizable, Powerfull and User-Friendly WordPress Mega Menus plugin, That Allows you to create unlimited mega menus with different sub-menus types :
+
 * Recent Posts
 * Dropdowns ( 3 Levels )
 * Search Box
@@ -18,6 +19,7 @@ An excellent responsive, Customizable, Powerfull and User-Friendly WordPress Meg
 
 Suppa comes with more than 10 skin, you can choose from these skins or you can create your own skin from the admin panel and save it ( no code / just options ) !
 you can play with :
+
 * Background ( Colors, Images, Positions …)
 * Colors
 * Box Shadow
