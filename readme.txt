@@ -45,6 +45,8 @@ you can play with :
 
 **Upgrade to Pro Version http://suppamegamenu.com**
 
+https://www.youtube.com/watch?v=DDQKtHaUyMY
+
 * Layout
 * Sticky Menu
 * Woocommerce Cart
