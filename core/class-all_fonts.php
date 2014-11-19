@@ -112,9 +112,9 @@ if( !class_exists('ctf_fonts') )
 			if( get_option( 'suppa_googleFonts_used' )  )
 			{
 				$all_fonts = get_option( 'suppa_googleFonts_used' );
+				$all_fonts = array_filter( $all_fonts ); 
 				$font_exists = false;
-				if( !in_array($font, $all_fonts) && !array_key_exists($font, ctf_fonts::$standard ) )
-				{
+				if( !in_array($font, $all_fonts) && !array_key_exists($font, ctf_fonts::$standard ) ){
 					$all_fonts[] = $font;
 					update_option( 'suppa_googleFonts_used' , $all_fonts );
 				}
