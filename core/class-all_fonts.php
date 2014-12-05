@@ -141,6 +141,7 @@ if( !class_exists('ctf_fonts') )
 				{
 					if( !array_key_exists($font, self::$standard ) )
 					{
+						$font = str_replace(' ', '%20', $font);
 						$font_string .= '|' . $font;
 					}
 				}

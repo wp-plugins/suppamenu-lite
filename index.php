@@ -4,7 +4,7 @@
 Plugin Name: .SuppaMenu ( Lite )
 Plugin URI: http://vamospace.com
 Description: A Lite Mega Menu Version of <a href="http://suppamegamenu.com">Suppamenu Pro</a>. Please read the <a href="http://vamospace.com/docs/suppa">Guide</a>
-Version: 1.1.2
+Version: 1.1.4
 Author: Sabri Taieb
 Author URI: http://vamospace.com
 Copyright 2014  Sabri Taieb , Codezag http://vamospace.com
@@ -16,7 +16,7 @@ $suppa_settings = array
 				(
 					// Plugin Settings
 					'plugin_id'			=> 'CTF_suppa_menu', // Don't ever ever ever change it
-					'version'			=> '1.1.2',
+					'version'			=> '1.1.4',
 					'guide'				=> 'http://vamospace.com/docs/suppa/',
 					'support_forum'	=> 'http://vamospace.com/support/',
 					'image_resize'		=> true, // false to disable the image resizing

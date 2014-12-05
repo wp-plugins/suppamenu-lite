@@ -846,7 +846,7 @@ suppaMenuOB = {
         if( /ipad|iphone|ipod|android|blackberry|webos|windows phone/i.test( navigator.userAgent.toLowerCase() ) )
         {
             config.device = 'mobile';
-            if( config.rwd_enable == 'on' && $rwd_start_width > $menu.parent().width() )
+            if( config.rwd_enable == 'on' && $menus_container.width() >= $rwd_start_width )
             {
                 // Hide Menus
                 $menus_container.css({'display':'none'});
