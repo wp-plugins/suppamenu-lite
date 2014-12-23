@@ -1,54 +1,60 @@
 <?php
 
 /*
-Plugin Name: .SuppaMenu ( Lite )
-Plugin URI: http://vamospace.com
+Plugin Name: .Suppamenu ( Lite )
+Plugin URI: codecanyon.net/item/suppamenu-all-purpose-wordpress-mega-menus/7265033?ref=vamospace
 Description: A Lite Mega Menu Version of <a href="http://suppamegamenu.com">Suppamenu Pro</a>. Please read the <a href="http://vamospace.com/docs/suppa">Guide</a>
-Version: 1.1.4
+Version: 1.1.9
 Author: Sabri Taieb
 Author URI: http://vamospace.com
 Copyright 2014  Sabri Taieb , Codezag http://vamospace.com
 */
 
-/** Defined **/
-$upload_dir = wp_upload_dir();
-$suppa_settings = array
-				(
-					// Plugin Settings
-					'plugin_id'			=> 'CTF_suppa_menu', // Don't ever ever ever change it
-					'version'			=> '1.1.4',
-					'guide'				=> 'http://vamospace.com/docs/suppa/',
-					'support_forum'	=> 'http://vamospace.com/support/',
-					'image_resize'		=> true, // false to disable the image resizing
-					'plugin_url'		=> plugins_url( '' , __FILE__ ) . '/' ,
-					'uploads_url'		=> $upload_dir['baseurl'],
-					'icon_url'			=> plugins_url( '' , __FILE__ ) . '/standard/img/icon.png' ,
-					'textdomain' 		=> 'suppa_menu', // Localisation ( translate )
-
-					'plugin_dir'		=> plugin_dir_path( __FILE__ ),
-
-					// Add Menu Page , Submenu Page Settins
-					'menu_type'			=> 'menu_page',				// menu_page or submenu_page
-					'page_title'		=> 'Suppamenu Settings' ,	// page_title
-					'menu_title'		=> 'Suppamenu( Lite )' ,		// menu_title
-					'capability'		=> 'manage_options'	,		// capability
-
-					// Framework Settings
-					'framework_version'	=> '3.1 suppa',
-
-					// Database Settings
-					'groups'			=> array('style','settings') // Don't ever ever ever change it
-				);
-
 /** Files Required **/
 require_once("core/class-all_fonts.php");
 require_once('core/class-get_categories.php');
-require_once('core/class-resize_thumbnails.php');
 require_once('core/ctf_options.class.php');
 require_once('core/ctf_setup.class.php');
 require_once('core/array-fontAwesome.php');
 require_once('standard/include/class-suppa_walkers.php');
-require_once('standard/include/class-customs_to_files.php');
+require_once('standard/include/walker-frontend.php');
+
+if( is_admin() ){
+	require_once('core/class-resize_thumbnails.php');
+	require_once('standard/include/class-customs_to_files.php');
+	require_once('standard/include/walker-backend.php');
+}
+
+/** Defined **/
+$upload_dir = wp_upload_dir();
+$suppa_settings = array(
+
+	// Plugin Settings
+	'plugin_id'			=> 'CTF_suppa_menu', // Don't ever ever ever change it
+	'version'			=> '1.1.9',
+	'guide'				=> 'http://vamospace.com/docs/suppa/',
+	'support_forum'	=> 'http://vamospace.com/support/',
+	'image_resize'		=> true, // false to disable the image resizing
+	'plugin_url'		=> plugins_url( '' , __FILE__ ) . '/' ,
+	'uploads_url'		=> $upload_dir['baseurl'],
+	'icon_url'			=> plugins_url( '' , __FILE__ ) . '/standard/img/icon.png' ,
+	'textdomain' 		=> 'suppa_menu', // Localisation ( translate )
+
+	'plugin_dir'		=> plugin_dir_path( __FILE__ ),
+
+	// Add Menu Page , Submenu Page Settins
+	'menu_type'			=> 'menu_page',				// menu_page or submenu_page
+	'page_title'		=> 'Suppamenu Settings' ,	// page_title
+	'menu_title'		=> 'Suppamenu( Lite )' ,		// menu_title
+	'capability'		=> 'manage_options'	,		// capability
+
+	// Framework Settings
+	'framework_version'	=> '3.1 suppa',
+
+	// Database Settings
+	'groups'			=> array('style','settings') // Don't ever ever ever change it
+);
+
 
 /** Create [PLUGIN_NAME] CLASS **/
 class codetemp_suppa_menu extends ctf_setup {
@@ -81,7 +87,7 @@ class codetemp_suppa_menu extends ctf_setup {
 		/** -------------------------------------------------------------------------------- **/
 
 		/** Thumbnail Resize **/
-		if( get_option('suppa_thumbs_sizes') )
+		if( is_admin() && get_option('suppa_thumbs_sizes') )
 		{
 			$thumbs = get_option('suppa_thumbs_sizes');
 			foreach ( $thumbs as $type => $siz )
@@ -106,7 +112,9 @@ class codetemp_suppa_menu extends ctf_setup {
 
 		/** -------------------------------------------------------------------------------- **/
 
-		$save_customs = new suppa_customs2files( $this->project_settings, $this->groups_db_offline );
+		if( is_admin() ){
+			$save_customs = new suppa_customs2files( $this->project_settings, $this->groups_db_offline );
+		}
 
 	}
 
@@ -160,7 +168,7 @@ class codetemp_suppa_menu extends ctf_setup {
 
 
 		// Header
-		$header_desc 	= 'Suppa Menu ' . $this->project_settings['version'] . '<br/>Framework ' . $this->project_settings['framework_version'];
+		$header_desc 	= 'Suppamenu Lite ( ' . $this->project_settings['version'] . ' )';
 		$html_id 		= 'suppa_menu';
 		echo $this->get_html_header( $header_desc , $html_id );
 
@@ -296,16 +304,12 @@ class codetemp_suppa_menu extends ctf_setup {
 	{
 		if( 'toplevel_page_CTF_suppa_menu' == $hook )
 		{
-			if( !get_option('suppa_first_install') )
-				echo '<script type="text/javascript">alert("'.__('Suppa Database must be update, you have to deactivate and activate the plugin','suppa_menu').'");</script>';
 			wp_enqueue_style('suppa_admin_menus_style', $this->project_settings['plugin_url'] . '/standard/css/suppa_admin_framework.css' );
 			wp_enqueue_script('suppa_admin_load_skin', $this->project_settings['plugin_url'] . '/standard/js/load_skin.js' );
 		}
 
 		if( 'nav-menus.php' == $hook )
 		{
-			if( !get_option('suppa_first_install') )
-				echo '<script type="text/javascript">alert("'.__('Suppa Database must be update, you have to deactivate and activate the plugin','suppa_menu').'");</script>';
 			wp_enqueue_style('suppa_admin_menus_style', $this->project_settings['plugin_url'] . '/standard/css/suppa_admin_menus.css' );
 			wp_enqueue_style('suppa_admin_menus_script', $this->project_settings['plugin_url'] . '/standard/js/suppa_admin.js' , array( 'jquery' ) );
 		}
@@ -387,59 +391,65 @@ class codetemp_suppa_menu extends ctf_setup {
 
 	}
 
-	static function plugin_install()
-	{
-		ob_start();
-		// Create Skins Array
-		$skins_folder 	= self::$plugin_activate['plugin_dir'] . 'standard/css/skins/';
-		$scandir 		= @scandir($skins_folder );
-		$all_skins 		= array();
-		$upload_dir 	= wp_upload_dir();
 
-		foreach ( $scandir as $key => $value)
-		{
-			if( $value != "." && $value != ".." )
-			{
-				$value = str_replace('.json', '', $value );
-				$all_skins[$value] = $value;
+	static function plugin_install(){
+
+		$upload_dir = wp_upload_dir();
+		if( ! is_writable($upload_dir['basedir']) )
+			die( __('Uploads Folder Must Be Writable','suppa_menu') );
+
+		//ob_start();
+
+		if( ! file_exists( $upload_dir['basedir']. '/suppamenu2' ) ){
+
+			$skins_folder 	= self::$plugin_activate['plugin_dir'] . 'standard/css/skins/';
+
+			// Create Skins Array
+			$scandir 		= @scandir($skins_folder );
+			$all_skins 		= array();
+
+			foreach ( $scandir as $key => $value){
+				if( $value != "." && $value != ".." ){
+					$value = str_replace('.json', '', $value );
+					$all_skins[$value] = $value;
+				}
 			}
+
+			wp_mkdir_p( $upload_dir['basedir']. '/suppamenu2' );
+			wp_mkdir_p( $upload_dir['basedir']. '/suppamenu2/skins' );
+			wp_mkdir_p( $upload_dir['basedir']. '/suppamenu2/css' );
+			wp_mkdir_p( $upload_dir['basedir']. '/suppamenu2/js' );
+
+			// save options of the default theme
+			$default_skin = $skins_folder . self::$plugin_activate['default_skin'] . '.json';
+
+			$handle    = @fopen($default_skin, 'r');
+			$json_data = @fread($handle,filesize($default_skin));
+			$json_data = json_decode($json_data, true);
+			update_option( 'CTF_suppa_menu_settings', $json_data );
+			@fclose($handle);
+
+			//skins to copy
+			foreach ( $all_skins as $key => $value ){
+				@copy( $skins_folder . $value . '.json' , $upload_dir['basedir']. '/suppamenu2/skins/' . $value . '.json' );
+			}
+
+			update_option( 'suppa_all_skins', $all_skins );
+
+			$handle 	= 	@fopen( $upload_dir['basedir'] . '/suppamenu2/index.php' , 'w');
+							@fwrite($handle, '<?php /** Silence is gold **/ ?>' );
+							@fclose($handle);
+
 		}
 
-        // Save Thumbnail sizes
+		delete_option('suppa_googleFonts_used');
+		ctf_fonts::get_googleFonts_list();
+
+      // Save Thumbnail sizes
 		do_action( 'CTF_suppa_menu_save_thumb_sizes' );
 
-		// Uploads Folder Check & Copy style files
-		if( !is_writable($upload_dir['basedir']) )
-		{
-			die( __('Uploads Folder Must Be Writable','suppa_menu') );
-		}
-		else
-		{
-			if( !get_option('suppa_first_install') )
-			{
-				wp_mkdir_p( $upload_dir['basedir']. '/suppamenu2' );
-				wp_mkdir_p( $upload_dir['basedir']. '/suppamenu2/skins' );
-				wp_mkdir_p( $upload_dir['basedir']. '/suppamenu2/css' );
-				wp_mkdir_p( $upload_dir['basedir']. '/suppamenu2/js' );
-
-				//skins to copy
-				foreach ( $all_skins as $key => $value )
-				{
-					@copy( $skins_folder . $value . '.json' , $upload_dir['basedir']. '/suppamenu2/skins/' . $value . '.json' );
-				}
-				add_option( 'suppa_all_skins', $all_skins );
-				add_option( 'suppa_first_install', 'on' );
-
-				$handle 	= 	@fopen( $upload_dir['basedir'] . '/suppamenu2/index.php' , 'w');
-								@fwrite($handle, '<?php /** Silence is gold **/ ?>' );
-								@fclose($handle);
-			}
-
-			ctf_fonts::get_googleFonts_list();
-		}
-		ob_end_clean();
+		//ob_end_clean();
     }
-
 
 }// end class
 

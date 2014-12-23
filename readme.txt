@@ -3,7 +3,7 @@ Contributors: codezag
 Tags: menus,dropdown,wordpress mega menu, wordpress menu, drag-and-drop, dropdown menu, icons, mega menu, megamenu, menu, menu icons, menu style, navigation, responsive, responsive menu, retina
 Requires at least: 3.8
 Tested up to: 4.1
-Stable tag: 1.1.4
+Stable tag: 1.1.9
 
 Wordpress mega menu, that allow you to build unlimited mega menus on the same page/site. Select a skin for each menu and you can create your own skin!
 
@@ -43,6 +43,12 @@ you can play with :
 * Suppa is WPML Ready, in case you want to run multiple languages at once!
 * Localisation Ready (.po & .mo ), in case you want to translate it to your own language.
 
+**Languages**
+
+* English
+* Italien Language, Thanks to Angelo Giammarresi http://www.laplandinteractive.com/
+* French, Thanks to Google Translate
+
 **Upgrade to Pro Version http://suppamegamenu.com**
 
 https://www.youtube.com/watch?v=DDQKtHaUyMY
@@ -73,6 +79,14 @@ https://www.youtube.com/watch?v=IelbFcyL7sM
 1. Suppamenu
 
 == Changelog ==
+
+= 1.1.9 [23/12/2014] =
+
+* New: Added Italien Language, Thanks to Angelo Giammarresi
+* Update: Language Files
+* Improved: Google Fonts ( Best Improvements so Far ! )
+* Improved: Performance
+* Improved: Code
 
 = 1.1.4 [5/12/2014] =
 
