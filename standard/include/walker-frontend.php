@@ -35,10 +35,10 @@ if( !class_exists( 'suppa_menu_walker' ) )
         var $top_level_counter              = 0;
         var $dropdown_first_level_conuter   = 0;
         var $dropdown_second_level_conuter  = 0;
+        var $dropdown_sub_open_pos          = '';
         var $column                         = 0;
         var $dropdown_width                 = "180px";
         var $dropdown_position              = "left";
-        var $dropdown_sub_open_pos          = '';
         var $links_column_width             = "180px";
         var $mega_posts_items               = array();
         var $suppa_item_id                  = 0;
@@ -47,10 +47,11 @@ if( !class_exists( 'suppa_menu_walker' ) )
         var $megaLinksTwo_first_item		= true;
 
         var $thumb_sizes                    = array();
+        var $skin_options                   = array();
 
-        function __construct( $thumb_sizes = array() )
-        {
-            $this->thumb_sizes = $thumb_sizes;
+        function __construct( $skin_options = array(), $thumb_sizes = array() ){
+            $this->skin_options = $skin_options;
+            $this->thumb_sizes  = $thumb_sizes;
         }
 
         /**
@@ -105,6 +106,7 @@ if( !class_exists( 'suppa_menu_walker' ) )
          * @param object $args
          */
         function start_el(&$output, $item, $depth = 0, $args = array(), $current_object_id = 0) {
+
             global $wp_query;
 
             // Link Meta
@@ -136,42 +138,35 @@ if( !class_exists( 'suppa_menu_walker' ) )
             }
 
             // Item Description
-            $description    = "";
+            $description    = ! empty( $item->description ) ? '<span class="suppa_item_desc">'.$item->description.'</span>' : '';
 
             // Item Icon
-            if( $icon_type == "upload" )
-            {
-                if( $icon != "" )
-                {
+            if( $icon_type == "upload" ){
+                if( $icon != "" ){
                     $check_retina_icon  = ( $icon_hover != "" ) ? $icon_hover : $icon;
                     $check_icon_only    = ( $icon_only == "on" ) ? '' : '<span class="suppa_item_title">'.$link_title.$description.'</span>' ;
                     $link_html = '<img class="suppa_upload_img suppa_UP_icon" src="'.$icon.'" alt="'.$link_title.'" data-icon="'.$icon.'" data-retina="'.$check_retina_icon.'" >'.$check_icon_only;
                 }
-                else
-                {
+                else{
                     $link_html = '<span class="suppa_item_title">'.$link_title.$description.'</span>';
                 }
             }
-            else if( $icon_type == "fontawesome" )
-            {
-                if( $FA_icon != "" )
-                {
+            else if( $icon_type == "fontawesome" ){
+                if( $FA_icon != "" ){
                     $check_icon_only    = ( $icon_only == "on" ) ? '' : '<span class="suppa_item_title">'.$link_title.$description.'</span>';
                     $link_html = '<span class="ctf_suppa_fa_box suppa_FA_icon"><span aria-hidden="true" class="'.$FA_icon.'" ></span></span>'.$check_icon_only;
                 }
-                else
-                {
+                else{
                     $link_html = '<span class="suppa_item_title">'.$link_title.$description.'</span>';
                 }
             }
-            else
-            {
+            else{
                 $link_html = '<span class="suppa_item_title">'.$link_title.$description.'</span>';
             }
 
             // If Level 0
-            if( $depth === 0 )
-            {
+            if( $depth === 0 ){
+
             	$this->megaLinksTwo_first_item = true;
             	$this->linksTwo_childsContainer = "";
 
@@ -184,19 +179,19 @@ if( !class_exists( 'suppa_menu_walker' ) )
 
                 $this_item_position_css = ( $this_item_position == "right" || $this_item_position == "none" ) ? ' float:none; ' : ' float:left; ';
 
-                // Display menu item when user log in/out/both
+                // User Log in/out/both
+                $is_user_logged_in = is_user_logged_in();
                 $user_logged_in_out =  @$item_meta[$this->menu_key.'link_user_logged'][0];
                 $display_item = ' display:none !important; ';
                 if( $user_logged_in_out == 'both' )
-                    { $display_item = ''; }
-                else if ( $user_logged_in_out == 'logged_in' && is_user_logged_in() )
-                    { $display_item = ''; }
-                else if ( $user_logged_in_out == 'logged_out' && !is_user_logged_in() )
-                    { $display_item = ''; }
+                { $display_item = ''; }
+                else if ( $user_logged_in_out == 'logged_in' && $is_user_logged_in )
+                { $display_item = ''; }
+                else if ( $user_logged_in_out == 'logged_out' && !$is_user_logged_in )
+                { $display_item = ''; }
 
                 // Dropdown
-                if( 'dropdown' == $this->menu_type )
-                {
+                if( 'dropdown' == $this->menu_type ){
                     $this->dropdown_width =  @$item_meta[$this->menu_key.'dropdown_width'][0];
                     if( @$item_meta[$this->menu_key.'dropdown_open_pos'][0] != '' ){
                         $this->dropdown_position =  'right';
@@ -209,66 +204,18 @@ if( !class_exists( 'suppa_menu_walker' ) )
 
                     $arrow = '';
                     $has_arrow = '';
-                    if( in_array( 'menu-item-has-children' , $item->classes ) )
-                    {
+                    if( in_array( 'menu-item-has-children' , $item->classes ) ){
                         $has_arrow = ' suppa_top_links_has_arrow ';
                         $arrow = '<span class="era_suppa_arrow_box ctf_suppa_fa_box_top_arrow"><span aria-hidden="true" class="suppa-caret-down"></span></span>';
-
                     }
 
                     $item_output = '<div style="'.$this_item_position_css.' '.$display_item.'" class="'.$item->classes[0].' suppa_menu suppa_menu_dropdown suppa_menu_'.$this->top_level_counter.'" ><a '.$attributes.' class="'.$class_names.' '.$has_arrow.'" >'.$link_html.$arrow.'</a>';
                     $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
                 }
 
-
-                // Links
-                else if( 'links' == $this->menu_type )
-                {
-
-                    $this->links_column_width =  @$item_meta[$this->menu_key.'links_column_width'][0];
-                    $links_fullwidth =  @$item_meta[$this->menu_key.'links_fullwidth'][0];
-                    $container_style = 'style="width:100%; left:0px;"';
-                    $top_link_style = '';
-
-                    if( $links_fullwidth == "off" or $links_fullwidth == "" )
-                    {
-                        $container_width =  @$item_meta[$this->menu_key.'links_width'][0];
-                        $container_align =  @$item_meta[$this->menu_key.'links_align'][0];
-                        $container_style = 'style="width:'.$container_width.';';
-                        $top_link_style  = ' position:relative; ';
-
-                        if( $container_align == 'left' )
-                        {
-                            $container_style .= ' left:0px;" ';
-                        }
-                        else if( $container_align == 'right' )
-                        {
-                            $container_style .= ' right:0px;" ';
-                        }
-                        else
-                        {
-                            $container_style .= ' left: 50%; margin-left: -'.( ( (int) $container_width ) / 2 ).'px; "';
-                        }
-                    }
-
-                    $arrow = '';
-                    $has_arrow = '';
-                    if( in_array( 'menu-item-has-children' , $item->classes ) )
-                    {
-                        $has_arrow = ' suppa_top_links_has_arrow ';
-                        $arrow = '<span class="era_suppa_arrow_box ctf_suppa_fa_box_top_arrow"><span aria-hidden="true" class="suppa-caret-down"></span></span>';
-
-                    }
-
-                    $item_output = '<div style="'.$this_item_position_css.$top_link_style.$display_item.'" class="'.$item->classes[0].' suppa_menu suppa_menu_links suppa_menu_'.$this->top_level_counter.'" ><a class="'.$class_names.' '.$has_arrow.'" '.$attributes.' >'.$link_html.$arrow.'</a>';
-                    $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-                    $output .= '<div class="suppa_submenu suppa_submenu_'.$this->top_level_counter.' suppa_submenu_columns_wrap" '.$container_style.' >';
-                }
-
-
                 // Posts
-                else if( 'posts' == $this->menu_type )
-                {
+                else if( 'posts' == $this->menu_type ){
+
                     $output .= '<div style="'.$this_item_position_css.$display_item.'" class="'.$item->classes[0].' suppa_menu suppa_menu_posts suppa_menu_'.$this->top_level_counter.'">';
 
                     // Reset the query
@@ -366,7 +313,7 @@ if( !class_exists( 'suppa_menu_walker' ) )
 
                         $posts_wrap .= '<div class="suppa_post" >';
                         $posts_wrap .= '<a href="'.$post_link.'" title="'.$post_title.'" >';
-                        $posts_wrap .= '<img style="width:'.$resized_width.'px;height:'.$resized_height.'px;" class="suppa_lazy_load" data-original="'.$imgurl.'" data-retina="'.$retina.'" alt="'.$post_title.'" />';
+                        $posts_wrap .= '<img style="width:'.$resized_width.'px;height:'.$resized_height.'px;" class="suppa_lazy_load '. $this->thumb_sizes['hover'] .'" data-original="'.$imgurl.'" data-retina="'.$retina.'" alt="'.$post_title.'" />';
                         $posts_wrap .= '<div class="suppa_post_link_container" ><span class="suppa_post_link_title">'.$post_title.'</span></div>';
                         $posts_wrap .= '</a><div class="suppa_clearfix"></div></div><!--suppa_post-->';
 
@@ -391,24 +338,48 @@ if( !class_exists( 'suppa_menu_walker' ) )
                 }
 
                 // Search Form
-                else if( 'search' == $this->menu_type )
-                {
+                else if( 'search' == $this->menu_type ){
+
                     $search_text =  @$item_meta[$this->menu_key.'search_text'][0];
-                    $output .= '<div style="'.$this_item_position_css.$display_item.'" class="'.$item->classes[0].' suppa_menu suppa_menu_search suppa_menu_'.$this->top_level_counter.'">';
-                    $output .= '    <span class="suppa_search_icon '.$this_item_position_class.'">
-                                        <span aria-hidden="true" class="suppa-search"></span>
-                                    </span>';
-                    $output .= '    <form action="'.get_bloginfo('url').'" method="get" class="suppa_search_form suppa_submenu" style="'.@$item_meta[$this->menu_key.'link_position'][0].':0px !important;">';
-                    $output .= '        <input type="text" name="s" class="suppa_search_input" value="" placeholder="'.$search_text.'" >';
-                    $output .= '        <span class="ctf_suppa_fa_box suppa_search_icon_remove">
-                                            <span aria-hidden="true" class="suppa-remove"></span>
-                                        </span>
-                                    </form>';
-                    $output .= '</div>';
+
+                    // Normal
+                    if( $this->skin_options['settings_modern_search'] == 'normal' ){
+                        $output .= '<div style="'.$this_item_position_css.$display_item.'" class="'.$item->classes[0].' suppa_menu suppa_menu_search suppa_search_normal suppa_menu_'.$this->top_level_counter.'">';
+                        $output .= '    <form action="'.get_bloginfo('url').'" method="get" >';
+                        $output .= '        <input type="text" name="s" class="suppa_search_input" value="" placeholder="'.$search_text.'" >';
+                        $output .= '        <button class="suppa_search_icon" type="submit">
+                                                <span aria-hidden="true" class="suppa-search"></span>
+                                            </button>
+                                        </form>';
+                        $output .= '</div>';
+                    }
+
+                    // Boxed
+                    else if( $this->skin_options['settings_modern_search'] == 'boxed' ){
+                        $output .= '<div style="'.$this_item_position_css.$display_item.'" class="'.$item->classes[0].' suppa_menu suppa_menu_search suppa_search_boxed suppa_menu_'.$this->top_level_counter.'" >';
+                        $output .= '<span aria-hidden="true" class="suppa_top_level_link suppa_search_icon suppa-search"></span>';
+                        $output .= '<div class="suppa_submenu" style="'.@$item_meta[$this->menu_key.'link_position'][0].':0px !important;" >';
+                        $output .= '    <form action="'.get_bloginfo('url').'" method="get" >';
+                        $output .= '        <input type="text" name="s" class="suppa_search_input" value="" placeholder="'.$search_text.'" >';
+                        $output .= '    </form>';
+                        $output .= '</div>';
+                        $output .= '</div>';
+                    }
+
+                    // Modern
+                    else if( $this->skin_options['settings_modern_search'] == 'modern' ){
+                        $output .= '<div style="'.$this_item_position_css.$display_item.'" class="'.$item->classes[0].' suppa_menu suppa_menu_search suppa_search_modern suppa_menu_'.$this->top_level_counter.'" >';
+                        $output .= '<span aria-hidden="true" class="suppa_top_level_link suppa_search_icon suppa-search"></span>';
+                        $output .= '<div class="suppa_submenu_modern_search" >';
+                        $output .= '    <form action="'.get_bloginfo('url').'" method="get" >';
+                        $output .= '        <input type="text" name="s" class="suppa_search_input" value="" placeholder="'.$search_text.'" >';
+                        $output .= '        <span aria-hidden="true" class="suppa_search_modern_close suppa-remove"></span>';
+                        $output .= '    </form>';
+                        $output .= '</div>';
+                        $output .= '</div>';
+                    }
+
                 }
-
-                else {}
-
 
             }
 
@@ -435,23 +406,6 @@ if( !class_exists( 'suppa_menu_walker' ) )
                 }
             }
 
-
-            // Links
-            if( 'links' == $this->menu_type )
-            {
-                if( $depth == 1 )
-                {
-                    $output .= '<div class="suppa_column" style="width:'.$this->links_column_width.';">';
-                    $item_output = '<a class="'.$class_names.' suppa_column_title" '.$attributes.' >'.$link_html.'</a> ';
-                    $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-                }
-                else if ( $depth >= 2 )
-                {
-                    $item_output = '<a class="'.$class_names.' suppa_column_link" '.$attributes.' >'.$link_html.'</a> ';
-                    $output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-                }
-            }
-
         }
 
         /**
@@ -469,29 +423,6 @@ if( !class_exists( 'suppa_menu_walker' ) )
             if( 'dropdown' == $this->menu_type )
             {
                 $output .= '</div>';
-            }
-            // Links
-            if( 'links' == $this->menu_type )
-            {
-                if( $depth === 0 )
-                {
-                    $output .= '</div></div><!--suppa_submenu_columns_wrap-->';
-                }
-                if( $depth === 1 )
-                {
-                    $output .= '</div>';
-                }
-            }
-
-            // linksTwo
-            if( 'links_style_two' == $this->menu_type )
-            {
-                if( $depth === 0 )
-                {
-                    $output .= '</div></div>';
-                }
-                if( $depth === 1 )
-                    $this->linksTwo_childsContainer .= '</div>';
             }
 
         }// End Func

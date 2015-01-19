@@ -316,28 +316,29 @@
 			<div id="page_22" class="page">
 				<h3 class="page_title">Fix the issue when you can add other menu items</h3>
 				<p>
-					No LIMIT with suppa, the limit is caused by your hosting company, so here's how to fix it.
+					No LIMIT with suppa, the limit is caused by your server, so here's how to fix it.
 				</p>
 
 				<h3 class="content_title">Fix The Menu Items Limit</h3>
 				<p>
 				1. PHP max_input_vars<br>
-				Open php.ini and add this line of code <br><br>
+				create a php.ini inside your wordpress folder and inside wp-admin, and add this line to it.
+				<br><br>
 				max_input_vars = 3000 <br><br>
 				if the code is already there , increase the number to 3000 or more ( that depends )<br>
-				if you don't know what you are doing , contact your host and have them make the change for you.
+				if you don't know what you are doing , contact your host and have them make this changes for you.
 				</p>
 
 				<p>
 				2. Suhosin<br>
 				Not all the server have Suhosin ( PHP Security module ) .<br>
-				Open php.ini and add these lines of code  <br><br>
+				Same steps like (1) and add this code :  <br><br>
 				suhosin.post.max_vars = 3000<br>
 				suhosin.request.max_vars = 3000 <br><br>
 				if the code is already there , increase the number to 3000 or more ( that depends )<br>
-				Again, if you don't know what you are doing , contact your host and have them make the change for you.
-
+				Again, if you don't know what you are doing , contact your host and have them make this changes for you.
 				</p>
+
 			</div>
 
 			<div  id="page_23" class="page">

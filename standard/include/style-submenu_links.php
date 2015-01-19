@@ -5,7 +5,7 @@
  * @package 	CTFramework
  * @author		Sabri Taieb ( codezag )
  * @copyright	Copyright (c) Sabri Taieb
- * @link		http://codetemp.com
+ * @link		http://vamospace.com
  * @since		Version 1.0
  *
  */
@@ -193,3 +193,47 @@ echo 	'<div class="ctf_option_container suppa_all_op_container">
 			echo '<div class="clearfix"></div><span class="ctf_option_desc">'.__( 'Set the links padding ( Top , Right , Bottom , Left )' , 'suppa_menu' ).'</span>
 
 		</div>';
+
+
+echo '<br/><br/><br/>';
+
+/* Description Style */
+$this->add_font(
+	array(
+		'group_id'			=> 'style', 		// Group to save this option on
+		'option_id'			=> 'megalinks_desc_font', 		// Option ID
+		'title'				=> __( 'Description Typography' , 'suppa_menu' ), 		// Title
+		'desc'				=> __( 'Set the Description typography' , 'suppa_menu' ), 		// Description or Help
+		'font_size'			=> 12,	// Font Size
+		'font_type'			=> 'px',	// Font Size Type
+		'font_family'		=> "'Arial', 'Verdana' sans-serif",	// Font Family
+		'font_style'		=> 'normal',	// Font Style
+		'font_color'		=> '#c9c9c9',	// Font Color
+		'fetch'				=> 'yes',	// Fetch Database
+	),
+	'suppa_all_op_container'
+);
+
+// Color ( Hover )
+$this->add_colorpicker(
+	array(
+		'group_id'			=> 'style',
+		'option_id'			=> 'megalinks_desc_color_hover',
+		'value'				=> '#ffffff',
+		'title'				=> __( 'Color ( Hover )' , 'suppa_menu' ),
+		'desc'				=> __( 'Set the description color when you hover over' , 'suppa_menu' )
+	),
+	'suppa_all_op_container'
+);
+
+// Padding
+$this->add_text_input(
+	array(
+		'group_id'			=> 'style',
+		'option_id'			=> 'megalinks_desc_padding_top',
+		'value'				=> '5px',
+		'title'				=> __( 'Top Padding ( Hover )' , 'suppa_menu' ),
+		'desc'				=> __( 'Set the description top padding' , 'suppa_menu' )
+	),
+	'suppa_all_op_container'
+);

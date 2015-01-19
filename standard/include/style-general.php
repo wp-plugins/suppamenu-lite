@@ -7,7 +7,7 @@ echo '<h3 class="ctf_page_title">' . __('General Style','suppa_menu') . '</h3>';
  * @package 	CTFramework
  * @author		Sabri Taieb ( codezag )
  * @copyright	Copyright (c) Sabri Taieb
- * @link		http://codetemp.com
+ * @link		http://vamospace.com
  * @since		Version 1.0
  *
  */

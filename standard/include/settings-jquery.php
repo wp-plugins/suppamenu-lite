@@ -1,19 +1,6 @@
 <?php
 echo '<h3 class="ctf_page_title">' . __('Jquery settings','suppa_menu') . '</h3>';
 
-
-// Selec jQuery Mode
-$this->add_checkbox(
-	array(
-		'group_id'			=> 'settings',
-		'option_id'			=> 'settings-jquery_enable',
-		'title'				=> __( 'Enable jQuery on noConflict Mode' , 'suppa_menu' ),
-		'desc'				=> __( 'Enable jquery on noConflict mode ' , 'suppa_menu' ),
-		'value'				=> 'off',
-		'fetch'				=> 'yes',
-	)
-);
-
 // jQuery Trigger
 $this->add_select(
 	array(
@@ -56,7 +43,32 @@ $this->add_select(
 								"easeOutQuad" => "easeOutQuad",
 								"easeInOutQuad" => "easeInOutQuad",
 								"easeInCubic" => "easeInCubic",
-
+								"easeOutCubic" => "easeOutCubic",
+								"easeInOutCubic" => "easeInOutCubic",
+								"easeInQuart" => "easeInQuart",
+								"easeOutQuart" => "easeOutQuart",
+								"easeInOutQuart" => "easeInOutQuart",
+								"easeInQuint" => "easeInQuint",
+								"easeOutQuint" => "easeOutQuint",
+								"easeInOutQuint" => "easeInOutQuint",
+								"easeInExpo" => "easeInExpo",
+								"easeOutExpo" => "easeOutExpo",
+								"easeInOutExpo" => "easeInOutExpo",
+								"easeInSine" => "easeInSine",
+								"easeOutSine" => "easeOutSine",
+								"easeInOutSine" => "easeInOutSine",
+								"easeInCirc" => "easeInCirc",
+								"easeOutCirc" => "easeOutCirc",
+								"easeInOutCirc" => "easeInOutCirc",
+								"easeInElastic" => "easeInElastic",
+								"easeOutElastic" => "easeOutElastic",
+								"easeInOutElastic" => "easeInOutElastic",
+								"easeInBack" => "easeInBack",
+								"easeOutBack" => "easeOutBack",
+								"easeInOutBack" => "easeInOutBack",
+								"easeInBounce" => "easeInBounce",
+								"easeOutBounce" => "easeOutBounce",
+								"easeInOutBounce" => "easeInOutBounce",
 								),
 		'value'				=> 'linear',
 	)

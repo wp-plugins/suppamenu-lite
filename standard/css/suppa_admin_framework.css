@@ -4,12 +4,15 @@
  * @package 	CTFramework
  * @author		Sabri Taieb ( codezag )
  * @copyright	Copyright (c) Sabri Taieb
- * @link		http://codetemp.com
+ * @link		http://vamospace.com
  * @since		Version 1.0
  *
  */
 
-/** =Menu **/
+/** =General **/
+.codetemp_main_nav li{
+	display: none;
+}
 
 /* Options */
 .codetemp_tab .ctf_kodda_options {

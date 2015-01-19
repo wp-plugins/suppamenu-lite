@@ -1,17 +1,16 @@
 <?php
 
 /*
-|   Suppa Back-End Menu Walker
-|
-|*/
+ |  Suppa Back-End Menu Walker
+*/
 
-if( !class_exists( 'suppa_menu_backend_walker' ) )
-{
-/**
- * @package CTFramework
- * @since 1.0
- * @uses Walker_Nav_Menu
- */
+if( !class_exists( 'suppa_menu_backend_walker' ) ){
+
+    /**
+     * @package CTFramework
+     * @since 1.0
+     * @uses Walker_Nav_Menu
+     */
     class suppa_menu_backend_walker extends Walker_Nav_Menu
     {
         protected $suppa_menu_type;
@@ -232,7 +231,7 @@ if( !class_exists( 'suppa_menu_backend_walker' ) )
                                     ?>
 
                                     <span class="fl" ><?php echo $title; ?></span>
-                                    <input type="text" value="<?php echo $value; ?>" id="edit-<?php echo $key.'-'.$item_id; ?>" class="fr <?php echo $key; ?>" name="<?php echo $key . "[". $item_id ."]";?>" />
+                                    <input maxlength="7" type="text" value="<?php echo $value; ?>" id="edit-<?php echo $key.'-'.$item_id; ?>" class="fr <?php echo $key; ?>" name="<?php echo $key . "[". $item_id ."]";?>" />
 
                                     <?php
                                         // Open Sub Postion
@@ -269,6 +268,7 @@ if( !class_exists( 'suppa_menu_backend_walker' ) )
                                     <div class="admin_suppa_clearfix"></div>
 
                                 </div>
+
 
                                 <!-- Menu Type : Posts -->
                                 <div <?php if( 'posts' != $menu_type) echo "style='display:none;'"; ?> class="admin_suppa_box_option_inside suppa_box_type admin_suppa_box_option_inside_posts">

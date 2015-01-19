@@ -5,7 +5,7 @@
  * @package 	CTFramework
  * @author		Sabri Taieb ( codezag )
  * @copyright	Copyright (c) Sabri Taieb
- * @link		http://codetemp.com
+ * @link		http://vamospace.com
  * @since		Version 1.0
  *
  */

@@ -10,14 +10,14 @@ if( !class_exists('ctf_fonts') )
 	class ctf_fonts {
 
 		public static $standard = array(
-			'Arial' 			=> "'Arial' , sans-serif",
-			'Arial Black' 	=> "'Arial Black' , sans-serif",
-			'Verdana' 		=> "'Verdana' , sans-serif",
-			'Impact' 		=> "'Impact' , sans-serif",
-			'Helvetica' 	=> "'Helvetica' , sans-serif",
-			'Georgia' 		=> "'Georgia' , sans-serif",
-			'Tahoma' 		=> "'Tahoma' , sans-serif",
-			'Courier New' 	=> "'Courier New' , sans-serif"
+			'Arial' 			=> "Arial , sans-serif",
+			'Arial Black' 	=> "Arial Black , sans-serif",
+			'Verdana' 		=> "Verdana , sans-serif",
+			'Impact' 		=> "Impact , sans-serif",
+			'Helvetica' 	=> "Helvetica , sans-serif",
+			'Georgia' 		=> "Georgia , sans-serif",
+			'Tahoma' 		=> "Tahoma , sans-serif",
+			'Courier New' 	=> "Courier New , sans-serif"
 		);
 
 		/**
@@ -89,7 +89,7 @@ if( !class_exists('ctf_fonts') )
 		        $data = json_decode($response, true);
 		        $items = $data['items'];
 		        foreach ($items as $item){
-		            $font_list[$item['family']] .= "'" .$item['family'] . "'";
+		            $font_list[$item['family']] = $item['family'];
 		        }
 
 		        //save list to db

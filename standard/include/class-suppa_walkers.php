@@ -6,7 +6,7 @@
  * @package 	CTFramework
  * @author		Sabri Taieb ( codezag )
  * @copyright	Copyright (c) Sabri Taieb
- * @link		http://codetemp.com
+ * @link		http://vamospace.com
  * @since		Version 1.0
  *
  */
@@ -16,10 +16,9 @@
  * @package CTFramework
  *
  */
-if( !class_exists( 'suppa_walkers' ) )
-{
-	class suppa_walkers
-	{
+if( !class_exists( 'suppa_walkers' ) ){
+
+	class suppa_walkers{
 
 		static $project_settings;
 		static $offline_db;
@@ -29,15 +28,13 @@ if( !class_exists( 'suppa_walkers' ) )
 		 * @package CTFramework
 		 *
 		 */
-		public function __construct( $project_settings , $offline_db )
-		{
+		public function __construct( $project_settings , $offline_db ){
+
 			/** Variables **/
 			self::$project_settings = $project_settings;
 			self::$offline_db 		= $offline_db;
 
-
-			if( count( self::$offline_db ) == 0 )
-			{
+			if( count( self::$offline_db ) == 0 ){
 				self::$offline_db['settings-responsive_text'] = 'Menu';
 				self::$offline_db['logo_enable'] = 'off';
 				self::$offline_db['rwd_logo_enable'] = 'off';
@@ -235,8 +232,7 @@ if( !class_exists( 'suppa_walkers' ) )
 		{
 			global $fontAwesome;
 
-			if( basename( $_SERVER['PHP_SELF'] ) == "nav-menus.php" )
-			{
+			if( basename( $_SERVER['PHP_SELF'] ) == "nav-menus.php" ){
 				// Add Widgets
 				echo '
 				<input type="hidden" id="admin_suppa_plugin_url" value="'.plugins_url( '../js/tinymce/' , __FILE__ ).'" />
@@ -338,21 +334,12 @@ if( !class_exists( 'suppa_walkers' ) )
 		 */
 		function replace_args($args){
 
-			if( get_option('suppa_locations_skins') )
-			{
-				$saved_locations 	= get_option('suppa_locations_skins');
+			if( get_option('suppa_locations_skins') ){
 
 				/** RWD **/
 				$rwd_menu_text = self::$offline_db['settings-responsive_text'];
-				if( function_exists('icl_t') )
-				{
+				if( function_exists('icl_t') ){
 					$rwd_menu_text = icl_t('admin_texts_plugin_CTF_suppa_menu', '[CTF_suppa_menu__group__settings]settings-responsive_text', 'Menu');
-				}
-
-				$rwd_logo = "";
-				if( suppa_walkers::$offline_db['rwd_logo_enable'] == 'on' )
-				{
-					$rwd_logo = '<a href="' . $site_url . '" class="suppa_rwd_logo" ><img src="' . suppa_walkers::$offline_db['rwd_logo_src'] . '" data-retina_logo="' . suppa_walkers::$offline_db['rwd_logo_retina_src'] . '" /></a>';
 				}
 
 				$rwd_wrap = '
@@ -365,24 +352,30 @@ if( !class_exists( 'suppa_walkers' ) )
 				</div>
 				';
 
-				foreach ( $saved_locations as $location => $skin)
-				{
-					if( $args['theme_location'] == $location )
-					{
-						if( get_option('suppa_thumbs_sizes') )
-						{
-							$thumbs = get_option('suppa_thumbs_sizes');
-						}
+				$saved_locations 	= get_option('suppa_locations_skins');
+				foreach ( $saved_locations as $location => $skin){
 
-						$args['walker'] 				= new suppa_menu_walker( $thumbs[$skin] );
-						$args['container_class'] 		= $args['theme_location'].' suppaMenu_wrap';
-						$args['menu_class']				= 'suppaMenu';
-						$args['items_wrap']				= '<div id="%1$s" class="%2$s">%3$s</div>' . $rwd_wrap;
+					if( $args['theme_location'] == $location ){
+
+						// Get Skin Options
+						$skin_options = get_option('suppamenu_skin_'.$skin);
+
+						// Get Thumbs Sizes
+						$thumbs = get_option('suppa_thumbs_sizes');
+						$thumbs = $thumbs[$skin];
+
+						$args['walker'] 				= new suppa_menu_walker( $skin_options, $thumbs );
+						$args['container_class'] 	= $args['theme_location'].' suppaMenu_wrap';
+						$args['menu_class']			= 'suppaMenu';
+						$args['items_wrap']			= '<div id="%1$s" class="%2$s">%3$s</div>' . $rwd_wrap;
 						$args['depth']					= 4;
-						$args['container']				= 'div';
-					}
-				}
-			}
+						$args['container']			= 'div';
+
+					}// End If
+
+				}// End Foreach
+
+			}// End If
 
 			return $args;
 		}
@@ -503,7 +496,3 @@ if( !class_exists( 'suppa_walkers' ) )
 		}
 	}
 }
-
-/** Include Walkers **/
-require('walker-backend.php');
-require('walker-frontend.php');

@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Suppa Menu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-20 09:53+0100\n"
-"PO-Revision-Date: 2014-12-20 09:53+0100\n"
+"POT-Creation-Date: 2015-01-17 21:59+0100\n"
+"PO-Revision-Date: 2015-01-17 22:00+0100\n"
 "Last-Translator: Angelo Giammarresi <info@wocmultimedia.com>\n"
 "Language-Team: Angelo Giammarresi <info@wocmultimedia.com>\n"
 "Language: it\n"
@@ -15,117 +15,416 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: index.php:152
-msgid "<span class=\"icon ct-wrench\"></span>Settings"
-msgstr "<span class=\"icon ct-wrench\"></span>Impostazioni"
+#: index.php:159
+msgid "Skin Settings"
+msgstr "Impostazioni Collegamenti "
 
-#: index.php:153 standard/include/settings-logo.php:9
+#: index.php:160 standard/include/settings-logo.php:9
 msgid "Layout &amp; Logo"
 msgstr "Layout &amp; Logo"
 
-#: index.php:154
-msgid "jQuery"
-msgstr "jQuery"
-
-#: index.php:155
+#: index.php:161
 msgid "Responsive"
 msgstr "Responsive"
 
-#: index.php:156
+#: index.php:162
 msgid "Sticky Menu"
 msgstr "Menu Fisso"
 
-#: index.php:157
-msgid "Suppport WP Menus"
-msgstr "Support WP Menu"
-
-#: index.php:158 index.php:170
+#: index.php:163 index.php:178
 msgid "Search Form"
 msgstr "Modulo Ricerca"
 
-#: index.php:159
+#: index.php:164
 msgid "Posts Settings"
 msgstr "Impostazioni Post"
 
-#: index.php:161
+#: index.php:165
+msgid "jQuery"
+msgstr "jQuery"
+
+#: index.php:166
+msgid "Suppport WP Menus"
+msgstr "Support WP Menu"
+
+#: index.php:169
 msgid "<span class=\"icon ct-magic\"></span>Menu Style"
 msgstr "<span class=\"icon ct-magic\"></span>Stile Menu"
 
-#: index.php:162 standard/include/settings-logo.php:26
+#: index.php:170 standard/include/settings-logo.php:26
 msgid "Logo"
 msgstr "Logo"
 
-#: index.php:163
+#: index.php:171
 msgid "Top Level Links"
 msgstr "Collegamenti Livello Primario"
 
-#: index.php:164
+#: index.php:172
 msgid "Current Links"
 msgstr "Collegamenti Attuali"
 
-#: index.php:165
+#: index.php:173
 msgid "Submenu General"
 msgstr "Submenu Generale"
 
-#: index.php:166
+#: index.php:174
 msgid "[Latest Posts]"
 msgstr "[Posti Recenti]"
 
-#: index.php:167
+#: index.php:175
 msgid "[Mega Posts]"
 msgstr "[Mega Posts]"
 
-#: index.php:168
+#: index.php:176
 msgid "[Mega Links]"
 msgstr "[Mega Links]"
 
-#: index.php:169
+#: index.php:177
 msgid "[DropDown]"
 msgstr "[DropDown]"
 
-#: index.php:171
+#: index.php:179
 msgid "[Mega Links Two]"
 msgstr "[Mega Links Two]"
 
-#: index.php:173
+#: index.php:181
 msgid "<span class=\"icon ct-magic\"></span>Menu Icons Style"
 msgstr "<span class=\"icon ct-magic\"></span>Stile Menu Icone"
 
-#: index.php:174 standard/include/style-top_level_icons.php:2
+#: index.php:182 standard/include/style-top_level_icons.php:2
 msgid "Top Level Icons"
 msgstr "Icone Livello Primario"
 
-#: index.php:175
+#: index.php:183
 msgid "[Mega Links] Title Icon"
 msgstr "[Mega Links] Icona Titolo "
 
-#: index.php:176
+#: index.php:184
 msgid "[Mega Links] Links Icon"
 msgstr "[Mega Links] Icona Collegamenti"
 
-#: index.php:177
+#: index.php:185
 msgid "[Dropdown] Icons"
 msgstr "[Dropdown] Icone"
 
-#: index.php:178
+#: index.php:186
 msgid "Social Media"
 msgstr "Social Media"
 
-#: index.php:180
+#: index.php:188
 msgid "<span class=\"icon ct-magic\"></span>Responsive Style"
 msgstr "<span class=\"icon ct-magic\"></span>Stile Responsive"
 
-#: index.php:181
+#: index.php:189
 msgid "<span class=\"icon ct-magic\"></span>Responsive Icons Style"
 msgstr "<span class=\"icon ct-magic\"></span>Icone Stile Responsive"
 
-#: index.php:182
+#: index.php:190
 msgid "<span class=\"icon ct-magic\"></span>Custom CSS"
 msgstr "<span class=\"icon ct-magic\"></span>CSS Personalizzato"
 
-#: index.php:417
+#: index.php:425
 msgid "Uploads Folder Must Be Writable"
 msgstr "La Cartella dei Caricamenti Deve essere scrivibile."
+
+#: core/ctf_setup.class.php:164
+msgid "Support Forum"
+msgstr "Forum di Supporto"
+
+#: core/ctf_setup.class.php:169
+msgid "Guide"
+msgstr "Guida"
+
+#: core/ctf_setup.class.php:171 core/ctf_setup.class.php:233
+msgid "Save Skin"
+msgstr "Salva Skin"
+
+#: core/ctf_setup.class.php:172
+msgid "Skin Name"
+msgstr "Nome Skin"
+
+#: core/ctf_options.class.php:127 core/ctf_options.class.php:176
+#: core/ctf_options.class.php:218 core/ctf_options.class.php:267
+#: core/ctf_options.class.php:320 core/ctf_options.class.php:379
+#: core/ctf_options.class.php:435 core/ctf_options.class.php:490
+#: core/ctf_options.class.php:541 core/ctf_options.class.php:596
+#: core/ctf_options.class.php:712 core/ctf_options.class.php:834
+msgid "<script>alert(\"DEBUG : ID Exists "
+msgstr "<script>alert(\"DEBUG : ID Esiste "
+
+#: core/ctf_options.class.php:557
+msgid "Upload"
+msgstr "Carica"
+
+#: core/ctf_options.class.php:668
+msgid "Demo"
+msgstr "Demo"
+
+#: core/ctf_options.class.php:911 core/ctf_options.class.php:979
+msgid "Funny Business ?"
+msgstr "Funny Business ?"
+
+#: core/ctf_options.class.php:975
+msgid ""
+"<div>Settings Saved</div><br/><br/><div class=\"suppa_save_alert\">Please "
+"clear your browser cache</div>"
+msgstr ""
+"<div>Impostazioni Salvate</div><br/><br/><div class=\"suppa_save_alert\">Per "
+"favore svuota la cache del tuo browser</div>"
+
+#: standard/include/settings-general.php:8
+msgid "Load a Skin"
+msgstr "Carica Interfaccia (Skin)"
+
+#: standard/include/settings-general.php:9
+msgid "Load the skin options to admin panel, then modify them and save"
+msgstr ""
+"Carica Opzioni Interfaccia (Skin) per amministrare il pannello, puoi poi "
+"modificarle e salvarle"
+
+#: standard/include/settings-general.php:12
+#, fuzzy
+msgid "Load Skin"
+msgstr "Carica Interfaccia (Skin)"
+
+#: standard/include/style-submenu_links.php:13
+msgid "Submenu Mega Links Style"
+msgstr "Stile Collegamenti Submenu Mega"
+
+#: standard/include/style-submenu_links.php:21
+msgid "Column Right Margin"
+msgstr "Margine Destro Colonne"
+
+#: standard/include/style-submenu_links.php:22
+msgid "Set the column right margin (px)"
+msgstr "Imposta Margine Destro Colonne (px)"
+
+#: standard/include/style-submenu_links.php:34
+msgid "Title Typography"
+msgstr "Tipografia Titolo"
+
+#: standard/include/style-submenu_links.php:35
+msgid "Set the title typography"
+msgstr "Imposta Tipografia Titolo"
+
+#: standard/include/style-submenu_links.php:51
+msgid "Title Color ( Hover )"
+msgstr "Colore Titolo (al Passaggio del mouse)"
+
+#: standard/include/style-submenu_links.php:52
+msgid "Set the title color when you hover over"
+msgstr "Imposta Colore Titolo al Passaggio del mouse"
+
+#: standard/include/style-submenu_links.php:63
+msgid "Title Bottom Border Color"
+msgstr "Colore Bordo Inferiore Titolo"
+
+#: standard/include/style-submenu_links.php:64
+msgid "Set the title bottom border color"
+msgstr "Imposta Colore Bordo Inferiore Titolo"
+
+#: standard/include/style-submenu_links.php:71
+msgid "Title Padding"
+msgstr "Rientri Titolo"
+
+#: standard/include/style-submenu_links.php:113
+msgid "Set the title padding ( Top , Right , Bottom , Left )"
+msgstr "Imposta Rientri Titoli ( Superiore, Destro, Inferiore, Sinistro )"
+
+#: standard/include/style-submenu_links.php:126
+#: standard/include/style-dropdown.php:10
+#: standard/include/style-megaLinksTwo.php:177
+msgid "Links Typography"
+msgstr "Tipografia Collegamenti"
+
+#: standard/include/style-submenu_links.php:127
+#: standard/include/style-dropdown.php:11
+#: standard/include/style-megaLinksTwo.php:178
+msgid "Set the links typography"
+msgstr "Imposta Tipografia Collegamenti"
+
+#: standard/include/style-submenu_links.php:143
+#: standard/include/style-dropdown.php:27
+#: standard/include/style-megaLinksTwo.php:194
+msgid "Links Color ( Hover )"
+msgstr "Colore Collegamenti (al Passaggio del mouse)"
+
+#: standard/include/style-submenu_links.php:144
+#: standard/include/style-megaLinksTwo.php:195
+msgid "Set the Links color when you hover over"
+msgstr "Imposta Colore Collegamenti al Passaggio del mouse"
+
+#: standard/include/style-submenu_links.php:151
+#: standard/include/style-dropdown.php:60
+#: standard/include/style-megaLinksTwo.php:202
+msgid "Links Padding"
+msgstr "Rientri Collegamenti"
+
+#: standard/include/style-submenu_links.php:193
+#: standard/include/style-dropdown.php:102
+#: standard/include/style-megaLinksTwo.php:244
+msgid "Set the links padding ( Top , Right , Bottom , Left )"
+msgstr ""
+"Imposta Rientri Collegamenti ( Superiore, Destro, Inferiore, Sinistro )"
+
+#: standard/include/style-submenu_links.php:205
+#: standard/include/style-dropdown.php:113
+#: standard/include/style-top_level.php:115
+#: standard/include/style-megaLinksTwo.php:256
+msgid "Description Typography"
+msgstr "Tipografia Descrizione"
+
+#: standard/include/style-submenu_links.php:206
+#: standard/include/style-dropdown.php:114
+#: standard/include/style-top_level.php:116
+#: standard/include/style-megaLinksTwo.php:257
+msgid "Set the Description typography"
+msgstr "Imposta Tipografia Descrizione"
+
+#: standard/include/style-submenu_links.php:223
+#: standard/include/style-dropdown.php:131
+#: standard/include/style-top_level.php:39
+#: standard/include/style-top_level.php:133
+#: standard/include/style-megaLinksTwo.php:274
+#: standard/include/style-rwd.php:168
+msgid "Color ( Hover )"
+msgstr "Colore (al Passaggio del mouse)"
+
+#: standard/include/style-submenu_links.php:224
+#: standard/include/style-dropdown.php:132
+#: standard/include/style-top_level.php:134
+#: standard/include/style-megaLinksTwo.php:275
+msgid "Set the description color when you hover over"
+msgstr "Imposta Colore Descrizione al Passaggio del mouse"
+
+#: standard/include/style-submenu_links.php:235
+#: standard/include/style-dropdown.php:143
+#: standard/include/style-top_level.php:145
+#: standard/include/style-megaLinksTwo.php:286
+msgid "Top Padding ( Hover )"
+msgstr "Rientro Superiore (al Passaggio del mouse)"
+
+#: standard/include/style-submenu_links.php:236
+#: standard/include/style-dropdown.php:144
+#: standard/include/style-top_level.php:146
+#: standard/include/style-megaLinksTwo.php:287
+msgid "Set the description top padding"
+msgstr "Imposta Descrizione Rientro Superiore"
+
+#: standard/include/settings-rwd.php:2
+msgid "Responsive settings"
+msgstr "Impostazioni Responsive"
+
+#: standard/include/settings-rwd.php:11
+msgid "Enable Responsive Design on Mobile "
+msgstr "Attiva Disegno Reattivo su Mobile"
+
+#: standard/include/settings-rwd.php:12
+msgid "Enable the responsive design mobile devices( IOS, Android ... )"
+msgstr "Attiva Disegno Reattivo su Dispositivi Portatili ( IOS, Android ... )"
+
+#: standard/include/settings-rwd.php:25
+msgid "RWD Start Work When Device <= To This Width"
+msgstr "RWD si attiva quando dispositivo <= a questa larghezza"
+
+#: standard/include/settings-rwd.php:26
+msgid "Set the width for RWD to start work"
+msgstr "Imposta Larghezza quando RWD deve attivarsi"
+
+#: standard/include/settings-rwd.php:36
+msgid "Add Responsive Text "
+msgstr "Aggiungi Testo Reattivo"
+
+#: standard/include/settings-rwd.php:37
+msgid "Add a text like \"Responsive Menu\""
+msgstr "Aggiungi un testo tipo \"Menu Reattivo\""
+
+#: standard/include/style-dropdown.php:2
+msgid "Submenu Dropdown Style"
+msgstr "Stile Sottomenu a Discesa (Dropdown)"
+
+#: standard/include/style-dropdown.php:28
+msgid "Set the links color when you hover over"
+msgstr "Imposta Colore Collegamenti al Passaggio del mouse"
+
+#: standard/include/style-dropdown.php:39
+msgid "Links Background Color ( Hover )"
+msgstr "Colore Sfondo Collegamenti (Passaggio del mouse)"
+
+#: standard/include/style-dropdown.php:40
+msgid "Set the links background color when user hover over"
+msgstr "Imposta Colore Sfondo Collegamenti quando l'utente passa su col mouse"
+
+#: standard/include/style-dropdown.php:51
+msgid "Links Bottom Border Color"
+msgstr "Colore Bordo Inferiore Collegamenti"
+
+#: standard/include/style-dropdown.php:52
+msgid "Set the links bottom border color"
+msgstr "Imposta Colore Bordo Collegamenti"
+
+#: standard/include/style-dropdown.php:153
+#: standard/include/style-top_level.php:156 standard/include/style-rwd.php:224
+msgid "Arrow Style"
+msgstr "Stile Freccia"
+
+#: standard/include/style-dropdown.php:200
+msgid ""
+"Set the dropdown arrow style ( Size , Color , Color[Hover] , Margin Right , "
+"Margin Top )"
+msgstr ""
+"Imposta lo stile della freccia menu a discesa (Dimensione, Colore. Colore "
+"[al passaggio del mouse], Margine Destro, Margine Superiore)"
+
+#: standard/include/style-top_level.php:14
+msgid "Top Level Links Style"
+msgstr "Stile Collegamenti Livello Primario"
+
+#: standard/include/style-top_level.php:21
+msgid "Top Links Typography"
+msgstr "Tipografia Collegamenti Livello Primario"
+
+#: standard/include/style-top_level.php:22
+msgid "Set the top links typography"
+msgstr "Imposta Tipografia Collegamenti Livello Primario"
+
+#: standard/include/style-top_level.php:40
+msgid "Set the top links color when you hover over"
+msgstr "Imposta Colore Collegamenti Superiori al Passaggio del mouse"
+
+#: standard/include/style-top_level.php:51 standard/include/style-rwd.php:192
+msgid "Background ( Hover )"
+msgstr "Sfondo (al Passaggio del mouse)"
+
+#: standard/include/style-top_level.php:52
+msgid "Set the top links background color when you hover over"
+msgstr "Imposta Colore Sfondo Collegamenti Superiori al Passaggio del mouse"
+
+#: standard/include/style-top_level.php:59
+msgid "Padding"
+msgstr "Rientri"
+
+#: standard/include/style-top_level.php:91
+msgid "Set the padding ( Top, Left, Right )"
+msgstr "Imposta Rientri (Alto, Sinistro, Destro)"
+
+#: standard/include/style-top_level.php:101
+msgid "Top Link Border color"
+msgstr "Colore Bordo Collegameti Livello Primario"
+
+#: standard/include/style-top_level.php:102
+msgid "Set the top links border color"
+msgstr "Imposta Colore Bordo Collegameti Livello Primario"
+
+#: standard/include/style-top_level.php:203
+#: standard/include/style-megaLinksTwo.php:165
+#: standard/include/style-rwd.php:253 standard/include/style-megaposts.php:167
+msgid ""
+"Set the arrow style ( Size , Color , Color[Hover] , Margin Right , Margin "
+"Top )"
+msgstr ""
+"Imposta lo stile della freccia  (Dimensione, Colore, Colore [al passaggio "
+"del mouse], Margine Destro, Margine Superiore)"
 
 #: standard/include/style-general.php:2
 msgid "General Style"
@@ -160,8 +459,8 @@ msgid "Set the menu height"
 msgstr "Imposta Altezza Menu"
 
 #: standard/include/style-general.php:85 standard/include/style-logo.php:58
-#: standard/include/style-rwd.php:180
 #: standard/include/style-submenu_general.php:20
+#: standard/include/style-rwd.php:180
 msgid "Background"
 msgstr "Sfondo Menu"
 
@@ -205,23 +504,292 @@ msgid "Border Radius"
 msgstr "Raggio Bordo"
 
 #: standard/include/style-general.php:311 standard/include/style-logo.php:284
-#: standard/include/style-search_form.php:243
 #: standard/include/style-submenu_general.php:246
+#: standard/include/style-search_form.php:210
 msgid ""
 "Set the border radius ( Top Left , Top Right , Bottom Right , Bottom Left )"
 msgstr ""
 "Imposta Raggio Bordi (Superiore Sinistro, Superiore Destro, Inferiore "
 "Destro, Inferiore Sinistro)"
 
-#: standard/include/settings-general.php:8
-msgid "Load a Skin"
-msgstr "Carica Interfaccia (Skin)"
+#: standard/include/style-current_top_link.php:2
+msgid "Current Links Style"
+msgstr "Stile Collegamenti Attuali"
 
-#: standard/include/settings-general.php:9
-msgid "Load the skin options to admin panel, then modify them and save"
+#: standard/include/style-current_top_link.php:11
+msgid "Current Top Link color"
+msgstr "Colore Collegamenti Attuali Livello Primario"
+
+#: standard/include/style-current_top_link.php:12
+msgid "Set the current top links color"
+msgstr "Imposta Colore Collegamenti Attuali Livello Primario"
+
+#: standard/include/style-current_top_link.php:23
+msgid "Current Top Link Background Color"
+msgstr "Colore Sfondo Collegamenti Attuali Livello Primario"
+
+#: standard/include/style-current_top_link.php:24
+msgid "Set the current top links background color"
+msgstr "Imposta Colore Sfondo Collegamenti Attuali Livello Primario"
+
+#: standard/include/style-current_top_link.php:35
+msgid "Current Top Link Arrow Color "
+msgstr "Colore Freccia Collegamenti Attuali Livello Primario"
+
+#: standard/include/style-current_top_link.php:36
+msgid "Set the current top links arrow color"
+msgstr "Imposta Colore Freccia Collegamenti Attuali Livello Primario"
+
+#: standard/include/style-current_top_link.php:52
+msgid "Submenu Current Link color"
+msgstr "Colore Collegamenti Sottomenu"
+
+#: standard/include/style-current_top_link.php:53
+msgid "Set the submenu current links color [Dropdown,Mega Links]"
+msgstr "Imposta Colore Collegamenti Sottomenu [Dropdown,Mega Links]"
+
+#: standard/include/style-current_top_link.php:64
+msgid "Submenu Current Link Background Color"
+msgstr "Colore Sfondo Sottomenu Collegamenti Attuali"
+
+#: standard/include/style-current_top_link.php:65
+msgid "Set the submenu current links background color [Dropdown,Mega Links]"
 msgstr ""
-"Carica Opzioni Interfaccia (Skin) per amministrare il pannello, puoi poi "
-"modificarle e salvarle"
+"Imposta Colore Sfondo Sottomenu Collegamenti Attuali [Dropdown,Mega Links]"
+
+#: standard/include/style-current_top_link.php:76
+msgid "Submenu Current Link Arrow Color "
+msgstr "Colore Freccia Sottomenu Collegamenti Attuali"
+
+#: standard/include/style-current_top_link.php:77
+msgid "Set the submenu current links arrow color [Dropdown,Mega Links]"
+msgstr ""
+"Imposta Colore Freccia Sottomenu Collegamenti Attuali [Dropdown,Mega Links]"
+
+#: standard/include/style-dropdown_icons.php:2
+msgid "DropDown Links Icons"
+msgstr "Icone Collegamenti a Discesa"
+
+#: standard/include/style-dropdown_icons.php:9
+#: standard/include/style-megaLinksTwo_mainLinks_icons.php:9
+#: standard/include/style-submenu_mega_link_icons.php:9
+#: standard/include/style-top_level_icons.php:9
+#: standard/include/style-rwd_icons.php:11
+#: standard/include/style-social.php:40
+#: standard/include/style-megaLinksTwo_links_icons.php:9
+#: standard/include/style-submenu_mega_title_icons.php:9
+msgid "FontAwesome Icons Size"
+msgstr "Dimensione Icone FontAwesome"
+
+#: standard/include/style-dropdown_icons.php:10
+#: standard/include/style-megaLinksTwo_mainLinks_icons.php:10
+#: standard/include/style-submenu_mega_link_icons.php:10
+#: standard/include/style-top_level_icons.php:10
+#: standard/include/style-rwd_icons.php:12
+#: standard/include/style-social.php:41
+#: standard/include/style-megaLinksTwo_links_icons.php:10
+#: standard/include/style-submenu_mega_title_icons.php:10
+msgid "Set the FontAwesome icons size ( px )"
+msgstr "Imposta Dimensione Icone FontAwesome ( px )"
+
+#: standard/include/style-dropdown_icons.php:18
+#: standard/include/style-megaLinksTwo_mainLinks_icons.php:18
+#: standard/include/style-submenu_mega_link_icons.php:18
+#: standard/include/style-top_level_icons.php:18
+#: standard/include/style-rwd_icons.php:20
+#: standard/include/style-social.php:49
+#: standard/include/style-megaLinksTwo_links_icons.php:18
+#: standard/include/style-submenu_mega_title_icons.php:18
+msgid "FontAwesome Icon Margin"
+msgstr "Margini Icone FontAwesome"
+
+#: standard/include/style-dropdown_icons.php:40
+#: standard/include/style-megaLinksTwo_mainLinks_icons.php:40
+#: standard/include/style-submenu_mega_link_icons.php:40
+#: standard/include/style-megaLinksTwo_links_icons.php:40
+#: standard/include/style-submenu_mega_title_icons.php:40
+msgid "Set the font awesome icon margin ( Top , Right ) you can use - ( -2px )"
+msgstr ""
+"Imposta Margini Icone FontAwesome (Superiore, Destro) si può usare anche "
+"simbolo - (es.: -2px)"
+
+#: standard/include/style-dropdown_icons.php:47
+#: standard/include/style-megaLinksTwo_mainLinks_icons.php:47
+#: standard/include/style-submenu_mega_link_icons.php:47
+#: standard/include/style-top_level_icons.php:48
+#: standard/include/style-rwd_icons.php:49
+#: standard/include/style-social.php:78
+#: standard/include/style-megaLinksTwo_links_icons.php:47
+#: standard/include/style-submenu_mega_title_icons.php:47
+msgid "Uploaded Icons Size"
+msgstr "Dimensioni Icone caricate"
+
+#: standard/include/style-dropdown_icons.php:69
+#: standard/include/style-megaLinksTwo_mainLinks_icons.php:69
+#: standard/include/style-submenu_mega_link_icons.php:69
+#: standard/include/style-top_level_icons.php:70
+#: standard/include/style-rwd_icons.php:71
+#: standard/include/style-social.php:100
+#: standard/include/style-megaLinksTwo_links_icons.php:69
+#: standard/include/style-submenu_mega_title_icons.php:69
+msgid "Set the Uploaded icons size ( Width , Height )"
+msgstr "Impostazioni Dimensioni Icone caricate (Larghezza, Altezza)"
+
+#: standard/include/style-dropdown_icons.php:75
+#: standard/include/style-megaLinksTwo_mainLinks_icons.php:76
+#: standard/include/style-submenu_mega_link_icons.php:76
+#: standard/include/style-top_level_icons.php:76
+#: standard/include/style-rwd_icons.php:77
+#: standard/include/style-social.php:106
+#: standard/include/style-megaLinksTwo_links_icons.php:76
+#: standard/include/style-submenu_mega_title_icons.php:75
+msgid "Uploaded Icon Margin"
+msgstr "Margini Icone caricate"
+
+#: standard/include/style-dropdown_icons.php:97
+msgid "Set the uploaded icon margin ( Top , Right ) you can use - ( -2px )"
+msgstr ""
+"Imposta Margini Icone caricate (Superiore, Destro) si può usare anche "
+"simbolo - (es.: -2px)"
+
+#: standard/include/settings-theme_implementation.php:2
+msgid "Theme Implementation"
+msgstr "Implementazione Tema"
+
+#: standard/include/settings-theme_implementation.php:10
+msgid "Support WP 3.+ Menus"
+msgstr "Supporta Menu WP 3.+"
+
+#: standard/include/settings-theme_implementation.php:11
+msgid ""
+"Enable this if your theme does not support wordpress 3.+ menus, then paste "
+"this code &#60;?php suppa_implement(); ?&#62; in your header.php after body "
+"tag"
+msgstr ""
+"Attiva questa opzione se il tuo tema non supporta Menu WP 3.+, poi incolla "
+"questo codice &#60;?php suppa_implement(); ?&#62; nella tua header.php dopo "
+"il tag body "
+
+#: standard/include/style-megaLinksTwo_mainLinks_icons.php:2
+#: standard/include/style-submenu_mega_link_icons.php:2
+#: standard/include/style-megaLinksTwo_links_icons.php:2
+msgid "\"Mega Links\" Links Icons"
+msgstr "\"Mega Links\" Icone Collegamenti"
+
+#: standard/include/style-megaLinksTwo_mainLinks_icons.php:98
+#: standard/include/style-submenu_mega_link_icons.php:98
+#: standard/include/style-top_level_icons.php:98
+#: standard/include/style-rwd_icons.php:99
+#: standard/include/style-social.php:128
+#: standard/include/style-megaLinksTwo_links_icons.php:98
+#: standard/include/style-submenu_mega_title_icons.php:97
+msgid "Set the uploaded icon margin ( Top , Right )"
+msgstr "Imposta margini icona caricata ( Superiore, Destro )"
+
+#: standard/include/style-submenu_posts.php:13
+msgid "Submenu Latest Posts Style"
+msgstr "Stile Sottomenu Post Recenti"
+
+#: standard/include/style-submenu_posts.php:21
+msgid "[Latest Posts] Thumbnail Width"
+msgstr "[Latest Posts] Larghezza Immagine Anteprima"
+
+#: standard/include/style-submenu_posts.php:22
+msgid "Set the latest posts menu type Thumbnail width"
+msgstr "Imposta Larghezza Immagine Anteprima del menu Post Recenti"
+
+#: standard/include/style-submenu_posts.php:33
+msgid "[Latest Posts] Thumbnail Height"
+msgstr "[Latest Posts] Altezza Immagine Anteprima"
+
+#: standard/include/style-submenu_posts.php:34
+msgid "Set the latest posts menu type Thumbnail height"
+msgstr "Imposta Altezza Immagine Anteprima del menu Post Recenti"
+
+#: standard/include/style-submenu_posts.php:41
+#: standard/include/style-megaposts.php:199
+msgid "Post Margin"
+msgstr "Margini Post"
+
+#: standard/include/style-submenu_posts.php:83
+#: standard/include/style-megaposts.php:241
+msgid "Set the post margin ( Top , Right , Bottom , Left )"
+msgstr ""
+"Imposta Margini Articoli/Post ( Superiore, Destro, Inferiore, Sinistro )"
+
+#: standard/include/style-submenu_posts.php:94
+#: standard/include/style-megaposts.php:252
+msgid "Post Link Typography"
+msgstr "Tipografia Collegamenti Post"
+
+#: standard/include/style-submenu_posts.php:95
+#: standard/include/style-megaposts.php:253
+msgid "Set the post link typography"
+msgstr "Imposta Tipografia Collegamenti Post"
+
+#: standard/include/style-submenu_posts.php:111
+#: standard/include/style-megaposts.php:269
+msgid "Post Link Background Color"
+msgstr "Colore Sfondo Collegamenti Post"
+
+#: standard/include/style-submenu_posts.php:112
+#: standard/include/style-megaposts.php:270
+msgid "Set the post link background color "
+msgstr "Imposta Colore Sfondo Collegamenti Post"
+
+#: standard/include/style-submenu_posts.php:123
+#: standard/include/style-megaposts.php:282
+msgid "Post Link Color ( Hover )"
+msgstr "Colore Collegamenti Post (al passaggio del mouse)"
+
+#: standard/include/style-submenu_posts.php:124
+#: standard/include/style-megaposts.php:283
+msgid "Set the post link color when you hover over"
+msgstr "Imposta Colore Collegamenti Post al passaggio del mouse"
+
+#: standard/include/style-submenu_posts.php:131
+#: standard/include/style-megaposts.php:290
+msgid "Post Link Padding"
+msgstr "Rientri Collegamenti Post"
+
+#: standard/include/style-submenu_posts.php:173
+#: standard/include/style-megaposts.php:332
+msgid "Set the post link padding ( Top , Right , Bottom , Left )"
+msgstr ""
+"Imposta Rientri Collegamenti Articoli ( Superiore, Destro, Inferiore, "
+"Sinistro )"
+
+#: standard/include/style-submenu_posts.php:186
+msgid "View All Button color"
+msgstr "Colore Pulsante Visualizza Tutto"
+
+#: standard/include/style-submenu_posts.php:187
+msgid "Set View All Button color"
+msgstr "Imposta Colore Pulsante Visualizza Tutto"
+
+#: standard/include/style-submenu_posts.php:198
+msgid "View All Button background color"
+msgstr "Colore Sfondo Pulsante Visualizza Tutto"
+
+#: standard/include/style-submenu_posts.php:199
+msgid "Set View All Button background color"
+msgstr "Imposta Colore Sfondo Pulsante Visualizza Tutto"
+
+#: standard/include/style-submenu_posts.php:211
+msgid "View All Button color ( hover )"
+msgstr "Colore Pulsante Visualizza Tutto (al Passaggio del mouse)"
+
+#: standard/include/style-submenu_posts.php:212
+msgid "Set View All Button color when you hover over"
+msgstr "Imposta Colore Pulsante Visualizza Tutto al passaggio del mouse"
+
+#: standard/include/style-submenu_posts.php:223
+msgid "View All Button background color ( hover )"
+msgstr "Colore Sfondo Pulsante Visualizza Tutto (al Passaggio del mouse)"
+
+#: standard/include/style-submenu_posts.php:224
+msgid "Set View All Button background color when you hover over"
+msgstr "Colore Sfondo Pulsante Visualizza Tutto al Passaggio del mouse"
 
 #: standard/include/style-logo.php:4 standard/include/style-rwd.php:16
 msgid "Logo Padding"
@@ -234,6 +802,100 @@ msgstr "Imposta Rientri Logo ( Superiore, Inferiore, Sinistro, Destro )"
 #: standard/include/style-logo.php:59
 msgid "Set the logo background"
 msgstr "Imposta Sfondo Logo"
+
+#: standard/include/style-submenu_general.php:13
+msgid "Submenu General Style"
+msgstr "Stile Generale Sottomenu"
+
+#: standard/include/style-submenu_general.php:21
+msgid "Set the submenu background"
+msgstr "Imposta sfondo del Sottomenu"
+
+#: standard/include/walker-frontend.php:428
+msgid "View All..."
+msgstr "Visualizza Tutto..."
+
+#: standard/include/walker-frontend.php:579
+msgid "View your shopping cart"
+msgstr "Visualizza Carrello Acquisti"
+
+#: standard/include/style-megaLinksTwo.php:13
+msgid "Submenu Mega Links Two Style"
+msgstr "Collegamenti Submenu Mega Stile 2"
+
+#: standard/include/style-megaLinksTwo.php:20
+#: standard/include/style-rwd.php:150
+msgid "Main Links Typography"
+msgstr "Tipografia Collegamenti Primari"
+
+#: standard/include/style-megaLinksTwo.php:21
+#: standard/include/style-rwd.php:151
+msgid "Set the main links typography"
+msgstr "Imposta Tipografia Collegamenti Primari"
+
+#: standard/include/style-megaLinksTwo.php:37
+msgid "Main Links Color ( Hover )"
+msgstr "Colore Collegamenti Primari (al Passaggio del mouse)"
+
+#: standard/include/style-megaLinksTwo.php:38
+msgid "Set the main links color when you hover over"
+msgstr "Imposta Colore Collegamenti Primari al Passaggio del mouse"
+
+#: standard/include/style-megaLinksTwo.php:49
+msgid "Main Links Background Color ( Hover )"
+msgstr "Colore Sfondo Collegamenti Primari (al Passaggio del mouse)"
+
+#: standard/include/style-megaLinksTwo.php:50
+#: standard/include/style-rwd.php:193
+msgid "Set the main links background color when you hover over"
+msgstr ""
+"Imposta Colore Sfondo dei Collegamenti Primari quando l'utente vi passa "
+"sopra col mouse"
+
+#: standard/include/style-megaLinksTwo.php:61
+msgid "Main Links Bottom Border Color"
+msgstr "Colore Bordo Inferiore Collegamenti Primari"
+
+#: standard/include/style-megaLinksTwo.php:62
+#: standard/include/style-rwd.php:205
+msgid "Set the main links bottom border color"
+msgstr "Imposta Colore Bordo Inferiore dei Collegamenti Primari"
+
+#: standard/include/style-megaLinksTwo.php:69
+msgid "Main Links Padding"
+msgstr "Rientri Collegamenti Primari"
+
+#: standard/include/style-megaLinksTwo.php:111
+msgid "Set the main links padding ( Top , Right , Bottom , Left )"
+msgstr ""
+"Imposta Rientri Collegamenti Primari ( Superiore, Destro, Inferiore, "
+"Sinistro )"
+
+#: standard/include/style-megaLinksTwo.php:118
+msgid "Main Links Arrow Style"
+msgstr "Stile Freccia Collegamenti Primari"
+
+#: standard/include/settings-posts.php:12
+msgid "Posts settings"
+msgstr "Impostazioni Post"
+
+#: standard/include/settings-posts.php:18
+msgid "Select image effect"
+msgstr "Seleziona Effetto Immagine"
+
+#: standard/include/settings-posts.php:19
+msgid "Select the image effect for thumbnails"
+msgstr "Seleziona Effetto Immagine Anteprima"
+
+#: standard/include/settings-posts.php:50
+msgid "Enable \"View all...\" button in \"latest posts\" menu type "
+msgstr ""
+"Attiva il pulsante  \"Visualizza tutto...\" nel menu tipo \"post recenti\""
+
+#: standard/include/settings-posts.php:51
+msgid "Enable \"View all...\" button in \"latest posts\" menu type"
+msgstr ""
+"Attiva il pulsante  \"Visualizza tutto...\" nel menu tipo \"post recenti\""
 
 #: standard/include/style-rwd.php:12
 msgid "Responsive Style"
@@ -291,25 +953,6 @@ msgstr "Altezza Collegamenti Primari"
 msgid "Set main links height"
 msgstr "Imposta Altezza Collegamenti Primari"
 
-#: standard/include/style-rwd.php:150
-#: standard/include/style-megaLinksTwo.php:20
-msgid "Main Links Typography"
-msgstr "Tipografia Collegamenti Primari"
-
-#: standard/include/style-rwd.php:151
-#: standard/include/style-megaLinksTwo.php:21
-msgid "Set the main links typography"
-msgstr "Imposta Tipografia Collegamenti Primari"
-
-#: standard/include/style-rwd.php:168
-#: standard/include/style-megaLinksTwo.php:274
-#: standard/include/style-top_level.php:39
-#: standard/include/style-top_level.php:133
-#: standard/include/style-dropdown.php:131
-#: standard/include/style-submenu_links.php:223
-msgid "Color ( Hover )"
-msgstr "Colore (al Passaggio del mouse)"
-
 #: standard/include/style-rwd.php:169
 msgid "Set the main links color when user hover over"
 msgstr ""
@@ -319,25 +962,9 @@ msgstr ""
 msgid "Set the main links background color"
 msgstr "Imposta Colore Sfondo dei Collegamenti Primari"
 
-#: standard/include/style-rwd.php:192 standard/include/style-top_level.php:51
-msgid "Background ( Hover )"
-msgstr "Sfondo (al Passaggio del mouse)"
-
-#: standard/include/style-rwd.php:193
-#: standard/include/style-megaLinksTwo.php:50
-msgid "Set the main links background color when you hover over"
-msgstr ""
-"Imposta Colore Sfondo dei Collegamenti Primari quando l'utente vi passa "
-"sopra col mouse"
-
 #: standard/include/style-rwd.php:204
 msgid "Bottom Border Color"
 msgstr "Colore Bordo Inferiore"
-
-#: standard/include/style-rwd.php:205
-#: standard/include/style-megaLinksTwo.php:62
-msgid "Set the main links bottom border color"
-msgstr "Imposta Colore Bordo Inferiore dei Collegamenti Primari"
 
 #: standard/include/style-rwd.php:215
 msgid "Main Link Left Margin"
@@ -347,22 +974,6 @@ msgstr "Margine Sinistro Collegamenti Primari"
 msgid "Set rwd main links left margin"
 msgstr "Imposta rwd Margine Sinistro Collegamenti Primari"
 
-#: standard/include/style-rwd.php:224 standard/include/style-top_level.php:156
-#: standard/include/style-dropdown.php:153
-msgid "Arrow Style"
-msgstr "Stile Freccia"
-
-#: standard/include/style-rwd.php:253
-#: standard/include/style-megaLinksTwo.php:165
-#: standard/include/style-top_level.php:203
-#: standard/include/style-megaposts.php:167
-msgid ""
-"Set the arrow style ( Size , Color , Color[Hover] , Margin Right , Margin "
-"Top )"
-msgstr ""
-"Imposta lo stile della freccia  (Dimensione, Colore, Colore [al passaggio "
-"del mouse], Margine Destro, Margine Superiore)"
-
 #: standard/include/style-rwd.php:261
 msgid "Submenus Padding"
 msgstr "Rientri Sottomenu"
@@ -370,417 +981,6 @@ msgstr "Rientri Sottomenu"
 #: standard/include/style-rwd.php:303
 msgid "Set the submenus padding ( Top , Right , Bottom , Left )"
 msgstr "Imposta Rientri Sottomenu ( Superiore, Destro, Inferiore, Sinistro )"
-
-#: standard/include/settings-jquery.php:2
-msgid "Jquery settings"
-msgstr "Impostazioni Jquery"
-
-#: standard/include/settings-jquery.php:10
-msgid "Enable jQuery on noConflict Mode"
-msgstr "Attiva jQuery in modalità noConflict"
-
-#: standard/include/settings-jquery.php:11
-msgid "Enable jquery on noConflict mode "
-msgstr "Attiva jquery in modalità noConflict"
-
-#: standard/include/settings-jquery.php:22
-msgid "jQuery Trigger"
-msgstr "jQuery Trigger"
-
-#: standard/include/settings-jquery.php:23
-msgid "set the jquery trigger ( hover-intent is the best choice"
-msgstr "imposta jquery trigger ( hover-intent è la scelta migliore "
-
-#: standard/include/settings-jquery.php:34
-msgid "jQuery Animation"
-msgstr "Animazione jQuery"
-
-#: standard/include/settings-jquery.php:35
-msgid "set the jquery animation"
-msgstr "Imposta Animazione jQuery"
-
-#: standard/include/settings-jquery.php:50
-msgid "jQuery Easings"
-msgstr "jQuery Easings"
-
-#: standard/include/settings-jquery.php:51
-msgid "set the jquery easings"
-msgstr "Imposta jquery easings"
-
-#: standard/include/settings-jquery.php:96
-msgid "Animation Time"
-msgstr "Durata Animazione"
-
-#: standard/include/settings-jquery.php:97
-msgid "set the jquery animation Time ( by millisecond )"
-msgstr "Imposta Durata Animazione jquery ( in millisecondi )"
-
-#: standard/include/style-megaLinksTwo_links_icons.php:2
-#: standard/include/style-megaLinksTwo_mainLinks_icons.php:2
-#: standard/include/style-submenu_mega_link_icons.php:2
-msgid "\"Mega Links\" Links Icons"
-msgstr "\"Mega Links\" Icone Collegamenti"
-
-#: standard/include/style-megaLinksTwo_links_icons.php:9
-#: standard/include/style-top_level_icons.php:9
-#: standard/include/style-dropdown_icons.php:9
-#: standard/include/style-megaLinksTwo_mainLinks_icons.php:9
-#: standard/include/style-social.php:40
-#: standard/include/style-submenu_mega_title_icons.php:9
-#: standard/include/style-rwd_icons.php:11
-#: standard/include/style-submenu_mega_link_icons.php:9
-msgid "FontAwesome Icons Size"
-msgstr "Dimensione Icone FontAwesome"
-
-#: standard/include/style-megaLinksTwo_links_icons.php:10
-#: standard/include/style-top_level_icons.php:10
-#: standard/include/style-dropdown_icons.php:10
-#: standard/include/style-megaLinksTwo_mainLinks_icons.php:10
-#: standard/include/style-social.php:41
-#: standard/include/style-submenu_mega_title_icons.php:10
-#: standard/include/style-rwd_icons.php:12
-#: standard/include/style-submenu_mega_link_icons.php:10
-msgid "Set the FontAwesome icons size ( px )"
-msgstr "Imposta Dimensione Icone FontAwesome ( px )"
-
-#: standard/include/style-megaLinksTwo_links_icons.php:18
-#: standard/include/style-top_level_icons.php:18
-#: standard/include/style-dropdown_icons.php:18
-#: standard/include/style-megaLinksTwo_mainLinks_icons.php:18
-#: standard/include/style-social.php:49
-#: standard/include/style-submenu_mega_title_icons.php:18
-#: standard/include/style-rwd_icons.php:20
-#: standard/include/style-submenu_mega_link_icons.php:18
-msgid "FontAwesome Icon Margin"
-msgstr "Margini Icone FontAwesome"
-
-#: standard/include/style-megaLinksTwo_links_icons.php:40
-#: standard/include/style-dropdown_icons.php:40
-#: standard/include/style-megaLinksTwo_mainLinks_icons.php:40
-#: standard/include/style-submenu_mega_title_icons.php:40
-#: standard/include/style-submenu_mega_link_icons.php:40
-msgid "Set the font awesome icon margin ( Top , Right ) you can use - ( -2px )"
-msgstr ""
-"Imposta Margini Icone FontAwesome (Superiore, Destro) si può usare anche "
-"simbolo - (es.: -2px)"
-
-#: standard/include/style-megaLinksTwo_links_icons.php:47
-#: standard/include/style-top_level_icons.php:48
-#: standard/include/style-dropdown_icons.php:47
-#: standard/include/style-megaLinksTwo_mainLinks_icons.php:47
-#: standard/include/style-social.php:78
-#: standard/include/style-submenu_mega_title_icons.php:47
-#: standard/include/style-rwd_icons.php:49
-#: standard/include/style-submenu_mega_link_icons.php:47
-msgid "Uploaded Icons Size"
-msgstr "Dimensioni Icone caricate"
-
-#: standard/include/style-megaLinksTwo_links_icons.php:69
-#: standard/include/style-top_level_icons.php:70
-#: standard/include/style-dropdown_icons.php:69
-#: standard/include/style-megaLinksTwo_mainLinks_icons.php:69
-#: standard/include/style-social.php:100
-#: standard/include/style-submenu_mega_title_icons.php:69
-#: standard/include/style-rwd_icons.php:71
-#: standard/include/style-submenu_mega_link_icons.php:69
-msgid "Set the Uploaded icons size ( Width , Height )"
-msgstr "Impostazioni Dimensioni Icone caricate (Larghezza, Altezza)"
-
-#: standard/include/style-megaLinksTwo_links_icons.php:76
-#: standard/include/style-top_level_icons.php:76
-#: standard/include/style-dropdown_icons.php:75
-#: standard/include/style-megaLinksTwo_mainLinks_icons.php:76
-#: standard/include/style-social.php:106
-#: standard/include/style-submenu_mega_title_icons.php:75
-#: standard/include/style-rwd_icons.php:77
-#: standard/include/style-submenu_mega_link_icons.php:76
-msgid "Uploaded Icon Margin"
-msgstr "Margini Icone caricate"
-
-#: standard/include/style-megaLinksTwo_links_icons.php:98
-#: standard/include/style-top_level_icons.php:98
-#: standard/include/style-megaLinksTwo_mainLinks_icons.php:98
-#: standard/include/style-social.php:128
-#: standard/include/style-submenu_mega_title_icons.php:97
-#: standard/include/style-rwd_icons.php:99
-#: standard/include/style-submenu_mega_link_icons.php:98
-msgid "Set the uploaded icon margin ( Top , Right )"
-msgstr "Imposta margini icona caricata ( Superiore, Destro )"
-
-#: standard/include/style-search_form.php:13
-msgid "Search Form Style"
-msgstr "Stile Modulo Ricerca"
-
-#: standard/include/style-search_form.php:17
-msgid "Search Icon Margin"
-msgstr "Margine Icona Ricerca"
-
-#: standard/include/style-search_form.php:49
-msgid "Set the search form margin ( Top , Right , Left )"
-msgstr "Imposta margini modulo ricerca ( Superiore, Destro, Sinistro )"
-
-#: standard/include/style-search_form.php:59
-msgid "Search Icon Color"
-msgstr "Colore  Icona Ricerca"
-
-#: standard/include/style-search_form.php:60
-msgid "Set the button icon color"
-msgstr "Imposta  Colore Pulsante Icona"
-
-#: standard/include/style-search_form.php:71
-msgid "Search Icon Backgound Color ( Hover )"
-msgstr "Colore Sfondo Icona (al Passaggio del Mouse)"
-
-#: standard/include/style-search_form.php:72
-msgid "Set the button backgound color when you hover over it"
-msgstr "Imposta Colore Sfondo Icona al Passaggio del Mouse"
-
-#: standard/include/style-search_form.php:83
-msgid "Search Icon Color ( Hover )"
-msgstr "Colore Icona al Passaggio del Mouse"
-
-#: standard/include/style-search_form.php:84
-msgid "Set the button color when you hover over it"
-msgstr "Imposta Colore Pulsante al Passaggio del Mouse"
-
-#: standard/include/style-search_form.php:95
-msgid "Button Icon Padding"
-msgstr "Rientri Pulsante Icona"
-
-#: standard/include/style-search_form.php:96
-msgid "Set the button icon padding ( Left + Right )"
-msgstr "Imposta Rientri Pulsante Icona (Sinistro + Destro)"
-
-#: standard/include/style-search_form.php:107
-msgid "Button Icon Size"
-msgstr "Dimensione Pulsante Icona"
-
-#: standard/include/style-search_form.php:108
-msgid "Set the button icon size"
-msgstr "Imposta Dimensione Pulsante Icona"
-
-#: standard/include/style-search_form.php:121
-msgid "Input Width"
-msgstr "Larghezza campo immissione"
-
-#: standard/include/style-search_form.php:122
-msgid "Set the width of the search input"
-msgstr "Imposta Larghezza campo immissione ricerca"
-
-#: standard/include/style-search_form.php:133
-msgid "Input Height"
-msgstr "Altezza campo immissione ricerca"
-
-#: standard/include/style-search_form.php:134
-msgid "Set the height of the search input"
-msgstr "Imposta Altezza campo immissione ricerca"
-
-#: standard/include/style-search_form.php:145
-msgid "Input Backgound Color"
-msgstr "Colore Sfondo campo immissione ricerca"
-
-#: standard/include/style-search_form.php:146
-msgid "Set the input backgound color"
-msgstr "Imposta Colore Sfondo campo immissione ricerca"
-
-#: standard/include/style-search_form.php:158
-msgid "Search Text Typography"
-msgstr "Tipografia Testo Campo immissione ricerca"
-
-#: standard/include/style-search_form.php:159
-msgid "Set the search text typography"
-msgstr "Imposta Tipografia Testo Campo immissione ricerca"
-
-#: standard/include/style-search_form.php:171
-msgid "Search Text Padding"
-msgstr "Rientri Testo Campo immissione ricerca"
-
-#: standard/include/style-search_form.php:193
-msgid "Set the search text padding ( Left , Right )"
-msgstr "Imposta Rientri Testo Campo immissione ricerca  (Sinistro, Destro)"
-
-#: standard/include/style-search_form.php:201
-msgid "Input Border Radius"
-msgstr "Raggio Bordo Campo immissione ricerca"
-
-#: standard/include/settings-sticky.php:2
-msgid "Sticky settings"
-msgstr "Impostazioni Sticky"
-
-#: standard/include/settings-sticky.php:10
-msgid "Enable Scrolling Menu"
-msgstr "Attiva Scorrimento Menu"
-
-#: standard/include/settings-sticky.php:11
-msgid "Enable scrolling menu , and watch your menu scrolling ( very nice )"
-msgstr "Attiva Scorrimento Menu, e vedi il tuo menu scorrere ( molto bello)"
-
-#: standard/include/settings-sticky.php:22
-msgid "Enable Scrolling Menu on Mobile"
-msgstr "Attiva Scorrimento Menu su dispositivo Mobile"
-
-#: standard/include/settings-sticky.php:23
-msgid "Enable scrolling menu smartphones and tablets"
-msgstr "Attiva Scorrimento Menu smartphone e tablet"
-
-#: standard/include/style-megaLinksTwo.php:13
-msgid "Submenu Mega Links Two Style"
-msgstr "Collegamenti Submenu Mega Stile 2"
-
-#: standard/include/style-megaLinksTwo.php:37
-msgid "Main Links Color ( Hover )"
-msgstr "Colore Collegamenti Primari (al Passaggio del mouse)"
-
-#: standard/include/style-megaLinksTwo.php:38
-msgid "Set the main links color when you hover over"
-msgstr "Imposta Colore Collegamenti Primari al Passaggio del mouse"
-
-#: standard/include/style-megaLinksTwo.php:49
-msgid "Main Links Background Color ( Hover )"
-msgstr "Colore Sfondo Collegamenti Primari (al Passaggio del mouse)"
-
-#: standard/include/style-megaLinksTwo.php:61
-msgid "Main Links Bottom Border Color"
-msgstr "Colore Bordo Inferiore Collegamenti Primari"
-
-#: standard/include/style-megaLinksTwo.php:69
-msgid "Main Links Padding"
-msgstr "Rientri Collegamenti Primari"
-
-#: standard/include/style-megaLinksTwo.php:111
-msgid "Set the main links padding ( Top , Right , Bottom , Left )"
-msgstr ""
-"Imposta Rientri Collegamenti Primari ( Superiore, Destro, Inferiore, "
-"Sinistro )"
-
-#: standard/include/style-megaLinksTwo.php:118
-msgid "Main Links Arrow Style"
-msgstr "Stile Freccia Collegamenti Primari"
-
-#: standard/include/style-megaLinksTwo.php:177
-#: standard/include/style-dropdown.php:10
-#: standard/include/style-submenu_links.php:126
-msgid "Links Typography"
-msgstr "Tipografia Collegamenti"
-
-#: standard/include/style-megaLinksTwo.php:178
-#: standard/include/style-dropdown.php:11
-#: standard/include/style-submenu_links.php:127
-msgid "Set the links typography"
-msgstr "Imposta Tipografia Collegamenti"
-
-#: standard/include/style-megaLinksTwo.php:194
-#: standard/include/style-dropdown.php:27
-#: standard/include/style-submenu_links.php:143
-msgid "Links Color ( Hover )"
-msgstr "Colore Collegamenti (al Passaggio del mouse)"
-
-#: standard/include/style-megaLinksTwo.php:195
-#: standard/include/style-submenu_links.php:144
-msgid "Set the Links color when you hover over"
-msgstr "Imposta Colore Collegamenti al Passaggio del mouse"
-
-#: standard/include/style-megaLinksTwo.php:202
-#: standard/include/style-dropdown.php:60
-#: standard/include/style-submenu_links.php:151
-msgid "Links Padding"
-msgstr "Rientri Collegamenti"
-
-#: standard/include/style-megaLinksTwo.php:244
-#: standard/include/style-dropdown.php:102
-#: standard/include/style-submenu_links.php:193
-msgid "Set the links padding ( Top , Right , Bottom , Left )"
-msgstr ""
-"Imposta Rientri Collegamenti ( Superiore, Destro, Inferiore, Sinistro )"
-
-#: standard/include/style-megaLinksTwo.php:256
-#: standard/include/style-top_level.php:115
-#: standard/include/style-dropdown.php:113
-#: standard/include/style-submenu_links.php:205
-msgid "Description Typography"
-msgstr "Tipografia Descrizione"
-
-#: standard/include/style-megaLinksTwo.php:257
-#: standard/include/style-top_level.php:116
-#: standard/include/style-dropdown.php:114
-#: standard/include/style-submenu_links.php:206
-msgid "Set the Description typography"
-msgstr "Imposta Tipografia Descrizione"
-
-#: standard/include/style-megaLinksTwo.php:275
-#: standard/include/style-top_level.php:134
-#: standard/include/style-dropdown.php:132
-#: standard/include/style-submenu_links.php:224
-msgid "Set the description color when you hover over"
-msgstr "Imposta Colore Descrizione al Passaggio del mouse"
-
-#: standard/include/style-megaLinksTwo.php:286
-#: standard/include/style-top_level.php:145
-#: standard/include/style-dropdown.php:143
-#: standard/include/style-submenu_links.php:235
-msgid "Top Padding ( Hover )"
-msgstr "Rientro Superiore (al Passaggio del mouse)"
-
-#: standard/include/style-megaLinksTwo.php:287
-#: standard/include/style-top_level.php:146
-#: standard/include/style-dropdown.php:144
-#: standard/include/style-submenu_links.php:236
-msgid "Set the description top padding"
-msgstr "Imposta Descrizione Rientro Superiore"
-
-#: standard/include/style-current_top_link.php:2
-msgid "Current Links Style"
-msgstr "Stile Collegamenti Attuali"
-
-#: standard/include/style-current_top_link.php:11
-msgid "Current Top Link color"
-msgstr "Colore Collegamenti Attuali Livello Primario"
-
-#: standard/include/style-current_top_link.php:12
-msgid "Set the current top links color"
-msgstr "Imposta Colore Collegamenti Attuali Livello Primario"
-
-#: standard/include/style-current_top_link.php:23
-msgid "Current Top Link Background Color"
-msgstr "Colore Sfondo Collegamenti Attuali Livello Primario"
-
-#: standard/include/style-current_top_link.php:24
-msgid "Set the current top links background color"
-msgstr "Imposta Colore Sfondo Collegamenti Attuali Livello Primario"
-
-#: standard/include/style-current_top_link.php:35
-msgid "Current Top Link Arrow Color "
-msgstr "Colore Freccia Collegamenti Attuali Livello Primario"
-
-#: standard/include/style-current_top_link.php:36
-msgid "Set the current top links arrow color"
-msgstr "Imposta Colore Freccia Collegamenti Attuali Livello Primario"
-
-#: standard/include/style-current_top_link.php:52
-msgid "Submenu Current Link color"
-msgstr "Colore Collegamenti Sottomenu"
-
-#: standard/include/style-current_top_link.php:53
-msgid "Set the submenu current links color [Dropdown,Mega Links]"
-msgstr "Imposta Colore Collegamenti Sottomenu [Dropdown,Mega Links]"
-
-#: standard/include/style-current_top_link.php:64
-msgid "Submenu Current Link Background Color"
-msgstr "Colore Sfondo Sottomenu Collegamenti Attuali"
-
-#: standard/include/style-current_top_link.php:65
-msgid "Set the submenu current links background color [Dropdown,Mega Links]"
-msgstr ""
-"Imposta Colore Sfondo Sottomenu Collegamenti Attuali [Dropdown,Mega Links]"
-
-#: standard/include/style-current_top_link.php:76
-msgid "Submenu Current Link Arrow Color "
-msgstr "Colore Freccia Sottomenu Collegamenti Attuali"
-
-#: standard/include/style-current_top_link.php:77
-msgid "Set the submenu current links arrow color [Dropdown,Mega Links]"
-msgstr ""
-"Imposta Colore Freccia Sottomenu Collegamenti Attuali [Dropdown,Mega Links]"
 
 #: standard/include/settings-logo.php:2
 msgid "Layout &amp; Logo Settings"
@@ -834,41 +1034,25 @@ msgstr "Logo per RWD"
 msgid "Upload Logo for Responsive WD ( Normal, Retina )"
 msgstr "Carica Logo per Responsive WD ( Normal, Retina )"
 
-#: standard/include/style-top_level.php:14
-msgid "Top Level Links Style"
-msgstr "Stile Collegamenti Livello Primario"
+#: standard/include/class-suppa_walkers.php:112
+msgid "SuppaMenu Locations & Skins"
+msgstr "SuppaMenu Posizioni e Skins"
 
-#: standard/include/style-top_level.php:21
-msgid "Top Links Typography"
-msgstr "Tipografia Collegamenti Livello Primario"
+#: standard/include/class-suppa_walkers.php:148
+#: standard/include/class-suppa_walkers.php:165
+#: standard/include/class-suppa_walkers.php:197
+msgid "Select skin : "
+msgstr "Seleziona skin : "
 
-#: standard/include/style-top_level.php:22
-msgid "Set the top links typography"
-msgstr "Imposta Tipografia Collegamenti Livello Primario"
+#: standard/include/class-suppa_walkers.php:325
+msgid "Menus & Skins Ready !"
+msgstr "Menu & Skin Pronti !"
 
-#: standard/include/style-top_level.php:40
-msgid "Set the top links color when you hover over"
-msgstr "Imposta Colore Collegamenti Superiori al Passaggio del mouse"
-
-#: standard/include/style-top_level.php:52
-msgid "Set the top links background color when you hover over"
-msgstr "Imposta Colore Sfondo Collegamenti Superiori al Passaggio del mouse"
-
-#: standard/include/style-top_level.php:59
-msgid "Padding"
-msgstr "Rientri"
-
-#: standard/include/style-top_level.php:91
-msgid "Set the padding ( Top, Left, Right )"
-msgstr "Imposta Rientri (Alto, Sinistro, Destro)"
-
-#: standard/include/style-top_level.php:101
-msgid "Top Link Border color"
-msgstr "Colore Bordo Collegameti Livello Primario"
-
-#: standard/include/style-top_level.php:102
-msgid "Set the top links border color"
-msgstr "Imposta Colore Bordo Collegameti Livello Primario"
+#: standard/include/style-top_level_icons.php:40
+#: standard/include/style-rwd_icons.php:42
+#: standard/include/style-social.php:71
+msgid "Set the font awesome icon margin ( Top , Right )"
+msgstr "Imposta margini icone caratteri awesome (Superiore, Destro) "
 
 #: standard/include/style-megaposts.php:12
 msgid "Submenu Mega Posts Style"
@@ -936,136 +1120,9 @@ msgstr "[Mega Posts]  Altezza Immagine Anteprima"
 msgid "Set the mega posts menu type Thumbnail height"
 msgstr "Imposta Altezza Immagine Anteprima del menu Mega Posts"
 
-#: standard/include/style-megaposts.php:199
-#: standard/include/style-submenu_posts.php:41
-msgid "Post Margin"
-msgstr "Margini Post"
-
-#: standard/include/style-megaposts.php:241
-#: standard/include/style-submenu_posts.php:83
-msgid "Set the post margin ( Top , Right , Bottom , Left )"
-msgstr ""
-"Imposta Margini Articoli/Post ( Superiore, Destro, Inferiore, Sinistro )"
-
-#: standard/include/style-megaposts.php:252
-#: standard/include/style-submenu_posts.php:94
-msgid "Post Link Typography"
-msgstr "Tipografia Collegamenti Post"
-
-#: standard/include/style-megaposts.php:253
-#: standard/include/style-submenu_posts.php:95
-msgid "Set the post link typography"
-msgstr "Imposta Tipografia Collegamenti Post"
-
-#: standard/include/style-megaposts.php:269
-#: standard/include/style-submenu_posts.php:111
-msgid "Post Link Background Color"
-msgstr "Colore Sfondo Collegamenti Post"
-
-#: standard/include/style-megaposts.php:270
-#: standard/include/style-submenu_posts.php:112
-msgid "Set the post link background color "
-msgstr "Imposta Colore Sfondo Collegamenti Post"
-
-#: standard/include/style-megaposts.php:282
-#: standard/include/style-submenu_posts.php:123
-msgid "Post Link Color ( Hover )"
-msgstr "Colore Collegamenti Post (al passaggio del mouse)"
-
-#: standard/include/style-megaposts.php:283
-#: standard/include/style-submenu_posts.php:124
-msgid "Set the post link color when you hover over"
-msgstr "Imposta Colore Collegamenti Post al passaggio del mouse"
-
-#: standard/include/style-megaposts.php:290
-#: standard/include/style-submenu_posts.php:131
-msgid "Post Link Padding"
-msgstr "Rientri Collegamenti Post"
-
-#: standard/include/style-megaposts.php:332
-#: standard/include/style-submenu_posts.php:173
-msgid "Set the post link padding ( Top , Right , Bottom , Left )"
-msgstr ""
-"Imposta Rientri Collegamenti Articoli ( Superiore, Destro, Inferiore, "
-"Sinistro )"
-
-#: standard/include/style-top_level_icons.php:40
-#: standard/include/style-social.php:71
-#: standard/include/style-rwd_icons.php:42
-msgid "Set the font awesome icon margin ( Top , Right )"
-msgstr "Imposta margini icone caratteri awesome (Superiore, Destro) "
-
-#: standard/include/settings-theme_implementation.php:2
-msgid "Theme Implementation"
-msgstr "Implementazione Tema"
-
-#: standard/include/settings-theme_implementation.php:10
-msgid "Support WP 3.+ Menus"
-msgstr "Supporta Menu WP 3.+"
-
-#: standard/include/settings-theme_implementation.php:11
-msgid ""
-"Enable this if your theme does not support wordpress 3.+ menus, then paste "
-"this code &#60;?php suppa_implement(); ?&#62; in your header.php after body "
-"tag"
-msgstr ""
-"Attiva questa opzione se il tuo tema non supporta Menu WP 3.+, poi incolla "
-"questo codice &#60;?php suppa_implement(); ?&#62; nella tua header.php dopo "
-"il tag body "
-
-#: standard/include/style-custom.php:7
-msgid "Custom CSS "
-msgstr "CSS Personalizzato"
-
-#: standard/include/style-custom.php:8
-msgid "Add your custom css"
-msgstr "Aggiungi il tuo CSS Personalizzato"
-
-#: standard/include/style-dropdown_icons.php:2
-msgid "DropDown Links Icons"
-msgstr "Icone Collegamenti a Discesa"
-
-#: standard/include/style-dropdown_icons.php:97
-msgid "Set the uploaded icon margin ( Top , Right ) you can use - ( -2px )"
-msgstr ""
-"Imposta Margini Icone caricate (Superiore, Destro) si può usare anche "
-"simbolo - (es.: -2px)"
-
-#: standard/include/settings-rwd.php:2
-msgid "Responsive settings"
-msgstr "Impostazioni Responsive"
-
-#: standard/include/settings-rwd.php:11
-msgid "Enable Responsive Design on Mobile "
-msgstr "Attiva Disegno Reattivo su Mobile"
-
-#: standard/include/settings-rwd.php:12
-msgid "Enable the responsive design mobile devices( IOS, Android ... )"
-msgstr "Attiva Disegno Reattivo su Dispositivi Portatili ( IOS, Android ... )"
-
-#: standard/include/settings-rwd.php:23
-msgid "Enable Responsive Design Desktops / Laptops"
-msgstr "Attiva Stile Responsive su Portatili"
-
-#: standard/include/settings-rwd.php:24
-msgid "Enable the responsive design on desktops and laptops"
-msgstr "Attiva Disegno Reattivo su Computer da Tavolo e Portatili"
-
-#: standard/include/settings-rwd.php:36
-msgid "RWD Start Work When Device <= To This Width"
-msgstr "RWD si attiva quando dispositivo <= a questa larghezza"
-
-#: standard/include/settings-rwd.php:37
-msgid "Set the width for RWD to start work"
-msgstr "Imposta Larghezza quando RWD deve attivarsi"
-
-#: standard/include/settings-rwd.php:47
-msgid "Add Responsive Text "
-msgstr "Aggiungi Testo Reattivo"
-
-#: standard/include/settings-rwd.php:48
-msgid "Add a text like \"Responsive Menu\""
-msgstr "Aggiungi un testo tipo \"Menu Reattivo\""
+#: standard/include/style-rwd_icons.php:3
+msgid "Responsive Icons"
+msgstr "Icone Reattive"
 
 #: standard/include/style-social.php:3
 msgid "Social Icons Style"
@@ -1079,83 +1136,197 @@ msgstr "Margini Collegamenti Sociali"
 msgid "Set the social links margin ( Left , Right )"
 msgstr "Imposta Margini Collegamenti Sociali (Sinistro, Destro)"
 
-#: standard/include/class-suppa_walkers.php:115
-msgid "SuppaMenu Locations & Skins"
-msgstr "SuppaMenu Posizioni e Skins"
+#: standard/include/settings-sticky.php:2
+msgid "Sticky settings"
+msgstr "Impostazioni Sticky"
 
-#: standard/include/class-suppa_walkers.php:151
-#: standard/include/class-suppa_walkers.php:168
-#: standard/include/class-suppa_walkers.php:200
-msgid "Select skin : "
-msgstr "Seleziona skin : "
+#: standard/include/settings-sticky.php:10
+msgid "Enable Scrolling Menu"
+msgstr "Attiva Scorrimento Menu"
 
-#: standard/include/class-suppa_walkers.php:328
-msgid "Menus & Skins Ready !"
-msgstr "Menu & Skin Pronti !"
+#: standard/include/settings-sticky.php:11
+msgid "Enable scrolling menu , and watch your menu scrolling ( very nice )"
+msgstr "Attiva Scorrimento Menu, e vedi il tuo menu scorrere ( molto bello)"
 
-#: standard/include/style-submenu_mega_title_icons.php:2
-msgid "\"Mega Links\" Title Icon"
-msgstr "\"Mega Links\" Icone Titoli"
+#: standard/include/settings-sticky.php:22
+msgid "Enable Scrolling Menu on Mobile"
+msgstr "Attiva Scorrimento Menu su dispositivo Mobile"
 
-#: standard/include/walker-frontend.php:426
-msgid "View All..."
-msgstr "Visualizza Tutto..."
+#: standard/include/settings-sticky.php:23
+msgid "Enable scrolling menu smartphones and tablets"
+msgstr "Attiva Scorrimento Menu smartphone e tablet"
 
-#: standard/include/walker-frontend.php:550
-msgid "View your shopping cart"
-msgstr "Visualizza Carrello Acquisti"
+#: standard/include/settings-search_form.php:3
+msgid "Search form settings"
+msgstr "Impostazioni Modulo Ricerca"
 
-#: standard/include/style-submenu_posts.php:13
-msgid "Submenu Latest Posts Style"
-msgstr "Stile Sottomenu Post Recenti"
+#: standard/include/settings-search_form.php:10
+#, fuzzy
+msgid "Search Form Type"
+msgstr "Stile Modulo Ricerca"
 
-#: standard/include/style-submenu_posts.php:21
-msgid "[Latest Posts] Thumbnail Width"
-msgstr "[Latest Posts] Larghezza Immagine Anteprima"
+#: standard/include/settings-search_form.php:11
+#, fuzzy
+msgid "Select the search form type"
+msgstr "Imposta Tipografia Testo Campo immissione ricerca"
 
-#: standard/include/style-submenu_posts.php:22
-msgid "Set the latest posts menu type Thumbnail width"
-msgstr "Imposta Larghezza Immagine Anteprima del menu Post Recenti"
+#: standard/include/settings-search_form.php:14
+msgid "Normal"
+msgstr "Normale"
 
-#: standard/include/style-submenu_posts.php:33
-msgid "[Latest Posts] Thumbnail Height"
-msgstr "[Latest Posts] Altezza Immagine Anteprima"
+#: standard/include/settings-search_form.php:15
+msgid "Boxed"
+msgstr "Boxed"
 
-#: standard/include/style-submenu_posts.php:34
-msgid "Set the latest posts menu type Thumbnail height"
-msgstr "Imposta Altezza Immagine Anteprima del menu Post Recenti"
+#: standard/include/settings-search_form.php:16
+msgid "Modern"
+msgstr "Moderno"
 
-#: standard/include/style-submenu_posts.php:186
-msgid "View All Button color"
-msgstr "Colore Pulsante Visualizza Tutto"
+#: standard/include/settings-search_form.php:27
+msgid "Display Search form on RWD"
+msgstr "Visualizza Modulo Ricerca su RWD"
 
-#: standard/include/style-submenu_posts.php:187
-msgid "Set View All Button color"
-msgstr "Imposta Colore Pulsante Visualizza Tutto"
+#: standard/include/settings-search_form.php:28
+msgid "Display search form on responsive web design"
+msgstr "Visualiza il modulo ricerca nel disegno web reattivo (RWD)"
 
-#: standard/include/style-submenu_posts.php:198
-msgid "View All Button background color"
-msgstr "Colore Sfondo Pulsante Visualizza Tutto"
+#: standard/include/settings-jquery.php:2
+msgid "Jquery settings"
+msgstr "Impostazioni Jquery"
 
-#: standard/include/style-submenu_posts.php:199
-msgid "Set View All Button background color"
-msgstr "Imposta Colore Sfondo Pulsante Visualizza Tutto"
+#: standard/include/settings-jquery.php:9
+msgid "jQuery Trigger"
+msgstr "jQuery Trigger"
 
-#: standard/include/style-submenu_posts.php:211
-msgid "View All Button color ( hover )"
-msgstr "Colore Pulsante Visualizza Tutto (al Passaggio del mouse)"
+#: standard/include/settings-jquery.php:10
+msgid "set the jquery trigger ( hover-intent is the best choice"
+msgstr "imposta jquery trigger ( hover-intent è la scelta migliore "
 
-#: standard/include/style-submenu_posts.php:212
-msgid "Set View All Button color when you hover over"
-msgstr "Imposta Colore Pulsante Visualizza Tutto al passaggio del mouse"
+#: standard/include/settings-jquery.php:21
+msgid "jQuery Animation"
+msgstr "Animazione jQuery"
 
-#: standard/include/style-submenu_posts.php:223
-msgid "View All Button background color ( hover )"
-msgstr "Colore Sfondo Pulsante Visualizza Tutto (al Passaggio del mouse)"
+#: standard/include/settings-jquery.php:22
+msgid "set the jquery animation"
+msgstr "Imposta Animazione jQuery"
 
-#: standard/include/style-submenu_posts.php:224
-msgid "Set View All Button background color when you hover over"
-msgstr "Colore Sfondo Pulsante Visualizza Tutto al Passaggio del mouse"
+#: standard/include/settings-jquery.php:37
+msgid "jQuery Easings"
+msgstr "jQuery Easings"
+
+#: standard/include/settings-jquery.php:38
+msgid "set the jquery easings"
+msgstr "Imposta jquery easings"
+
+#: standard/include/settings-jquery.php:83
+msgid "Animation Time"
+msgstr "Durata Animazione"
+
+#: standard/include/settings-jquery.php:84
+msgid "set the jquery animation Time ( by millisecond )"
+msgstr "Imposta Durata Animazione jquery ( in millisecondi )"
+
+#: standard/include/style-search_form.php:13
+msgid "Search Form Style"
+msgstr "Stile Modulo Ricerca"
+
+#: standard/include/style-search_form.php:17
+#, fuzzy
+msgid "Search Form Margin"
+msgstr "Margine Icona Ricerca"
+
+#: standard/include/style-search_form.php:49
+msgid "Set the search form margin ( Top , Right , Left )"
+msgstr "Imposta margini modulo ricerca ( Superiore, Destro, Sinistro )"
+
+#: standard/include/style-search_form.php:61
+#, fuzzy
+msgid "Search Icon Size"
+msgstr "Dimensione Icona 3 Barre"
+
+#: standard/include/style-search_form.php:62
+msgid "Set the button icon size"
+msgstr "Imposta Dimensione Pulsante Icona"
+
+#: standard/include/style-search_form.php:68
+#, fuzzy
+msgid "Search Icon Padding"
+msgstr "Margine Icona Ricerca"
+
+#: standard/include/style-search_form.php:100
+#, fuzzy
+msgid "Search icon padding ( top, left, right )"
+msgstr "Imposta Rientri (Alto, Sinistro, Destro)"
+
+#: standard/include/style-search_form.php:110
+msgid "Search Icon Color"
+msgstr "Colore  Icona Ricerca"
+
+#: standard/include/style-search_form.php:111
+msgid "Set the button icon color"
+msgstr "Imposta  Colore Pulsante Icona"
+
+#: standard/include/style-search_form.php:122
+#, fuzzy
+msgid "Search Icon Backgound Color"
+msgstr "Colore Sfondo Icona (al Passaggio del Mouse)"
+
+#: standard/include/style-search_form.php:123
+#, fuzzy
+msgid "Set the button backgound color"
+msgstr "Imposta Colore Sfondo campo immissione ricerca"
+
+#: standard/include/style-search_form.php:136
+msgid "Input Width"
+msgstr "Larghezza campo immissione"
+
+#: standard/include/style-search_form.php:137
+msgid "Set the width of the search input"
+msgstr "Imposta Larghezza campo immissione ricerca"
+
+#: standard/include/style-search_form.php:148
+msgid "Input Height"
+msgstr "Altezza campo immissione ricerca"
+
+#: standard/include/style-search_form.php:149
+msgid "Set the height of the search input"
+msgstr "Imposta Altezza campo immissione ricerca"
+
+#: standard/include/style-search_form.php:160
+msgid "Input Backgound Color"
+msgstr "Colore Sfondo campo immissione ricerca"
+
+#: standard/include/style-search_form.php:161
+msgid "Set the input backgound color"
+msgstr "Imposta Colore Sfondo campo immissione ricerca"
+
+#: standard/include/style-search_form.php:168
+msgid "Input Border Radius"
+msgstr "Raggio Bordo Campo immissione ricerca"
+
+#: standard/include/style-search_form.php:221
+msgid "Search Text Typography"
+msgstr "Tipografia Testo Campo immissione ricerca"
+
+#: standard/include/style-search_form.php:222
+msgid "Set the search text typography"
+msgstr "Imposta Tipografia Testo Campo immissione ricerca"
+
+#: standard/include/style-search_form.php:234
+msgid "Search Text Padding"
+msgstr "Rientri Testo Campo immissione ricerca"
+
+#: standard/include/style-search_form.php:256
+msgid "Set the search text padding ( Left , Right )"
+msgstr "Imposta Rientri Testo Campo immissione ricerca  (Sinistro, Destro)"
+
+#: standard/include/style-custom.php:7
+msgid "Custom CSS "
+msgstr "CSS Personalizzato"
+
+#: standard/include/style-custom.php:8
+msgid "Add your custom css"
+msgstr "Aggiungi il tuo CSS Personalizzato"
 
 #: standard/include/walker-backend.php:91
 #, php-format
@@ -1388,180 +1559,48 @@ msgstr "Originale: %s"
 msgid "Remove"
 msgstr "Rimuovere"
 
-#: standard/include/settings-search_form.php:2
-msgid "Search form settings"
-msgstr "Impostazioni Modulo Ricerca"
+#: standard/include/style-submenu_mega_title_icons.php:2
+msgid "\"Mega Links\" Title Icon"
+msgstr "\"Mega Links\" Icone Titoli"
 
-#: standard/include/settings-search_form.php:11
-msgid "Enable Modern Search Form"
-msgstr "Attiva Modulo Ricerca Moderno"
+#~ msgid "Enable Modern Search Form"
+#~ msgstr "Attiva Modulo Ricerca Moderno"
 
-#: standard/include/settings-search_form.php:12
-msgid "Enable the modern search form"
-msgstr "Attiva il modulo ricerca moderno"
+#~ msgid "Enable the modern search form"
+#~ msgstr "Attiva il modulo ricerca moderno"
 
-#: standard/include/settings-search_form.php:23
-msgid "Display Search form on RWD"
-msgstr "Visualizza Modulo Ricerca su RWD"
+#~ msgid "Set the button backgound color when you hover over it"
+#~ msgstr "Imposta Colore Sfondo Icona al Passaggio del Mouse"
 
-#: standard/include/settings-search_form.php:24
-msgid "Display search form on responsive web design"
-msgstr "Visualiza il modulo ricerca nel disegno web reattivo (RWD)"
+#~ msgid "Search Icon Color ( Hover )"
+#~ msgstr "Colore Icona al Passaggio del Mouse"
 
-#: standard/include/style-rwd_icons.php:3
-msgid "Responsive Icons"
-msgstr "Icone Reattive"
+#~ msgid "Set the button color when you hover over it"
+#~ msgstr "Imposta Colore Pulsante al Passaggio del Mouse"
 
-#: standard/include/settings-posts.php:12
-msgid "Posts settings"
-msgstr "Impostazioni Post"
+#~ msgid "Button Icon Padding"
+#~ msgstr "Rientri Pulsante Icona"
 
-#: standard/include/settings-posts.php:18
-msgid "Select image effect"
-msgstr "Seleziona Effetto Immagine"
+#~ msgid "Set the button icon padding ( Left + Right )"
+#~ msgstr "Imposta Rientri Pulsante Icona (Sinistro + Destro)"
 
-#: standard/include/settings-posts.php:19
-msgid "Select the image effect for thumbnails"
-msgstr "Seleziona Effetto Immagine Anteprima"
+#~ msgid "Button Icon Size"
+#~ msgstr "Dimensione Pulsante Icona"
 
-#: standard/include/settings-posts.php:50
-msgid "Enable \"View all...\" button in \"latest posts\" menu type "
-msgstr ""
-"Attiva il pulsante  \"Visualizza tutto...\" nel menu tipo \"post recenti\""
+#~ msgid "<span class=\"icon ct-wrench\"></span>Settings"
+#~ msgstr "<span class=\"icon ct-wrench\"></span>Impostazioni"
 
-#: standard/include/settings-posts.php:51
-msgid "Enable \"View all...\" button in \"latest posts\" menu type"
-msgstr ""
-"Attiva il pulsante  \"Visualizza tutto...\" nel menu tipo \"post recenti\""
+#~ msgid "Enable jQuery on noConflict Mode"
+#~ msgstr "Attiva jQuery in modalità noConflict"
 
-#: standard/include/style-dropdown.php:2
-msgid "Submenu Dropdown Style"
-msgstr "Stile Sottomenu a Discesa (Dropdown)"
+#~ msgid "Enable jquery on noConflict mode "
+#~ msgstr "Attiva jquery in modalità noConflict"
 
-#: standard/include/style-dropdown.php:28
-msgid "Set the links color when you hover over"
-msgstr "Imposta Colore Collegamenti al Passaggio del mouse"
+#~ msgid "Enable Responsive Design Desktops / Laptops"
+#~ msgstr "Attiva Stile Responsive su Portatili"
 
-#: standard/include/style-dropdown.php:39
-msgid "Links Background Color ( Hover )"
-msgstr "Colore Sfondo Collegamenti (Passaggio del mouse)"
-
-#: standard/include/style-dropdown.php:40
-msgid "Set the links background color when user hover over"
-msgstr "Imposta Colore Sfondo Collegamenti quando l'utente passa su col mouse"
-
-#: standard/include/style-dropdown.php:51
-msgid "Links Bottom Border Color"
-msgstr "Colore Bordo Inferiore Collegamenti"
-
-#: standard/include/style-dropdown.php:52
-msgid "Set the links bottom border color"
-msgstr "Imposta Colore Bordo Collegamenti"
-
-#: standard/include/style-dropdown.php:200
-msgid ""
-"Set the dropdown arrow style ( Size , Color , Color[Hover] , Margin Right , "
-"Margin Top )"
-msgstr ""
-"Imposta lo stile della freccia menu a discesa (Dimensione, Colore. Colore "
-"[al passaggio del mouse], Margine Destro, Margine Superiore)"
-
-#: standard/include/style-submenu_links.php:13
-msgid "Submenu Mega Links Style"
-msgstr "Stile Collegamenti Submenu Mega"
-
-#: standard/include/style-submenu_links.php:21
-msgid "Column Right Margin"
-msgstr "Margine Destro Colonne"
-
-#: standard/include/style-submenu_links.php:22
-msgid "Set the column right margin (px)"
-msgstr "Imposta Margine Destro Colonne (px)"
-
-#: standard/include/style-submenu_links.php:34
-msgid "Title Typography"
-msgstr "Tipografia Titolo"
-
-#: standard/include/style-submenu_links.php:35
-msgid "Set the title typography"
-msgstr "Imposta Tipografia Titolo"
-
-#: standard/include/style-submenu_links.php:51
-msgid "Title Color ( Hover )"
-msgstr "Colore Titolo (al Passaggio del mouse)"
-
-#: standard/include/style-submenu_links.php:52
-msgid "Set the title color when you hover over"
-msgstr "Imposta Colore Titolo al Passaggio del mouse"
-
-#: standard/include/style-submenu_links.php:63
-msgid "Title Bottom Border Color"
-msgstr "Colore Bordo Inferiore Titolo"
-
-#: standard/include/style-submenu_links.php:64
-msgid "Set the title bottom border color"
-msgstr "Imposta Colore Bordo Inferiore Titolo"
-
-#: standard/include/style-submenu_links.php:71
-msgid "Title Padding"
-msgstr "Rientri Titolo"
-
-#: standard/include/style-submenu_links.php:113
-msgid "Set the title padding ( Top , Right , Bottom , Left )"
-msgstr "Imposta Rientri Titoli ( Superiore, Destro, Inferiore, Sinistro )"
-
-#: standard/include/style-submenu_general.php:13
-msgid "Submenu General Style"
-msgstr "Stile Generale Sottomenu"
-
-#: standard/include/style-submenu_general.php:21
-msgid "Set the submenu background"
-msgstr "Imposta sfondo del Sottomenu"
-
-#: core/ctf_setup.class.php:164
-msgid "Support Forum"
-msgstr "Forum di Supporto"
-
-#: core/ctf_setup.class.php:169
-msgid "Guide"
-msgstr "Guida"
-
-#: core/ctf_setup.class.php:171 core/ctf_setup.class.php:233
-msgid "Save Skin"
-msgstr "Salva Skin"
-
-#: core/ctf_setup.class.php:172
-msgid "Skin Name"
-msgstr "Nome Skin"
-
-#: core/ctf_options.class.php:127 core/ctf_options.class.php:176
-#: core/ctf_options.class.php:218 core/ctf_options.class.php:267
-#: core/ctf_options.class.php:320 core/ctf_options.class.php:379
-#: core/ctf_options.class.php:435 core/ctf_options.class.php:490
-#: core/ctf_options.class.php:541 core/ctf_options.class.php:596
-#: core/ctf_options.class.php:712 core/ctf_options.class.php:834
-msgid "<script>alert(\"DEBUG : ID Exists "
-msgstr "<script>alert(\"DEBUG : ID Esiste "
-
-#: core/ctf_options.class.php:557
-msgid "Upload"
-msgstr "Carica"
-
-#: core/ctf_options.class.php:668
-msgid "Demo"
-msgstr "Demo"
-
-#: core/ctf_options.class.php:911 core/ctf_options.class.php:974
-msgid "Funny Business ?"
-msgstr "Funny Business ?"
-
-#: core/ctf_options.class.php:970
-msgid ""
-"<div>Settings Saved</div><br/><br/><div class=\"suppa_save_alert\">Please "
-"clear your browser cache</div>"
-msgstr ""
-"<div>Impostazioni Salvate</div><br/><br/><div class=\"suppa_save_alert\">Per "
-"favore svuota la cache del tuo browser</div>"
+#~ msgid "Enable the responsive design on desktops and laptops"
+#~ msgstr "Attiva Disegno Reattivo su Computer da Tavolo e Portatili"
 
 #~ msgid ""
 #~ "Suppa Database must be update, you have to deactivate and activate the "

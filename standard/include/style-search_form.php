@@ -5,7 +5,7 @@
  * @package 	CTFramework
  * @author		Sabri Taieb ( codezag )
  * @copyright	Copyright (c) Sabri Taieb
- * @link		http://codetemp.com
+ * @link		http://vamospace.com
  * @since		Version 1.0
  *
  */
@@ -14,7 +14,7 @@ echo '<h3 class="ctf_page_title">' . __('Search Form Style','suppa_menu') . '</h
 
 // Form Margin
 echo 	'<div class="ctf_option_container suppa_all_op_container">
-			<span class="ctf_option_title">'.__( 'Search Icon Margin' , 'suppa_menu' ).'</span>';
+			<span class="ctf_option_title">'.__( 'Search Form Margin' , 'suppa_menu' ).'</span>';
 
 			$this->add_text_input(
 				array(
@@ -50,6 +50,57 @@ echo 	'<div class="ctf_option_container suppa_all_op_container">
 
 		</div>';
 
+echo '<br/><br/><br/>';
+
+// Button Icon Padding
+$this->add_text_input(
+	array(
+		'group_id'			=> 'style',
+		'option_id'			=> 'submenu-search-button_icon_size',
+		'value'				=> '14px',
+		'title'				=> __( 'Search Icon Size' , 'suppa_menu' ),
+		'desc'				=> __( 'Set the button icon size' , 'suppa_menu' )
+	),
+	'suppa_all_op_container'
+);
+
+echo 	'<div class="ctf_option_container suppa_all_op_container">
+			<span class="ctf_option_title">'.__( 'Search Icon Padding' , 'suppa_menu' ).'</span>';
+
+			$this->add_text_input(
+				array(
+					'group_id'			=> 'style',
+					'option_id'			=> 'search_padding_top',
+					'value'				=> '0px',
+					'class'				=> 'ctf_option_box_shadow'
+				),
+				'ctf_container_box_shadow'
+			);
+
+			$this->add_text_input(
+				array(
+					'group_id'			=> 'style',
+					'option_id'			=> 'search_padding_left',
+					'value'				=> '0px',
+					'class'				=> 'ctf_option_box_shadow'
+				),
+				'ctf_container_box_shadow'
+			);
+
+			$this->add_text_input(
+				array(
+					'group_id'			=> 'style',
+					'option_id'			=> 'search_padding_right',
+					'value'				=> '0px',
+					'class'				=> 'ctf_option_box_shadow'
+				),
+				'ctf_container_box_shadow'
+			);
+
+			echo '<div class="clearfix"></div><span class="ctf_option_desc">'.__( 'Search icon padding ( top, left, right )' , 'suppa_menu' ).'</span>
+
+		</div>';
+
 // Button Icon color
 $this->add_colorpicker(
 	array(
@@ -68,44 +119,8 @@ $this->add_colorpicker(
 		'group_id'			=> 'style',
 		'option_id'			=> 'submenu-search-button_bg_color',
 		'value'				=> '#06456e',
-		'title'				=> __( 'Search Icon Backgound Color ( Hover )' , 'suppa_menu' ),
-		'desc'				=> __( 'Set the button backgound color when you hover over it' , 'suppa_menu' )
-	),
-	'suppa_all_op_container'
-);
-
-// Button Background color
-$this->add_colorpicker(
-	array(
-		'group_id'			=> 'style',
-		'option_id'			=> 'submenu-search-button_color_hover',
-		'value'				=> '#06456e',
-		'title'				=> __( 'Search Icon Color ( Hover )' , 'suppa_menu' ),
-		'desc'				=> __( 'Set the button color when you hover over it' , 'suppa_menu' )
-	),
-	'suppa_all_op_container'
-);
-
-// Button Icon Padding
-$this->add_text_input(
-	array(
-		'group_id'			=> 'style',
-		'option_id'			=> 'submenu-search-button_icon_padding_left_right',
-		'value'				=> '20px',
-		'title'				=> __( 'Button Icon Padding' , 'suppa_menu' ),
-		'desc'				=> __( 'Set the button icon padding ( Left + Right )' , 'suppa_menu' )
-	),
-	'suppa_all_op_container'
-);
-
-// Button Icon Padding
-$this->add_text_input(
-	array(
-		'group_id'			=> 'style',
-		'option_id'			=> 'submenu-search-button_icon_size',
-		'value'				=> '14px',
-		'title'				=> __( 'Button Icon Size' , 'suppa_menu' ),
-		'desc'				=> __( 'Set the button icon size' , 'suppa_menu' )
+		'title'				=> __( 'Search Icon Backgound Color' , 'suppa_menu' ),
+		'desc'				=> __( 'Set the button backgound color' , 'suppa_menu' )
 	),
 	'suppa_all_op_container'
 );
@@ -147,6 +162,19 @@ $this->add_colorpicker(
 	),
 	'suppa_all_op_container'
 );
+
+// Input Border radius
+$this->add_text_input(
+	array(
+		'group_id'			=> 'style',
+		'option_id'			=> 'search_input_border_radius',
+		'value'				=> '0px',
+		'title'				=> __( 'Input Border Radius' , 'suppa_menu' ),
+		'desc'				=> __( 'Input Border Radius' , 'suppa_menu' )
+	),
+	'suppa_all_op_container'
+);
+
 
 echo '<br/><br/><br/>';
 
@@ -191,55 +219,5 @@ echo 	'<div class="ctf_option_container suppa_all_op_container">
 			);
 
 			echo '<div class="clearfix"></div><span class="ctf_option_desc">'.__( 'Set the search text padding ( Left , Right )' , 'suppa_menu' ).'</span>
-
-		</div>';
-
-echo '<br/><br/><br/>';
-
-// Border Radius
-echo 	'<div class="ctf_option_container suppa_all_op_container">
-			<span class="ctf_option_title">'.__( 'Input Border Radius' , 'suppa_menu' ).'</span>';
-
-			$this->add_text_input(
-				array(
-					'group_id'			=> 'style',
-					'option_id'			=> 'submenu-search-input-borderradius_top_left',
-					'value'				=> '0px',
-					'class'				=> 'ctf_option_border_radius'
-				),
-				'ctf_container_border_radius'
-			);
-
-			$this->add_text_input(
-				array(
-					'group_id'			=> 'style',
-					'option_id'			=> 'submenu-search-input-borderradius_top_right',
-					'value'				=> '0px',
-					'class'				=> 'ctf_option_border_radius'
-				),
-				'ctf_container_border_radius'
-			);
-
-			$this->add_text_input(
-				array(
-					'group_id'			=> 'style',
-					'option_id'			=> 'submenu-search-input-borderradius_bottom_right',
-					'value'				=> '0px',
-					'class'				=> 'ctf_option_border_radius'
-				),
-				'ctf_container_border_radius'
-			);
-
-			$this->add_text_input(
-				array(
-					'group_id'			=> 'style',
-					'option_id'			=> 'submenu-search-input-borderradius_bottom_left',
-					'value'				=> '0px',
-					'class'				=> 'ctf_option_border_radius'
-				),
-				'ctf_container_border_radius'
-			);
-
-			echo '<div class="clearfix"></div><span class="ctf_option_desc">'.__( 'Set the border radius ( Top Left , Top Right , Bottom Right , Bottom Left )' , 'suppa_menu' ).'</span>
 
 		</div>';

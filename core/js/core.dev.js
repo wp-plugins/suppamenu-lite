@@ -2,7 +2,7 @@
  *
  * Codetemp Framework ( CTFramework )
  *
- * @author Taieb Sabri (codetemp), http://codetemp.com
+ * @author Taieb Sabri (codetemp), http://vamospace.com
  * @version 1.2.5
  *
  * Start 2013-6-2

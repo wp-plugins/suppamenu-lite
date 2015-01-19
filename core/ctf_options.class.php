@@ -4,7 +4,7 @@
  *
  * Codetemp Framework ( CTFramework )
  *
- * @author Taieb Sabri (codetemp), http://codetemp.com
+ * @author Taieb Sabri (codetemp), http://vamospace.com
  *
  * @since 1.0.0
  *
@@ -668,6 +668,14 @@ if( !class_exists('ctf_options') )
 			echo 		'<button class="ctf_option_font_demo fl">'.__( 'Demo' , 'suppa_menu' ).'</button>
 						<div class="clearfix"></div>';
 
+						$this->add_box(
+							array(
+								'display'			=> 'hide',
+								'width'				=> '468px',
+								'desc'				=> 'Pellentesque habitant morbi tristique senectus .', 		// Description or Help
+							)
+						);
+
 			echo 		$after.$desc.'
 					</div>';
 		}
@@ -854,7 +862,7 @@ if( !class_exists('ctf_options') )
 		 * @param $container_special_class string
 		 *
 		 */
-		static function add_box( $config = array() , $container_special_class = "" )
+		public function add_box( $config = array() , $container_special_class = "" )
 		{
 			extract( wp_parse_args( $config, array(
 				'type'				=> 'normal',// Type : success, error, normal
@@ -868,13 +876,14 @@ if( !class_exists('ctf_options') )
 				'after'				=> '', 		// html after
 			)));
 
-			$image   = ($image == '') ? '' : '<img class="ctf_box_img" src="'.$image.'" alt="" />';
-			$title   = ($title == '') ? '' : '<span class="ctf_box_title">'.$title.'</span>';
-			$desc  	 = ($desc  == '') ? '' : '<span class="ctf_box_desc">'.$desc.'</span>';
-			$width   = ($width  == '') ? '' : ' width:'.$width.'; ';
-			$display = ($display == 'show') ? 'display:block;' : ' display:none; ';
+			$image = $image == '' ? '' : '<img class="ctf_box_img" src="'.$image.'" alt="" />';
+			$title = $title == '' ? '' : '<span class="ctf_box_title">'.$title.'</span>';
+			$desc = $desc == '' ? '' : '<span class="ctf_box_desc">'.$desc.'</span>';
+			$width = $width == '' ? '' : ' width:'.$width.'; ';
+			$display = $display == 'show' ? 'display:block;' : ' display:none; ';
 
 			$html = $before.'<div class="ctf_box ctf_box_type_'.$type.' '.$container_special_class.'" style=" '.$width.' '.$display.' " >
+								'.$image.'
 								<div class="ctf_box_content">
 									'.$title.'
 									'.$desc.'
@@ -920,14 +929,19 @@ if( !class_exists('ctf_options') )
 					$value 			= @urldecode( $row_explode[1] );
 					$value 			= stripslashes( $value );
 
-					// Add Decoded Option to $new_array_options
-					$new_array_options[ $name ] = $value;
-
 					// Used Fonts
 					if( preg_match( "/.+_font_family$/" , $name ) )
 					{
 						ctf_fonts::add_font_used( $value );
+						if( $value == 'null' ){
+							$value = "Arial , sans-serif";
+						}
+
 					} // End IF
+
+					// Add Decoded Option to $new_array_options
+					$new_array_options[ $name ] = $value;
+
 				}
 
 				// Update The Parent

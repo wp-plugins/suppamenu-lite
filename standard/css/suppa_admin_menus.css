@@ -4,7 +4,7 @@
  * @package 	CTFramework
  * @author		Sabri Taieb ( codezag )
  * @copyright	Copyright (c) Sabri Taieb
- * @link		http://codetemp.com
+ * @link		http://vamospace.com
  * @since		Version 1.0
  *
  */
@@ -70,7 +70,7 @@ li[class*='menu-item-depth-0'] .item-type-default {
 }
 
 .admin_suppa_box .admin_suppa_box_header {
-	padding : 12px 8px; 
+	padding : 12px 8px;
 	position: relative;
 
 	/* color/bg/border */
@@ -86,7 +86,7 @@ li[class*='menu-item-depth-0'] .item-type-default {
 		position: absolute;
 		right: 10px;
 		top: 13px;
-		
+
 		width: 15px;
 		height: 15px;
 		line-height: 15px;
@@ -210,7 +210,7 @@ li[class*='menu-item-depth-0'] .item-type-default {
 				top: -20px;
 				right: auto;
 				left: 0px;
-				
+
 			}
 		.era_admin_widget_box_inside {
 			overflow-y: scroll;
@@ -274,7 +274,7 @@ li[class*='menu-item-depth-0'] .item-type-default {
 
 .admin_suppa_box_container_settings label select,
 #menu-item-suppa-link_position_container select,
-#menu-item-suppa-link_logged_in select{ 
+#menu-item-suppa-link_logged_in select{
 	float: right;
 }
 .admin_suppa_upload_icon_box_preview {
@@ -302,7 +302,7 @@ li[class*='menu-item-depth-0'] .item-type-default {
 }
 
 .suppa_button_enable {
-	background: green !important; 
+	background: green !important;
 	color: white !important;
 	border: none !important;
 }
@@ -311,5 +311,5 @@ li[class*='menu-item-depth-0'] .item-type-default {
 	padding-right: 25px !important;
 	background-image:url('../img/ajax-loader.gif') !important;
 	background-position: center right !important;
-	background-repeat: no-repeat !important; 
+	background-repeat: no-repeat !important;
 }

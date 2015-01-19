@@ -4,7 +4,7 @@
  *
  * Codetemp Framework ( CTFramework )
  *
- * @author Taieb Sabri (codetemp), http://codetemp.com
+ * @author Taieb Sabri (codetemp), http://vamospace.com
  *
  * @since 1.0.0
  *
@@ -122,7 +122,6 @@ if( !class_exists('ctf_setup') )
 				wp_enqueue_script( 'codetemp-core-admin-settings' , $this->project_settings['plugin_url'] . 'core/js/core.dev.js' , array('jquery' , 'media-upload' , 'thickbox' , 'jquery-ui-core' , 'jquery-ui-draggable' , 'jquery-ui-droppable' , 'jquery-ui-sortable' , 'ctf_core_add_inputs' ) , $this->project_settings['framework_version'] , true );
 				wp_enqueue_script( 'codetemp-core-admin-ace-script' , $this->project_settings['plugin_url']  .'core/js/ace/ace.js' , array( 'codetemp-core-admin-settings' ) , $this->project_settings['framework_version'] , true );
 				wp_enqueue_script( 'codetemp-core-admin-colorpicker-script' , $this->project_settings['plugin_url'] . 'core/js/colorpicker/js/colorpicker.js' , array( 'codetemp-core-admin-settings' ) , $this->project_settings['framework_version'] , true );
-				wp_localize_script( 'codetemp-core-admin-settings', 'codetemp_groups', $this->project_settings['groups'] );
 			}
 		}
 
@@ -134,7 +133,7 @@ if( !class_exists('ctf_setup') )
 		 */
 		public function get_html_header( $header_desc = "" , $html_id = "" )
 		{
-			$html = '<form id="codetemp_form" >
+			$html = '<form id="codetemp_form" style="margin-top:20px;">
 
 						<div class="codetemp_ajax_response" style="display:none;">
 							<div class="codetemp_ajax_response_close" >x</div>
@@ -153,19 +152,23 @@ if( !class_exists('ctf_setup') )
 			// Header
 			$html .= '
 						<div class="codetemp_header" >
-							<img src="' . $this->project_settings['plugin_url'] . 'core/img/codetemp.png" alt="" class="codetemp_header_logo fl" />
-							<h3 class="fl">Code Templates</h3>
+							<h3 class="fl">Vamospace.com</h3>
 							<span class="codetemp_header_desc fr" >'.$header_desc.'</span>
 							<div class="clearfix"></div>
 						</div><!--codetemp_header-->
 
 						<div class="codetemp_bread">
 
+							<a href="' . $this->project_settings['support_forum'] . '" class="fl">
+								<img src="' . $this->project_settings['plugin_url'] . 'core/img/rounded_support.png" alt="" class="fl" />
+								<span class="fl" >'.__( 'Support Forum' , 'suppa_menu' ).'</span>
+						 	</a>
+
 							<a href="' . $this->project_settings['guide'] . '" class="fl">
 								<img src="' . $this->project_settings['plugin_url'] . 'core/img/rounded_guide.png" alt="" class="fl" />
 								<span class="fl" >'.__( 'Guide' , 'suppa_menu' ).'</span>
 							</a>
-							'.$this->get_html_button( 'update_all' , __( 'Save Settings' , 'suppa_menu' ) , 'fr' ).'
+							'.$this->get_html_button( 'update_all' , __( 'Save Skin' , 'suppa_menu' ) , 'fr' ).'
 							<input type="text" placeholder="'.__('Skin Name','suppa_menu').'" class="fr" id="suppa_skin_name">
 
 							<div class="clearfix"></div>
@@ -227,7 +230,7 @@ if( !class_exists('ctf_setup') )
 		{
 
 			$html ='	<div class="codetemp_bread">'
-							.$this->get_html_button( 'update_all' , __( 'Save Settings' , 'suppa_menu' ) , 'fr' ).
+							.$this->get_html_button( 'update_all' , __( 'Save Skin' , 'suppa_menu' ) , 'fr' ).
 							'<div class="clearfix"></div>
 						</div><!--codetemp_bread-->';
 
