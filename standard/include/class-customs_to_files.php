@@ -71,6 +71,14 @@ class suppa_customs2files{
     // Generate FrontEnd CSS & JS Settings
 	function save_to_files( $location_info ){
 
+        /** Create New Cache Versio, to prevent browser cache issues **/
+        $cache_version = 250;
+        if( get_option('suppa_cache_version') != false ){
+            $cache_version = get_option('suppa_cache_version');
+        }
+        $cache_version = $cache_version + 1;
+        update_option('suppa_cache_version',$cache_version);
+
 		/** Folders **/
 		$upload_dir 	= wp_upload_dir();
 		$suppa_folder 	= $upload_dir['basedir'].'/suppamenu2/';
@@ -774,7 +782,6 @@ class suppa_customs2files{
                 font-size:'.$skin_data['fontawesome_icons_size'].' !important;
                 color:'.$skin_data['submenu-search-text_font_font_color'].' !important;
             }
-
 
             /** ----------------------------------------------------------------
              ******** Responsive Web Design Style

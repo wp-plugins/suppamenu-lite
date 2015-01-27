@@ -1,11 +1,11 @@
 /**
  * Admin Style File
  *
- * @package 	CTFramework
- * @author		Sabri Taieb ( codezag )
- * @copyright	Copyright (c) Sabri Taieb
- * @link		http://vamospace.com
- * @since		Version 1.0
+ * @package    CTFramework
+ * @author     Sabri Taieb ( codezag )
+ * @copyright  Copyright (c) Sabri Taieb
+ * @link    http://vamospace.com
+ * @since      Version 1.0
  *
  */
 
@@ -18,298 +18,298 @@
 .fl { float: left; }
 
 .admin_suppa_clearfix {
-	float: none !important;
-	clear: both !important;
-	overflow: hidden !important;
-	display: block !important;
-	height: 0px !important;
-	width: 0px !important;
+   float: none !important;
+   clear: both !important;
+   overflow: hidden !important;
+   display: block !important;
+   height: 0px !important;
+   width: 0px !important;
 }
 
 .item-type-default {
-	text-transform: uppercase;
+   text-transform: uppercase;
 }
 
 #menu-item-suppa-link_position_container{
-	display: none;
+   display: none;
 }
 
 li[class*='menu-item-depth-0'] .admin_suppa_box_menu_type,
 li[class*='menu-item-depth-0'] #menu-item-suppa-link_position_container{
-	display: block;
+   display: block;
 }
 
 .admin_suppa_box_mega_posts {
-	display: none;
+   display: none;
 }
 
 li.suppa_menu_item_mega_posts.menu-item-depth-1 .admin_suppa_box_mega_posts{
-	display: block !important;
+   display: block !important;
 }
 
 .menu-item .item-type-default{
-	display: none;
+   display: none;
 }
 
 li[class*='menu-item-depth-0'] .item-type-default {
-	display: inline-block !important;
+   display: inline-block !important;
 }
 
 /** =Admin Options Box **/
 .admin_suppa_box {
-	width: 97%;
-	margin: 0px 0 15px 0px !important;
-	clear: both;
+   width: 97%;
+   margin: 0px 0 15px 0px !important;
+   clear: both;
 
-	/* color/bg/border */
-	background-color: #eee;
-	color: #353535;
+   /* color/bg/border */
+   background-color: #eee;
+   color: #353535;
 }
 .admin_suppa_box_menu_type {
-	display: none;
+   display: none;
 }
 
 .admin_suppa_box .admin_suppa_box_header {
-	padding : 12px 8px;
-	position: relative;
+   padding : 12px 8px;
+   position: relative;
 
-	/* color/bg/border */
-	background-color: #353535;
-	color: #ffffff;
+   /* color/bg/border */
+   background-color: #353535;
+   color: #ffffff;
 
 }
-	.admin_suppa_box .admin_suppa_box_header span{
-		font-size: 14px;
-		text-transform: uppercase;
-	}
-	.admin_suppa_box .admin_suppa_box_header a{
-		position: absolute;
-		right: 10px;
-		top: 13px;
+   .admin_suppa_box .admin_suppa_box_header span{
+      font-size: 14px;
+      text-transform: uppercase;
+   }
+   .admin_suppa_box .admin_suppa_box_header a{
+      position: absolute;
+      right: 10px;
+      top: 13px;
 
-		width: 15px;
-		height: 15px;
-		line-height: 15px;
-		text-align: center;
-		cursor: pointer;
-		font-size: 16px;
-		font-weight: bold;
+      width: 15px;
+      height: 15px;
+      line-height: 15px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
 
-		/* color/bg/border */
-		background-color: #ffffff;
+      /* color/bg/border */
+      background-color: #ffffff;
 
-		/* CSS3 */
-		-moz-border-radius: 100%;
-		-webkit-border-radius: 100%;
-		border-radius: 100%;
-	}
+      /* CSS3 */
+      -moz-border-radius: 100%;
+      -webkit-border-radius: 100%;
+      border-radius: 100%;
+   }
 
 .admin_suppa_box .admin_suppa_box_container {
-	padding: 10px;
-	display: none;
+   padding: 10px;
+   display: none;
 
-	/* color/bg/border */
-	border-right:1px solid #c1c1c1;
-	border-bottom:1px solid #c1c1c1;
-	border-left:1px solid #c1c1c1;
+   /* color/bg/border */
+   border-right:1px solid #c1c1c1;
+   border-bottom:1px solid #c1c1c1;
+   border-left:1px solid #c1c1c1;
 }
-	.admin_suppa_box_container_settings label,
-	.admin_suppa_box_container_settings #menu-item-suppa-link_position_container{
-		display: block !important;
-		padding-bottom: 10px;
-		margin-bottom: 10px;
+   .admin_suppa_box_container_settings label,
+   .admin_suppa_box_container_settings #menu-item-suppa-link_position_container{
+      display: block !important;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
 
-	}
+   }
 
-	.admin_suppa_box_option_inside {
-		padding: 6px;
-		margin-bottom: 10px;
+   .admin_suppa_box_option_inside {
+      padding: 6px;
+      margin-bottom: 10px;
 
-		/* color/bg/border */
-		background-color: #fafafa;
-		border:1px solid #e1e1e1;
-	}
-		.admin_suppa_box_option_inside div {
-			float: right;
-		}
+      /* color/bg/border */
+      background-color: #fafafa;
+      border:1px solid #e1e1e1;
+   }
+      .admin_suppa_box_option_inside div {
+         float: right;
+      }
 
 .admin_suppa_box select {
-	width: 156px !important;
+   width: 156px !important;
 }
 
 .admin_suppa_upload {
-	margin-top: 5px;
-	margin-right: 3px;
+   margin-top: 5px;
+   margin-right: 3px;
 }
 
 /** =Widget **/
 .era_admin_widgets_container {
-	width:100%;
-	height: auto;
-	z-index: 999;
-	position: fixed;
-	margin: 0 auto;
-	top:0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	overflow: hidden;
-	display: none;
+   width:100%;
+   height: auto;
+   z-index: 999;
+   position: fixed;
+   margin: 0 auto;
+   top:0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   overflow: hidden;
+   display: none;
 
-	/* color/bg/border */
-	background-color: rgba( 0,0,0,0.7 );
+   /* color/bg/border */
+   background-color: rgba( 0,0,0,0.7 );
 }
-	.era_admin_widget_box {
-		width:900px !important;
-		height: 600px;
-		z-index: 9991;
-		position: absolute;
-		margin: 0 auto;
-		top:50px;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		display: none;
+   .era_admin_widget_box {
+      width:900px !important;
+      height: 600px;
+      z-index: 9991;
+      position: absolute;
+      margin: 0 auto;
+      top:50px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: none;
 
-		/* color/bg/border */
-		background-color: #ffffff;
-	}
-		.era_admin_widget_box_header {
-			font-size: 18px;
-			text-transform: uppercase;
-			font-weight: bold;
-			padding: 14px 12px;
-			position: relative;
+      /* color/bg/border */
+      background-color: #ffffff;
+   }
+      .era_admin_widget_box_header {
+         font-size: 18px;
+         text-transform: uppercase;
+         font-weight: bold;
+         padding: 14px 12px;
+         position: relative;
 
-			/* color/bg/border */
-			color: #414141;
-			background-color: #ffffff;
-			border-bottom:1px solid #eeeeee;
-		}
-			.era_admin_widget_box_header a,
-			.suppa_admin_open{
-				width: 20px;
-				height: 20px;
-				line-height: 20px;
-				text-align: center;
-				position: absolute;
-				right: 10px;
-				top: 10px;
-				font-size: 14px;
-				cursor: pointer;
+         /* color/bg/border */
+         color: #414141;
+         background-color: #ffffff;
+         border-bottom:1px solid #eeeeee;
+      }
+         .era_admin_widget_box_header a,
+         .suppa_admin_open{
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            font-size: 14px;
+            cursor: pointer;
 
-				/* color/bg/border */
-				background-color: #f1f1f1;
+            /* color/bg/border */
+            background-color: #f1f1f1;
 
-				/* CSS3 */
-				-moz-border-radius:100%;
-				-webkit-border-radius:100%;
-				border-radius:100%;
-			}
-			.suppa_admin_open{
-				top: -20px;
-				right: auto;
-				left: 0px;
+            /* CSS3 */
+            -moz-border-radius:100%;
+            -webkit-border-radius:100%;
+            border-radius:100%;
+         }
+         .suppa_admin_open{
+            top: -20px;
+            right: auto;
+            left: 0px;
 
-			}
-		.era_admin_widget_box_inside {
-			overflow-y: scroll;
-			padding: 14px 12px;
+         }
+      .era_admin_widget_box_inside {
+         overflow-y: scroll;
+         padding: 14px 12px;
 
-			/* color/bg/border */
-			background-color: #ffffff;
-		}
+         /* color/bg/border */
+         background-color: #ffffff;
+      }
 
 .suppa_fontAwesome_container .admin_suppa_fontAwesome_icon_box {
-	font-size: 20px;
-	width: 40px;
-	height: 40px;
-	line-height: 40px;
-	text-align: center;
-	display: inline-block;
-	margin-bottom: 3px;
+   font-size: 20px;
+   width: 40px;
+   height: 40px;
+   line-height: 40px;
+   text-align: center;
+   display: inline-block;
+   margin-bottom: 3px;
 
-	border:1px solid #ccc;
+   border:1px solid #ccc;
 }
-	.suppa_fontAwesome_container .admin_suppa_fontAwesome_icon_box span{
-		line-height: 40px;
-	}
+   .suppa_fontAwesome_container .admin_suppa_fontAwesome_icon_box span{
+      line-height: 40px;
+   }
 .suppa_fontAwesome_container .admin_suppa_fontAwesome_icon_box:hover,
 .suppa_fontAwesome_container .admin_suppa_fontAwesome_icon_box_selected {
-	border:1px solid orange;
-	color: orange;
+   border:1px solid orange;
+   color: orange;
 }
 .suppa_fontAwesome_container .era_admin_widget_box_inside {
-	height: 400px;
+   height: 400px;
 }
 
 .suppa_fontAwesome_container .selected {
-	border-color: orange;
-	color: orange;
+   border-color: orange;
+   color: orange;
 }
 
 .admin_suppa_box_option_inside_html textarea {
-	width: 100%;
-	margin-top: 20px;
-	height: 80px;
+   width: 100%;
+   margin-top: 20px;
+   height: 80px;
 }
 
 .admin_suppa_wp_editor {
-	width: 860px;
-	max-width: 860px;
-	height: 350px;
+   width: 860px;
+   max-width: 860px;
+   height: 350px;
 }
 
 .era_admin_widgets_container_button {
-	background-color: #f1f1f1;
-	padding:8px;
-	color: #353535;
-	border:1px solid #cccccc;
-	cursor: pointer;
+   background-color: #f1f1f1;
+   padding:8px;
+   color: #353535;
+   border:1px solid #cccccc;
+   cursor: pointer;
 }
 
 .era_admin_widget_box_footer {
-	text-align: center;
+   text-align: center;
 }
 
 .admin_suppa_box_container_settings label select,
 #menu-item-suppa-link_position_container select,
 #menu-item-suppa-link_logged_in select{
-	float: right;
+   float: right;
 }
 .admin_suppa_upload_icon_box_preview {
-	max-width: 100px;
-	max-height: 100px;
+   max-width: 100px;
+   max-height: 100px;
 }
 
 .suppa_location_saved {
-	background: #313131;
-	color: #ffffff;
-	padding: 15px;
-	font-size: 16px;
-	width:200px;
-	height: 30px;
-	position: fixed !important;
-	top: 200px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	margin: 0 auto;
+   background: #313131;
+   color: #ffffff;
+   padding: 15px;
+   font-size: 16px;
+   width:200px;
+   height: 30px;
+   position: fixed !important;
+   top: 200px;
+   bottom: 0px;
+   left: 0px;
+   right: 0px;
+   margin: 0 auto;
 }
 
 #suppa_import_export_menu_items {
-	height: 100px;
+   height: 100px;
 }
 
 .suppa_button_enable {
-	background: green !important;
-	color: white !important;
-	border: none !important;
+   background: green !important;
+   color: white !important;
+   border: none !important;
 }
 
 .admin_suppa_save_menu_location_saving {
-	padding-right: 25px !important;
-	background-image:url('../img/ajax-loader.gif') !important;
-	background-position: center right !important;
-	background-repeat: no-repeat !important;
+   padding-right: 25px !important;
+   background-image:url('../img/ajax-loader.gif') !important;
+   background-position: center right !important;
+   background-repeat: no-repeat !important;
 }

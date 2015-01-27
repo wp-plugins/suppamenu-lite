@@ -60,14 +60,7 @@ html, body {
   /* Prevent background color leak outs */
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
-  background-clip: padding-box;
-  /** CSS3 **/
-  -webkit-box-sizing: border-box;
-  /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;
-  /* Firefox, other Gecko */
-  box-sizing: border-box;
-  /* Opera/IE 8+ */ }
+  background-clip: padding-box; }
 
 .suppaMenu .clearfix {
   overflow: hidden !important;
@@ -166,7 +159,14 @@ html, body {
   display: inline-block !important;
   border: none !important;
   position: static;
-  vertical-align: top; }
+  vertical-align: top;
+  /** CSS3 **/
+  -webkit-box-sizing: border-box;
+  /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;
+  /* Firefox, other Gecko */
+  box-sizing: border-box;
+  /* Opera/IE 8+ */ }
   .suppa_menu .suppa_top_level_link {
     outline: none;
     display: inline-block !important;

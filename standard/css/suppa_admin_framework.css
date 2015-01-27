@@ -1,227 +1,227 @@
 /**
  * Admin CSS (dev)
  *
- * @package 	CTFramework
- * @author		Sabri Taieb ( codezag )
- * @copyright	Copyright (c) Sabri Taieb
- * @link		http://vamospace.com
- * @since		Version 1.0
+ * @package    CTFramework
+ * @author     Sabri Taieb ( codezag )
+ * @copyright  Copyright (c) Sabri Taieb
+ * @link    http://vamospace.com
+ * @since      Version 1.0
  *
  */
 
 /** =General **/
 .codetemp_main_nav li{
-	display: none;
+   display: none;
 }
 
 /* Options */
 .codetemp_tab .ctf_kodda_options {
-	overflow: hidden;
-	padding: 15px 10px;
+   overflow: hidden;
+   padding: 15px 10px;
 
-	/* color/bg/border */
-	background-color:#fbfbfb;
-	border-bottom: 1px solid #dddddd;
+   /* color/bg/border */
+   background-color:#fbfbfb;
+   border-bottom: 1px solid #dddddd;
 }
-	.ctf_kodda_options span span {
-		text-transform: uppercase;
-	}
-	.ctf_kodda_options .ctf_option_container {
-		width: 220px !important;
-		float: left;
-		margin: 0px 8px 0px 0px !important;
-		padding: 4px !important;
+   .ctf_kodda_options span span {
+      text-transform: uppercase;
+   }
+   .ctf_kodda_options .ctf_option_container {
+      width: 220px !important;
+      float: left;
+      margin: 0px 8px 0px 0px !important;
+      padding: 4px !important;
 
-		/* color/bg/border */
-		background-color: #f1f1f1;
-	}
-		.ctf_kodda_options .ctf_option_container .ctf_option_title {
-			font-size: 13px;
-			font-weight: normal;
-			float: left;
-			margin: 0px !important;
-			padding: 0px !important;
-		}
-		.ctf_kodda_options .ctf_option_container .ctf_option_checkbox_label {
-			margin: 0px !important;
-		}
-		.ctf_kodda_options .ctf_option_container .ctf_option_text_input,
-		.ctf_kodda_options .ctf_option_container .ctf_option_select {
-			width: 80px !important;
-		}
+      /* color/bg/border */
+      background-color: #f1f1f1;
+   }
+      .ctf_kodda_options .ctf_option_container .ctf_option_title {
+         font-size: 13px;
+         font-weight: normal;
+         float: left;
+         margin: 0px !important;
+         padding: 0px !important;
+      }
+      .ctf_kodda_options .ctf_option_container .ctf_option_checkbox_label {
+         margin: 0px !important;
+      }
+      .ctf_kodda_options .ctf_option_container .ctf_option_text_input,
+      .ctf_kodda_options .ctf_option_container .ctf_option_select {
+         width: 80px !important;
+      }
 
-	.ctf_kodda_options button {
-		margin-left: 10px;
-	}
+   .ctf_kodda_options button {
+      margin-left: 10px;
+   }
 
-	.ctf_kodda_options .ctf_option_text_input,
-	.ctf_kodda_options .ctf_option_select {
-		width: 65px;
-		/* color/bg/border */
-		background-color: #ffffff !important;
-	}
+   .ctf_kodda_options .ctf_option_text_input,
+   .ctf_kodda_options .ctf_option_select {
+      width: 65px;
+      /* color/bg/border */
+      background-color: #ffffff !important;
+   }
 
-	.ctf_kodda_options .ctf_option_text_input,
-	.ctf_kodda_options .ctf_option_select,
-	.ctf_kodda_options label {
-		margin-left: 20px;
-	}
+   .ctf_kodda_options .ctf_option_text_input,
+   .ctf_kodda_options .ctf_option_select,
+   .ctf_kodda_options label {
+      margin-left: 20px;
+   }
 
 
 /** =Style Pages **/
 .ctf_option_no_border {
-	padding: 0px !important;
-	margin: 0px 0px 15px 0px !important;
-	/* color/bg/border */
-	border-bottom: none !important;
+   padding: 0px !important;
+   margin: 0px 0px 15px 0px !important;
+   /* color/bg/border */
+   border-bottom: none !important;
 }
 
 /* Gradient */
 .ctf_container_gradient {
-	width: 276px;
-	float: left;
-	padding: 0px !important;
-	margin: 0px !important;
+   width: 276px;
+   float: left;
+   padding: 0px !important;
+   margin: 0px !important;
 
-	/* color/bg/border */
-	border-bottom: none !important;
+   /* color/bg/border */
+   border-bottom: none !important;
 }
-	.ctf_container_gradient .ctf_option_colorpicker_color{
-		margin-left: 5px !important;
-	}
-	.ctf_option_gradient {
-		width: 190px !important;
-	}
+   .ctf_container_gradient .ctf_option_colorpicker_color{
+      margin-left: 5px !important;
+   }
+   .ctf_option_gradient {
+      width: 190px !important;
+   }
 
 /* Box shadow */
 .ctf_container_box_shadow {
-	width: 176px;
-	float: left;
-	padding: 0px !important;
-	margin: 0px !important;
+   width: 176px;
+   float: left;
+   padding: 0px !important;
+   margin: 0px !important;
 
-	/* color/bg/border */
-	border-bottom: none !important;
+   /* color/bg/border */
+   border-bottom: none !important;
 }
-	.ctf_container_box_shadow .ctf_option_colorpicker_color{
-		margin-left: 5px !important;
-	}
-	.ctf_option_box_shadow {
-		width: 115px !important;
-	}
+   .ctf_container_box_shadow .ctf_option_colorpicker_color{
+      margin-left: 5px !important;
+   }
+   .ctf_option_box_shadow {
+      width: 115px !important;
+   }
 
 /* Border radius */
 .ctf_container_border_radius {
-	width: 140px;
-	float: left;
-	padding: 0px !important;
-	margin: 0px !important;
+   width: 140px;
+   float: left;
+   padding: 0px !important;
+   margin: 0px !important;
 
-	/* color/bg/border */
-	border-bottom: none !important;
+   /* color/bg/border */
+   border-bottom: none !important;
 }
-	.ctf_option_border_radius {
-		width: 86px !important;
-	}
+   .ctf_option_border_radius {
+      width: 86px !important;
+   }
 
 
 /* Skins */
 .suppa_skins_list li{
-	float: left;
-	padding: 5px;
-	height: 50px;
-	width: 100px;
-	overflow: hidden;
-	border:4px solid transparent;
-	margin-right:10px;
-	display: inline-block;
-	line-height: 50px;
-	text-align: center;
+   float: left;
+   padding: 5px;
+   height: 50px;
+   width: 100px;
+   overflow: hidden;
+   border:4px solid transparent;
+   margin-right:10px;
+   display: inline-block;
+   line-height: 50px;
+   text-align: center;
 
 }
 
 .suppa_skins_list li.suppa_skin_selected{
-	border-color:#cccccc;
+   border-color:#cccccc;
 }
 
 .suppa_skins_list li.suppa_skin_default{
-	background-color: #0b1b26;
-	color: #ffffff;
+   background-color: #0b1b26;
+   color: #ffffff;
 }
 
 .suppa_skins_list li.suppa_skin_redrosa{
-	background-color: #D83F28;
-	color: #ffffff;
+   background-color: #D83F28;
+   color: #ffffff;
 }
 
 .suppa_skins_list li.suppa_skin_calvarine{
-	background-color: #222222;
-	color: #ffffff;
+   background-color: #222222;
+   color: #ffffff;
 }
 
 .suppa_skins_list li.suppa_skin_cyberia{
-	background-color: #007096;
-	color: #ffffff;
+   background-color: #007096;
+   color: #ffffff;
 }
 
 .suppa_skins_list li.suppa_skin_jallon{
-	background-color: #03332b;
-	color: #ffffff;
+   background-color: #03332b;
+   color: #ffffff;
 }
 
 .suppa_skins_list li.suppa_skin_bastlow{
-	background-color: #e58004;
-	color: #ffffff;
+   background-color: #e58004;
+   color: #ffffff;
 }
 
 .suppa_skins_list li.suppa_skin_wally{
-	color: #ffffff;
-	background-color: #383838;
-	background-image: -webkit-linear-gradient(top, #383838, #242424);
-	background-image: -moz-linear-gradient(top, #383838, #242424);
-	background-image: -o-linear-gradient(top, #383838, #242424);
-	background-image: -ms-linear-gradient(top, #383838, #242424);
-	background-image: linear-gradient(top, #383838, #242424);
+   color: #ffffff;
+   background-color: #383838;
+   background-image: -webkit-linear-gradient(top, #383838, #242424);
+   background-image: -moz-linear-gradient(top, #383838, #242424);
+   background-image: -o-linear-gradient(top, #383838, #242424);
+   background-image: -ms-linear-gradient(top, #383838, #242424);
+   background-image: linear-gradient(top, #383838, #242424);
 
 }
 
 .suppa_skins_list li.suppa_skin_demo{
-	background-color: #0b1b26;
-	color: #ffffff;
+   background-color: #0b1b26;
+   color: #ffffff;
 }
 
 .suppa_skins_list li.suppa_skin_ubuntus{
-	background-color: #5E2750;
-	color: #ffffff;
+   background-color: #5E2750;
+   color: #ffffff;
 }
 
 .suppa_skins_list li.suppa_skin_ubuntus2{
-	background-color: #5E2750;
-	color: #ffffff;
+   background-color: #5E2750;
+   color: #ffffff;
 }
 
 .suppa_skins_list li.suppa_skin_light{
-	color: #555555;
-	background-color: #ffffff;
-	background-image: -webkit-linear-gradient(top, #ffffff, #f5f5f5);
-	background-image: -moz-linear-gradient(top, #ffffff, #f5f5f5);
-	background-image: -o-linear-gradient(top, #ffffff, #f5f5f5);
-	background-image: -ms-linear-gradient(top, #ffffff, #f5f5f5);
-	background-image: linear-gradient(top, #ffffff, #f5f5f5);
+   color: #555555;
+   background-color: #ffffff;
+   background-image: -webkit-linear-gradient(top, #ffffff, #f5f5f5);
+   background-image: -moz-linear-gradient(top, #ffffff, #f5f5f5);
+   background-image: -o-linear-gradient(top, #ffffff, #f5f5f5);
+   background-image: -ms-linear-gradient(top, #ffffff, #f5f5f5);
+   background-image: linear-gradient(top, #ffffff, #f5f5f5);
 
-	-moz-box-shadow:    0 0 2px 1px rgba(150,150,150,0.5);
-	-webkit-box-shadow: 0 0 2px 1px rgba(150,150,150,0.5);
-	box-shadow:         0 0 2px 1px rgba(150,150,150,0.5);
+   -moz-box-shadow:    0 0 2px 1px rgba(150,150,150,0.5);
+   -webkit-box-shadow: 0 0 2px 1px rgba(150,150,150,0.5);
+   box-shadow:         0 0 2px 1px rgba(150,150,150,0.5);
 
 }
 
 li.suppa_skin_redow{
-	background-color: #E02927;
-	color: #ffffff;
+   background-color: #E02927;
+   color: #ffffff;
 }
 
 .suppa_all_op_container {
-	background-color: #f5f5f5;
-	border:1px solid #e5e5e5;
-	padding: 20px;
+   background-color: #f5f5f5;
+   border:1px solid #e5e5e5;
+   padding: 20px;
 }

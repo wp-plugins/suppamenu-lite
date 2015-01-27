@@ -74,7 +74,6 @@ html,body{
 	-moz-background-clip:    padding;
 	background-clip:         padding-box;
 
-	@include box-sizing();
 }
 
 .suppaMenu .clearfix {
@@ -182,6 +181,7 @@ html,body{
 	position: static;
 	vertical-align:top;
 
+@include box-sizing;
 	.suppa_top_level_link {
 		outline: none;
 		display: inline-block !important;

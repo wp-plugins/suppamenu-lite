@@ -1235,6 +1235,7 @@
       /** Adjust Submenu Align **/
       suppaMenuOB.rwdAdjustSubmenuAlign( $menu_wrap, config );
 
+
       /** Box Layout **/
       if( config.box_layout == 'wide_layout' )
         $menu_wrap.addClass('suppaMenu_wrap_wide_layout');

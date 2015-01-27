@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Suppa Menu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-17 21:57+0100\n"
-"PO-Revision-Date: 2015-01-17 21:59+0100\n"
+"POT-Creation-Date: 2015-01-26 10:45+0100\n"
+"PO-Revision-Date: 2015-01-26 10:46+0100\n"
 "Last-Translator: sabri taieb <codezag@gmail.com>\n"
 "Language-Team: sabri taieb <codezag@gmail.com>\n"
 "Language: en\n"
@@ -15,131 +15,131 @@ msgstr ""
 "X-Generator: Poedit 1.5.4\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: index.php:159
+#: index.php:174
 msgid "Skin Settings"
 msgstr "Skin paramétres"
 
-#: index.php:160 standard/include/settings-logo.php:9
+#: index.php:175 standard/include/settings-logo.php:9
 msgid "Layout &amp; Logo"
 msgstr "mise en page et le logo"
 
-#: index.php:161
+#: index.php:176
 msgid "Responsive"
 msgstr "Responsive"
 
-#: index.php:162
+#: index.php:177
 msgid "Sticky Menu"
 msgstr "Sticky Menu"
 
-#: index.php:163 index.php:178
+#: index.php:178 index.php:193
 msgid "Search Form"
 msgstr "Formulaire de recherche"
 
-#: index.php:164
+#: index.php:179
 #, fuzzy
 msgid "Posts Settings"
 msgstr "réinitialiser les paramètres"
 
-#: index.php:165
+#: index.php:180
 msgid "jQuery"
 msgstr "jQuery"
 
-#: index.php:166
+#: index.php:181
 msgid "Suppport WP Menus"
 msgstr "Suppport WP Menus"
 
-#: index.php:169
+#: index.php:184
 #, fuzzy
 msgid "<span class=\"icon ct-magic\"></span>Menu Style"
 msgstr "<span class=\"icon ct-magic\"></span>Style"
 
-#: index.php:170 standard/include/settings-logo.php:26
+#: index.php:185 standard/include/settings-logo.php:26
 msgid "Logo"
 msgstr "Logo"
 
-#: index.php:171
+#: index.php:186
 msgid "Top Level Links"
 msgstr "Top Liens"
 
-#: index.php:172
+#: index.php:187
 #, fuzzy
 msgid "Current Links"
 msgstr "Courant Top Liens"
 
-#: index.php:173
+#: index.php:188
 #, fuzzy
 msgid "Submenu General"
 msgstr "Sous-menu général"
 
-#: index.php:174
+#: index.php:189
 #, fuzzy
 msgid "[Latest Posts]"
 msgstr "Utilisez comme dernier articles"
 
-#: index.php:175
+#: index.php:190
 #, fuzzy
 msgid "[Mega Posts]"
 msgstr "Utilisez comme Mega Articles"
 
-#: index.php:176
+#: index.php:191
 #, fuzzy
 msgid "[Mega Links]"
 msgstr "Sous-menu Mega Liens"
 
-#: index.php:177
+#: index.php:192
 #, fuzzy
 msgid "[DropDown]"
 msgstr "Sous-menu DropDown"
 
-#: index.php:179
+#: index.php:194
 #, fuzzy
 msgid "[Mega Links Two]"
 msgstr "Sous-menu Mega Liens"
 
-#: index.php:181
+#: index.php:196
 #, fuzzy
 msgid "<span class=\"icon ct-magic\"></span>Menu Icons Style"
 msgstr "<span class=\"icon ct-magic\"></span>Style"
 
-#: index.php:182 standard/include/style-top_level_icons.php:2
+#: index.php:197 standard/include/style-top_level_icons.php:2
 msgid "Top Level Icons"
 msgstr "Top Lien icônes"
 
-#: index.php:183
+#: index.php:198
 #, fuzzy
 msgid "[Mega Links] Title Icon"
 msgstr "Sous-menu Mega Liens Titre icônes"
 
-#: index.php:184
+#: index.php:199
 #, fuzzy
 msgid "[Mega Links] Links Icon"
 msgstr "Sous-menu Mega Liens Liens icônes"
 
-#: index.php:185
+#: index.php:200
 #, fuzzy
 msgid "[Dropdown] Icons"
 msgstr "Sous-menu Dropdown icones"
 
-#: index.php:186
+#: index.php:201
 msgid "Social Media"
 msgstr "Médias sociaux"
 
-#: index.php:188
+#: index.php:203
 #, fuzzy
 msgid "<span class=\"icon ct-magic\"></span>Responsive Style"
 msgstr "<span class=\"icon ct-magic\"></span>Style"
 
-#: index.php:189
+#: index.php:204
 #, fuzzy
 msgid "<span class=\"icon ct-magic\"></span>Responsive Icons Style"
 msgstr "<span class=\"icon ct-magic\"></span>Style"
 
-#: index.php:190
+#: index.php:205
 #, fuzzy
 msgid "<span class=\"icon ct-magic\"></span>Custom CSS"
 msgstr "<span class=\"icon ct-magic\"></span>Style"
 
-#: index.php:425
+#: index.php:450
 msgid "Uploads Folder Must Be Writable"
 msgstr "\"UPLOADS\" dossier doit être accessible en écriture"
 
@@ -535,7 +535,6 @@ msgstr "Border Radius"
 
 #: standard/include/style-general.php:311 standard/include/style-logo.php:284
 #: standard/include/style-submenu_general.php:246
-#: standard/include/style-search_form.php:210
 msgid ""
 "Set the border radius ( Top Left , Top Right , Bottom Right , Bottom Left )"
 msgstr ""
@@ -693,18 +692,31 @@ msgid "Theme Implementation"
 msgstr "Theme Implementation"
 
 #: standard/include/settings-theme_implementation.php:10
-msgid "Support WP 3.+ Menus"
-msgstr "Support WP 3.+ Menus"
+#: standard/include/settings-theme_implementation.php:11
+#, fuzzy
+msgid "Select How Many Menu Locations"
+msgstr "Sélectionner l'emplacement"
 
 #: standard/include/settings-theme_implementation.php:11
-msgid ""
-"Enable this if your theme does not support wordpress 3.+ menus, then paste "
-"this code &#60;?php suppa_implement(); ?&#62; in your header.php after body "
-"tag"
-msgstr ""
-" Activer cette option si votre thème ne supporte pas wordpress 3 + menus, "
-"puis collez le code <php suppa_implement (); ?> Dans votre header.php après "
-"la balise body"
+#, fuzzy
+msgid "you want to add in your site,"
+msgstr "Sélectionnez la façon dont la mise en page du menu sera sur votre site"
+
+#: standard/include/settings-theme_implementation.php:11
+msgid "then paste this code"
+msgstr "puis collez ce code"
+
+#: standard/include/settings-theme_implementation.php:11
+msgid "in your header.php "
+msgstr "dans votre header.php"
+
+#: standard/include/settings-theme_implementation.php:11
+msgid " after body tag or on any position in your theme."
+msgstr "après <body> ou sur ne importe quelle position dans votre thème."
+
+#: standard/include/settings-theme_implementation.php:11
+msgid "video tutorial here"
+msgstr "vidéo tutorial ici"
 
 #: standard/include/style-megaLinksTwo_mainLinks_icons.php:2
 #: standard/include/style-submenu_mega_link_icons.php:2
@@ -1096,18 +1108,18 @@ msgstr "un logo pour RWD "
 msgid "Upload Logo for Responsive WD ( Normal, Retina )"
 msgstr "Télécharger un logo pour RWD (Normale, Retina)"
 
-#: standard/include/class-suppa_walkers.php:112
+#: standard/include/class-suppa_walkers.php:111
 msgid "SuppaMenu Locations & Skins"
 msgstr "SuppaMenu Locations & Skins"
 
-#: standard/include/class-suppa_walkers.php:148
-#: standard/include/class-suppa_walkers.php:165
-#: standard/include/class-suppa_walkers.php:197
+#: standard/include/class-suppa_walkers.php:147
+#: standard/include/class-suppa_walkers.php:164
+#: standard/include/class-suppa_walkers.php:196
 #, fuzzy
 msgid "Select skin : "
 msgstr "Sélectionner l'emplacement"
 
-#: standard/include/class-suppa_walkers.php:325
+#: standard/include/class-suppa_walkers.php:344
 msgid "Menus & Skins Ready !"
 msgstr "Menus & Skins Prêt !"
 
@@ -1260,7 +1272,7 @@ msgstr "Moderne"
 
 #: standard/include/settings-search_form.php:16
 msgid "Modern"
-msgstr ""
+msgstr "Modern"
 
 #: standard/include/settings-search_form.php:27
 msgid "Display Search form on RWD"
@@ -1386,23 +1398,24 @@ msgstr " la couleur de fond du l'input"
 msgid "Set the input backgound color"
 msgstr "Définissez la couleur de fond du l'input"
 
-#: standard/include/style-search_form.php:168
+#: standard/include/style-search_form.php:172
+#: standard/include/style-search_form.php:173
 msgid "Input Border Radius"
 msgstr "Input Border Radius"
 
-#: standard/include/style-search_form.php:221
+#: standard/include/style-search_form.php:186
 msgid "Search Text Typography"
 msgstr "la typographie de texte de recherche formulaire "
 
-#: standard/include/style-search_form.php:222
+#: standard/include/style-search_form.php:187
 msgid "Set the search text typography"
 msgstr "Régler la typographie de texte de recherche formulaire "
 
-#: standard/include/style-search_form.php:234
+#: standard/include/style-search_form.php:199
 msgid "Search Text Padding"
 msgstr "Recherche texte Rembourrage"
 
-#: standard/include/style-search_form.php:256
+#: standard/include/style-search_form.php:221
 msgid "Set the search text padding ( Left , Right )"
 msgstr "Réglez la recherche texte rembourrage (Gauche, Droite)"
 
@@ -1660,6 +1673,26 @@ msgstr "Delete"
 msgid "\"Mega Links\" Title Icon"
 msgstr "Sous-menu Mega Liens Titre icônes"
 
+#~ msgid ""
+#~ "then paste this code &#60;?php suppa_implement(); ?&#62; in your header."
+#~ "php "
+#~ msgstr ""
+#~ "puis collez ce code & # 60 ; ? php suppa_implement ( ) ; ? & # 62 ; dans "
+#~ "votre header.php"
+
+#, fuzzy
+#~ msgid ""
+#~ "Select how many menu locations you want to add in your site, then paste "
+#~ "this code &#60;?php suppa_implement(); ?&#62; in your header.php after "
+#~ "body tag or on any position in your theme."
+#~ msgstr ""
+#~ " Activer cette option si votre thème ne supporte pas wordpress 3 + menus, "
+#~ "puis collez le code <php suppa_implement (); ?> Dans votre header.php "
+#~ "après la balise body"
+
+#~ msgid "Support WP 3.+ Menus"
+#~ msgstr "Support WP 3.+ Menus"
+
 #, fuzzy
 #~ msgid "Enable Modern Search Form"
 #~ msgstr "Formulaire de recherche"
@@ -1754,9 +1787,6 @@ msgstr "Sous-menu Mega Liens Titre icônes"
 
 #~ msgid "Button Icon Color"
 #~ msgstr " la couleur d'icône"
-
-#~ msgid "Select Menu Location"
-#~ msgstr "Sélectionner l'emplacement"
 
 #~ msgid "Icon Type"
 #~ msgstr "Type d'icône"

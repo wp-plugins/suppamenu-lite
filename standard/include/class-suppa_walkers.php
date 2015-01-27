@@ -24,11 +24,10 @@ if( !class_exists( 'suppa_walkers' ) ){
 		static $offline_db;
 
 		/**
-		 * Constructor
+		 * Actions/Filters
 		 * @package CTFramework
-		 *
 		 */
-		public function __construct( $project_settings , $offline_db ){
+		public function init( $project_settings , $offline_db ){
 
 			/** Variables **/
 			self::$project_settings = $project_settings;
@@ -295,6 +294,26 @@ if( !class_exists( 'suppa_walkers' ) ){
 				</div>';
 			}
 		}
+
+
+		/**
+		 *
+		 * After plugin install create css js files
+		 * @package CTFramework
+		 *
+		 */
+		function after_plugin_install_create_css_js_files(){
+
+			// Save Locations & Create Skins
+			$locations = get_option( 'suppa_locations_skins' );
+			foreach ( $locations as $loc => $skin ){
+				do_action( 'CTF_suppa_menu_after_db_save', array( $loc , $skin ) );
+			}
+
+			// Save Thumbnail sizes
+			do_action( 'CTF_suppa_menu_save_thumb_sizes' );
+		}
+
 
 
 		/**

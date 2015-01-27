@@ -337,6 +337,7 @@ if( !class_exists( 'suppa_menu_walker' ) )
                     $output .= '</div>';
                 }
 
+
                 // Search Form
                 else if( 'search' == $this->menu_type ){
 
@@ -380,6 +381,7 @@ if( !class_exists( 'suppa_menu_walker' ) )
                     }
 
                 }
+
 
             }
 
