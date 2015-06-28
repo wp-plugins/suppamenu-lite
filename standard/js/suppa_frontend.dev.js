@@ -8,6 +8,31 @@
 
 
       /**
+       * Modern Search Triggers
+       * @param $menu the menu object
+       * @param config Custom menu settings & style
+       */
+      modernSearchTriggers : function ( $menu, config ){
+
+        var $modernWrap = $menu.find('.suppa_submenu_modern_search');
+
+        // Click Trigger
+        $modernWrap.prev('.suppa_search_icon')
+        .click(function(){
+          $modernWrap.show( config.jquery_time );
+        });
+
+        // Close
+        $modernWrap.find('.suppa_search_modern_close')
+        .click(function(){
+        $modernWrap.hide( config.jquery_time );
+        });
+
+
+      },
+
+
+      /**
        * Layout & Logo
        * @param $menu the menu object
        * @param config Custom menu settings & style
@@ -70,6 +95,40 @@
           }
       },
 
+
+      /**
+       * Adjust Mega Posts - All Posts Container Width
+       *
+       * @param $menu the menu object
+       * @param config Custom menu settings & style
+       *
+       */
+      adjustMegaPosts : function ( $menu, config ){
+
+         /** Adjust Mega Posts - All Posts Container Width **/
+         $menu.find('.suppa_submenu_mega_posts').each(function(){
+            var $this                       = jQuery( this ),
+               $cat_container_width        = $this.find('.suppa_mega_posts_categories').width(),
+               $cat_container_right_border = parseInt( $this.find('.suppa_mega_posts_categories').css('border-right-width') ),
+               $submenu_width              = $this.width();
+
+            $this.find('.suppa_mega_posts_allposts').width( $submenu_width - ($cat_container_width+$cat_container_right_border) );
+         });
+
+         jQuery( window ).on( 'resize', function(){
+
+           /** Adjust Mega Posts - All Posts Container Width **/
+           $menu.find('.suppa_submenu_mega_posts').each(function(){
+               var $this                       = jQuery( this ),
+                   $cat_container_width        = $this.find('.suppa_mega_posts_categories').width(),
+                   $cat_container_right_border = parseInt( $this.find('.suppa_mega_posts_categories').css('border-right-width') ),
+                   $submenu_width              = $this.width();
+
+                   $this.find('.suppa_mega_posts_allposts').width( $submenu_width - ($cat_container_width+$cat_container_right_border) );
+           });
+
+         });
+      },
 
 
       /**
@@ -917,10 +976,12 @@
                                   });
                               }
 
+
                               $this.children('.era_rwd_suppa_arrow_box')
                                   .addClass('era_rwd_suppa_arrow_both_open')
-                                  .children('span')
+                                  .find('.suppa-caret-down')
                                   .attr('class','suppa-caret-up');
+
                               $this.addClass('era_rwd_suppa_submenu_box era_rwd_suppa_link_both_open');
 
                           }
@@ -959,7 +1020,7 @@
                               }
 
                               $this.removeClass('era_rwd_suppa_arrow_both_open')
-                                      .children('span').attr('class','suppa-caret-down');
+                                .find('.suppa-caret-up').removeClass('suppa-caret-up').addClass('suppa-caret-down');
                               $this.parent().removeClass('era_rwd_suppa_submenu_box era_rwd_suppa_link_both_open');
                           }
                       }
@@ -1235,6 +1296,8 @@
       /** Adjust Submenu Align **/
       suppaMenuOB.rwdAdjustSubmenuAlign( $menu_wrap, config );
 
+      /** Modern Search Form **/
+      suppaMenuOB.modernSearchTriggers( $menu_wrap, config );
 
       /** Box Layout **/
       if( config.box_layout == 'wide_layout' )
@@ -1267,6 +1330,9 @@
             suppaMenuOB.hoverTrigger( $menu_wrap , config );
         break;
       }
+
+      /** Adjust Mega Posts , All Posts Container **/
+      suppaMenuOB.adjustMegaPosts(  $menu_wrap, config  );
 
       /** Close When click outside **/
       suppaMenuOB.clickOutsideCloseSubmenus( $menu_wrap, config );

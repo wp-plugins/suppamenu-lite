@@ -37,8 +37,6 @@ if( !class_exists( 'suppa_walkers' ) ){
 				self::$offline_db['settings-responsive_text'] = 'Menu';
 				self::$offline_db['logo_enable'] = 'off';
 				self::$offline_db['rwd_logo_enable'] = 'off';
-				self::$offline_db['submenu-megaposts-post_width'] = '200px';
-				self::$offline_db['submenu-megaposts-post_height'] = '160px';
 				self::$offline_db['posts_img_effect'] = 'none';
 				self::$offline_db['submenu-posts-post_width'] = '200px';
 				self::$offline_db['submenu-posts-post_height'] = '160px';
@@ -383,7 +381,7 @@ if( !class_exists( 'suppa_walkers' ) ){
 						$thumbs = get_option('suppa_thumbs_sizes');
 						$thumbs = $thumbs[$skin];
 
-						$args['walker'] 				= new suppa_menu_walker( $skin_options, $thumbs );
+						$args['walker'] 			= new suppa_menu_walker( $skin_options, $thumbs );
 						$args['container_class'] 	= $args['theme_location'].' suppaMenu_wrap';
 						$args['menu_class']			= 'suppaMenu';
 						$args['items_wrap']			= '<div id="%1$s" class="%2$s">%3$s</div>' . $rwd_wrap;

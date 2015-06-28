@@ -783,6 +783,34 @@ class suppa_customs2files{
                 color:'.$skin_data['submenu-search-text_font_font_color'].' !important;
             }
 
+
+            /** ----------------------------------------------------------------
+             ******** Social Links Style
+             ---------------------------------------------------------------- **/
+            .'.$location_info[0].' .suppa_menu_social a.suppa_top_level_link{
+                padding-left:'.$skin_data['social-links-fontawesome_icon_margin_left'].' !important;
+                padding-right:'.$skin_data['social-links-fontawesome_icon_margin_right'].' !important;
+            }
+
+            /** ----------------------------------------------------------------
+             ******** Social Links Icons Style
+             ---------------------------------------------------------------- **/
+            /** F.Awesome Icons **/
+            .'.$location_info[0].' .suppa_menu_social .suppa_top_level_link .suppa_FA_icon_only {
+                font-size:'.$skin_data['social_links_fontawesome_icons_size'].' !important;
+                padding-top: '.$skin_data['social_links_fontawesome_icon_margin_top'].' !important;
+                padding-right: '.$skin_data['social_links_fontawesome_icon_margin_right'].' !important;
+            }
+
+            /** Uploaded Only Icons **/
+            .'.$location_info[0].' .suppa_menu_social .suppa_top_level_link .suppa_UP_icon_only {
+                width : '.$skin_data['social_links_uploaded_icons_width'].' !important;
+                height : '.$skin_data['social_links_uploaded_icons_height'].' !important;
+                padding-top: '.$skin_data['social_links_normal_icon_margin_top'].' !important;
+                padding-right: '.$skin_data['social_links_normal_icon_margin_right'].' !important;
+            }
+
+
             /** ----------------------------------------------------------------
              ******** Responsive Web Design Style
              ---------------------------------------------------------------- **/
@@ -1040,23 +1068,23 @@ class suppa_customs2files{
 
         $suppa_settings = "
         suppa_js_settings = new Object();
-        suppa_js_settings.jquery_trig       = '".$skin_data['settings-jquery_trigger']."';
-        suppa_js_settings.jquery_anim       = '".$skin_data['settings-jquery_animation']."';
-        suppa_js_settings.jquery_easings    = '".$skin_data['settings-jquery_easings']."';
-        suppa_js_settings.jquery_time       = ".(int)$skin_data['settings-jquery_animation_time'].";
-        suppa_js_settings.rwd_enable        = '".$skin_data['settings-responsive_enable']."';
-        suppa_js_settings.rwd_start_width   = ".(int)$skin_data['settings_responsive_start_width'].";
-        suppa_js_settings.rwd_text          = '".$skin_data['settings-responsive_text']."';
-        suppa_js_settings.box_layout        = '".$skin_data['menu-layout']."';
-        suppa_js_settings.modern_search     = '".$skin_data['settings_modern_search']."';
-        suppa_js_settings.rwd_search        = '".$skin_data['settings_rwd_search_form_display']."';
-        suppa_js_settings.logo_enable       = '".$skin_data['logo_enable']."';
-        suppa_js_settings.rwd_logo_enable   = '".$skin_data['rwd_logo_enable']."';
-        suppa_js_settings.logo_src          = '".$skin_data['logo_src']."';
-        suppa_js_settings.logo_retina_src   = '".$skin_data['logo_retina_src']."';
-        suppa_js_settings.rwd_logo_src      = '".$skin_data['rwd_logo_src']."';
+        suppa_js_settings.jquery_trig           = '".$skin_data['settings-jquery_trigger']."';
+        suppa_js_settings.jquery_anim           = '".$skin_data['settings-jquery_animation']."';
+        suppa_js_settings.jquery_easings        = '".$skin_data['settings-jquery_easings']."';
+        suppa_js_settings.jquery_time           = ".(int)$skin_data['settings-jquery_animation_time'].";
+        suppa_js_settings.rwd_enable            = '".$skin_data['settings-responsive_enable']."';
+        suppa_js_settings.rwd_start_width       = ".(int)$skin_data['settings_responsive_start_width'].";
+        suppa_js_settings.rwd_text              = '".$skin_data['settings-responsive_text']."';
+        suppa_js_settings.box_layout            = '".$skin_data['menu-layout']."';
+        suppa_js_settings.modern_search         = '".$skin_data['settings_modern_search']."';
+        suppa_js_settings.rwd_search            = '".$skin_data['settings_rwd_search_form_display']."';
+        suppa_js_settings.logo_enable           = '".$skin_data['logo_enable']."';
+        suppa_js_settings.rwd_logo_enable       = '".$skin_data['rwd_logo_enable']."';
+        suppa_js_settings.logo_src              = '".$skin_data['logo_src']."';
+        suppa_js_settings.logo_retina_src       = '".$skin_data['logo_retina_src']."';
+        suppa_js_settings.rwd_logo_src          = '".$skin_data['rwd_logo_src']."';
         suppa_js_settings.rwd_logo_retina_src   = '".$skin_data['rwd_logo_retina_src']."';
-        suppa_js_settings.site_url          = '".$site_url."';
+        suppa_js_settings.site_url              = '".get_home_url()."';
         suppa_js_settings.recent_posts_view_all = '".$skin_data['latest_posts_view_all']."';
 
 	    jQuery('.".$location_info[0]."').suppamenu( suppa_js_settings );

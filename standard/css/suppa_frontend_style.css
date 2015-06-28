@@ -9,14 +9,6 @@
  *
  */
 /** =General **/
-html, body {
-  width: 100%;
-  height: 100%;
-  padding: 0px;
-  margin: 0px;
-  border: 0px;
-  outline: 0px; }
-
 .suppaMenu_wrap {
   width: 100%;
   /** CSS3 **/
@@ -569,9 +561,11 @@ html, body {
   overflow: hidden;
   display: none;
   text-align: left;
+  /* Top Links */
   /** Hide Social Media & Logo **/
   /** Mega Posts **/
   /** Mega Links **/
+  /* Shortcodes */
   /** DropDown **/
   /** Search Form **/ }
   .suppaMenu_rwd_wrap .suppa_rwd_top_button_container {
@@ -629,6 +623,12 @@ html, body {
     border-right: none !important;
     border-left: none !important;
     overflow: hidden !important; }
+    .suppaMenu_rwd_wrap .suppa_dropdown_item_container > a .suppa-caret-left {
+      display: none; }
+    .suppaMenu_rwd_wrap .suppa_dropdown_item_container > a .suppa-caret-up::first-of-type {
+      display: none; }
+    .suppaMenu_rwd_wrap .suppa_dropdown_item_container > a .suppa-caret-down::first-of-type {
+      display: none; }
   .suppaMenu_rwd_wrap .era_rwd_suppa_arrow_box {
     float: right !important;
     display: inline-block !important;
@@ -657,6 +657,9 @@ html, body {
     overflow: hidden !important; }
   .suppaMenu_rwd_wrap .suppa_rwd_menu_links a .suppa_item_desc {
     display: block; }
+  .suppaMenu_rwd_wrap .suppa_rwd_submenu_html {
+    position: static !important;
+    margin: 0 !important; }
   .suppaMenu_rwd_wrap .suppa_rwd_menu_dropdown .suppa_fa_carret_left {
     display: none !important; }
   .suppaMenu_rwd_wrap .suppa_rwd_menu_dropdown > .suppa_rwd_submenu .suppa_rwd_submenu {

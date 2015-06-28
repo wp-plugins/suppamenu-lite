@@ -27,15 +27,6 @@
 
 
 /** =General **/
-html,body{
-	width: 100%;
-	height: 100%;
-	padding: 0px;
-	margin: 0px;
-	border: 0px;
-	outline: 0px;
-}
-
 .suppaMenu_wrap{
 	width: 100%;
 	@include box-sizing();
@@ -773,6 +764,7 @@ html,body{
 		overflow: hidden;
 	}
 
+	/* Top Links */
 	.suppa_rwd_menu {
 
 		> .suppa_rwd_submenu {
@@ -822,6 +814,10 @@ html,body{
 			border-right: none !important;
 			border-left: none !important;
 			overflow: hidden !important;
+
+			.suppa-caret-left{ display:none; }
+			.suppa-caret-up::first-of-type{ display:none; }
+			.suppa-caret-down::first-of-type{ display:none; }
 		}
 	}
 
@@ -885,11 +881,16 @@ html,body{
 		}
 	}
 
+	/* Shortcodes */
+	.suppa_rwd_submenu_html { position:static !important; margin:0 !important;}
+
 	/** DropDown **/
 	.suppa_rwd_menu_dropdown {
+
 		.suppa_fa_carret_left {
 			display: none !important;
 		}
+
 		> .suppa_rwd_submenu .suppa_rwd_submenu {
 			display: none;
 		}

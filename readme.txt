@@ -2,18 +2,23 @@
 Contributors: codezag
 Tags: menus,dropdown,wordpress mega menu, wordpress menu, drag-and-drop, dropdown menu, icons, mega menu, megamenu, menu, menu icons, menu style, navigation, responsive, responsive menu, retina
 Requires at least: 3.8
-Tested up to: 4.1
-Stable tag: 1.3
+Tested up to: 4.2.2
+Stable tag: 1.5
 
 Wordpress mega menu, that allow you to build unlimited mega menus on the same page/site. Select a skin for each menu and you can create your own skin!
 
 == Description ==
+
+Pro Version
+https://www.youtube.com/watch?v=DDQKtHaUyMY
+
 An excellent responsive, Customizable, Powerfull and User-Friendly WordPress Mega Menus plugin, That Allows you to create unlimited mega menus with different sub-menus types :
 
 * Recent Posts
 * Dropdowns ( 3 Levels )
+* Social Media
 * Search Box
-* Logo
+* Layout & Logo
 
 **Customization**
 
@@ -49,26 +54,19 @@ you can play with :
 * Italien Language, Thanks to Angelo Giammarresi http://www.laplandinteractive.com/
 * French, Thanks to Google Translate
 
-**Upgrade to Pro Version http://suppamegamenu.com**
+**Upgrade to Pro Version And Get : **
 
-https://www.youtube.com/watch?v=DDQKtHaUyMY
-
-* Layout
 * Sticky Menu
 * Woocommerce Cart
 * Mega Posts : [Sub Type]
 * Mega Links : [Sub Type]
 * Mega Links Type {2} : [Sub Type]
-* Social Media : [Sub Type]
 * HTML & Shotcodes : [Sub Type]
 * Ability To Style all of these submenu types
-* Add Description to Links
-* Effects for Thumbnail ( Recent Posts/Mega Posts )
-* More jQuery Easings ( 26 More ! )
 * Life Time Support
 * Documentation : http://vamospace.com/docs/suppa
 
-**Go Pro NowÂ <strong>http://suppamegamenu.com**
+**Upgrade Now <strong>http://suppamegamenu.com**
 
 == Installation ==
 Extract the zip file and just drop the contents in the wp-content/plugins/ directory of your WordPress installation and then activate the Plugin from Plugins page.
@@ -79,6 +77,17 @@ https://www.youtube.com/watch?v=IelbFcyL7sM
 1. Suppamenu
 
 == Changelog ==
+
+= 1.5 [28/06/2015] =
+
+* New: Layout
+* New: Social Media Links
+* New: Effects For Posts Thumbnails
+* Fix: Responsive dropdown link shows 3 arrows when click on it to open submenu
+* Fix: Responsive Submenu not displaying correctly ( shortcodes submenu type )
+* Fix: Dropdown arrow not displaying
+* Fix: For a PHP Notice message
+* Improved: Documentation
 
 = 1.3 [27/01/2015] =
 

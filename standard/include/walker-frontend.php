@@ -3,7 +3,7 @@
 /*
 |   Suppa Back-End Menu Walker
 |
-|*/
+*/
 
 
 if( !class_exists( 'suppa_menu_walker' ) )
@@ -62,11 +62,15 @@ if( !class_exists( 'suppa_menu_walker' ) )
          */
         function start_lvl(&$output, $depth = 0, $args = array())
         {
+
             // DropDown
             if( $this->menu_type == 'dropdown' )
             {
                 if( $depth >= 1 )
-                    $output = str_replace("<span class=\"suppa_ar_arrow_right_".$this->dropdown_first_level_conuter.'_'.$depth."\"></span>", '<span class="era_suppa_arrow_box suppa_fa_carret_right"><span aria-hidden="true" class="suppa-caret-right"></span></span><span class="era_suppa_arrow_box suppa_fa_carret_left"><span aria-hidden="true" class="suppa-caret-left"></span></span>' , $output );
+                {
+                    $output = str_replace('<span class="suppa_ar_arrow_right_'.$this->dropdown_first_level_conuter.'_'.$depth.'"></span>', '<span class="era_suppa_arrow_box suppa_fa_carret_right suppa_fa_carret_right_shokola"><span aria-hidden="true" class="suppa-caret-right" /></span><span class="era_suppa_arrow_box suppa_fa_carret_left"><span aria-hidden="true" class="suppa-caret-left" /></span>' , $output );
+                    $output = str_replace('<span class="suppa_ar_arrow_right_'.$this->dropdown_second_level_conuter.'_'.$depth.'"></span>', '<span class="era_suppa_arrow_box suppa_fa_carret_right suppa_fa_carret_right_shokola"><span aria-hidden="true" class="suppa-caret-right" /></span><span class="era_suppa_arrow_box suppa_fa_carret_left"><span aria-hidden="true" class="suppa-caret-left" /></span>' , $output );
+                }
 
                 $css_left = '0px';
                 if( $depth != 0 )
@@ -192,6 +196,7 @@ if( !class_exists( 'suppa_menu_walker' ) )
 
                 // Dropdown
                 if( 'dropdown' == $this->menu_type ){
+
                     $this->dropdown_width =  @$item_meta[$this->menu_key.'dropdown_width'][0];
                     if( @$item_meta[$this->menu_key.'dropdown_open_pos'][0] != '' ){
                         $this->dropdown_position =  'right';
@@ -217,9 +222,6 @@ if( !class_exists( 'suppa_menu_walker' ) )
                 else if( 'posts' == $this->menu_type ){
 
                     $output .= '<div style="'.$this_item_position_css.$display_item.'" class="'.$item->classes[0].' suppa_menu suppa_menu_posts suppa_menu_'.$this->top_level_counter.'">';
-
-                    // Reset the query
-                    wp_reset_query();
 
                     // The Query : Load All Posts
                     $post_category =  @$item_meta[$this->menu_key.'posts_category'][0];
@@ -382,6 +384,25 @@ if( !class_exists( 'suppa_menu_walker' ) )
 
                 }
 
+                // Social
+                else if( 'social' == $this->menu_type ){
+
+                    // Item Icon
+                    $link_html = '';
+                    if( $icon_type == "upload" )
+                    {
+                        $check_retina_icon = ( $icon_hover != "" ) ? $icon_hover : $icon;
+                        $link_html = '<img class="suppa_upload_img suppa_UP_icon_only" src="'.$icon.'" alt="'.$link_title.'" data-icon="'.$icon.'" data-retina="'.$check_retina_icon.'" >';
+                    }
+                    else if( $icon_type == "fontawesome" )
+                    {
+                        $link_html = '<span class="ctf_suppa_fa_box suppa_FA_icon_only"><span aria-hidden="true" class="'.$FA_icon.'" ></span></span>';
+                    }
+
+                    $output .= '<div style="'.$this_item_position_css.$display_item.'" class="'.$item->classes[0].' suppa_menu suppa_menu_social suppa_menu_'.$this->top_level_counter.'">';
+                    $output .= '<a class="'.$class_names.'" '.$attributes.' >'.$link_html.'</a>';
+                    $output .= '</div>';
+                }
 
             }
 
@@ -420,6 +441,19 @@ if( !class_exists( 'suppa_menu_walker' ) )
         function end_el(&$output, $object, $depth = 0, $args = array() )
         {
             global $wp_query;
+
+
+            // fix for woocommerce multilangual issue !
+            //$wpml_current_lang =  ICL_LANGUAGE_CODE;
+            //if( defined('ICL_SITEPRESS_VERSION') ){
+
+            //    global $sitepress;
+//
+            //    $default_language = $sitepress->get_default_language();
+            //    $sitepress->switch_lang( $default_language );
+//
+            //}
+
 
             // Dropdown
             if( 'dropdown' == $this->menu_type )

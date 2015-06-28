@@ -4,10 +4,9 @@
 Plugin Name: .Suppamenu Lite
 Plugin URI: http://codecanyon.net/item/suppamenu-all-purpose-wordpress-mega-menus/7265033??ref=vamospace
 Description: All-Purpose WordPress Mega Menus Plugin. Please read the <a href="http://vamospace.com/docs/suppa">Guide</a>
-Version: 1.3
+Version: 1.5
 Author: Sabri Taieb
 Author URI: http://vamospace.com
-License: You should have purchased a license from http://codecanyon.net/
 Copyright 2014  Sabri Taieb , Codezag http://vamospace.com
 Support Forum : http://vamospace.com/support
 */
@@ -35,9 +34,9 @@ $suppa_settings = array (
 	// Plugin Settings
 	'default_skin'		=> 'bastlow',
 	'plugin_id'			=> 'CTF_suppa_menu', // Don't ever ever ever change it
-	'version'			=> '1.3',
+	'version'			=> '1.5',
 	'guide'				=> 'http://vamospace.com/docs/suppa/',
-	'support_forum'	=> 'http://vamospace.com/support/',
+	'support_forum'		=> 'http://vamospace.com/support/',
 	'image_resize'		=> true,  // false to disable the image resizing
 	'textdomain' 		=> 'suppa_menu', // Localisation ( translate )
 	'plugin_url'		=> plugins_url( '' , __FILE__ ) . '/' ,
@@ -88,7 +87,7 @@ class codetemp_suppa_menu extends ctf_setup {
 				));
 			}
 
-			$count = (int)$this->groups_db_offline['settings-theme_implement_count'];
+			$count = (int)@$this->groups_db_offline['settings-theme_implement_count'];
 			if( $count > 0 ){
 				for( $i=1; $i <= $count ; $i++ ){
 					register_nav_menus( array(
@@ -159,30 +158,6 @@ class codetemp_suppa_menu extends ctf_setup {
 	**/
 	public function display_admin_page(){
 
-		ctf_options::add_box(
-			array(
-				'type'		=> 'success',
-				'title'		=> 'Suppamenu Pro <a href="http://suppamegamenu.com">Visit Demo Site</a>',
-				'width'		=> '800px',
-				'desc'		=> '<p>Go Pro Now and Get these Awesome Features:</p>
-								<ol>
-									<li> Layout
-									<li> Sticky
-									<li> Woocommerce Cart
-									<li> Mega Posts : [Sub Type]
-									<li> Mega Links : [Sub Type]
-									<li> Mega Links Type {2} : [Sub Type]
-									<li> Social Media : [Sub Type]
-									<li> HTML &amp; Shotcodes : [Sub Type]
-									<li> Ability To Style all of these new submenu types
-									<li> Effects for Thumbnail ( Recent Posts/Mega Posts )
-									<li> Life Time Support
-								</ol>
-
-							  ',
-			)
-		);
-
 		// Header
 		$header_desc 	= 'Suppamenu ' . $this->project_settings['version'];
 		$html_id 		= 'suppa_menu';
@@ -214,6 +189,7 @@ class codetemp_suppa_menu extends ctf_setup {
 			__( '<span class="icon ct-magic"></span>Menu Icons Style' , 'suppa_menu' )	=> array(
 				__( 'Top Level Icons', 'suppa_menu' ),
 				__( '[Dropdown] Icons', 'suppa_menu' ),
+				__( 'Social Media', 'suppa_menu' ),
 			),
 			__( '<span class="icon ct-magic"></span>Responsive Style' , 'suppa_menu' )	=> array(),
 			__( '<span class="icon ct-magic"></span>Responsive Icons Style' , 'suppa_menu' )	=> array(),
@@ -280,6 +256,9 @@ class codetemp_suppa_menu extends ctf_setup {
 					</div>
 					<div class="codetemp_page" id="codetemp_page_3_2">
 						<?php require_once('standard/include/style-dropdown_icons.php') ?>
+					</div>
+					<div class="codetemp_page" id="codetemp_page_3_3">
+						<?php require_once('standard/include/style-social.php') ?>
 					</div>
 
 					<!-- Responsive Style -->
@@ -423,21 +402,22 @@ class codetemp_suppa_menu extends ctf_setup {
 		);
 
 		$saved_locations 	= get_option('suppa_locations_skins');
-		foreach ( $saved_locations as $loca => $skin )
-		{
-			wp_enqueue_script('suppamenu_js_settings_file_'.$loca,
-									$js_folder_url . $loca . '.js' ,
-									array('suppamenu_frontend_script') ,
-									$cache_version ,
-									true
-			);
+		if( is_array( $saved_locations ) ){
+			foreach ( $saved_locations as $loca => $skin ){
+				wp_enqueue_script('suppamenu_js_settings_file_'.$loca,
+										$js_folder_url . $loca . '.js' ,
+										array('suppamenu_frontend_script') ,
+										$cache_version ,
+										true
+				);
+			}
 		}
 
 	}
 
 	static function plugin_install(){
 
-		//ob_start();
+		ob_start();
 
 		$upload_dir = wp_upload_dir();
 		if( ! is_writable($upload_dir['basedir']) )
@@ -529,10 +509,10 @@ class codetemp_suppa_menu extends ctf_setup {
 		delete_option('suppa_googleFonts_used');
 		ctf_fonts::get_googleFonts_list();
 
-      // Save Thumbnail sizes
+      	// Save Thumbnail sizes
 		do_action( 'CTF_suppa_menu_save_thumb_sizes' );
 
-		//ob_end_clean();
+		ob_end_clean();
     }
 
 
@@ -559,14 +539,22 @@ register_activation_hook( __FILE__, array( 'codetemp_suppa_menu', 'plugin_instal
 
 /** Theme Implementation for WP 3+ Menus **/
 if( !function_exists('suppa_implement') ){
+
 	function suppa_implement( $menu_number = '' ){
-   	if( $menu_number == '' ){
-	   	wp_nav_menu( array( 'theme_location' => 'suppa_menu_location' ) );
-   	}
-   	else{
-   		wp_nav_menu( array( 'theme_location' => 'suppa_menu_location_' . $menu_number ) );
-   	}
+
+	   	if( $menu_number == '' ){
+
+		   	wp_nav_menu( array( 'theme_location' => 'suppa_menu_location' ) );
+
+	   	}
+	   	else{
+
+	   		wp_nav_menu( array( 'theme_location' => 'suppa_menu_location_' . $menu_number ) );
+
+	   	}
+
 	}
+
 }
 
 /** wooThemes canvas support **/
@@ -605,7 +593,12 @@ add_shortcode('suppa_login_sc', 'suppa_login_sc');
 
 /** Shortcode for the menu itself **/
 function suppa_menu_func( $atts ) {
-   suppa_implement();
+	if( gettype( $atts ) == "string" ){
+		suppa_implement(1);
+	}
+	else{
+		suppa_implement( $atts['id'] );
+	}
 }
 add_shortcode('suppa_menu', 'suppa_menu_func');
 

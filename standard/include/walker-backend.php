@@ -204,18 +204,30 @@ if( !class_exists( 'suppa_menu_backend_walker' ) ){
                                         <input type="radio" value="dropdown" class="suppa_menu_type <?php echo $key; ?>" name="<?php echo $key . "[". $item_id ."]";?>" <?php if($menu_type=="dropdown") echo "checked"; ?> /> &nbsp;&nbsp; <?php _e('Use as DropDown','suppa_menu'); ?><br/>
                                     </label>
 
+
                                     <label>
                                         <input type="radio" value="posts" class="suppa_menu_type <?php echo $key; ?>" name="<?php echo $key . "[". $item_id ."]";?>" <?php if($menu_type=="posts") echo "checked"; ?> /> &nbsp;&nbsp; <?php _e('Use as Recent Posts','suppa_menu'); ?><br/>
                                     </label>
 
+
                                     <label>
                                         <input type="radio" value="search" class="suppa_menu_type <?php echo $key; ?>" name="<?php echo $key . "[". $item_id ."]";?>" <?php if($menu_type=="search") echo "checked"; ?> /> &nbsp;&nbsp; <?php _e('Use as Search Form','suppa_menu'); ?><br/>
+                                    </label>
+
+                                    <label>
+                                        <input type="radio" value="social" class="suppa_menu_type <?php echo $key; ?>" name="<?php echo $key . "[". $item_id ."]";?>" <?php if($menu_type=="social") echo "checked"; ?> /> &nbsp;&nbsp; <?php _e('Use as Social Media','suppa_menu'); ?><br/>
                                     </label>
 
                                 </div>
 
 
                                 <br/><br/>
+
+
+                                <!-- Menu Type : Social -->
+                                <div <?php if( 'social' != $menu_type) echo "style='display:none;'"; ?> class="admin_suppa_box_option_inside suppa_box_type admin_suppa_box_option_inside_social">
+                                    <?php _e( 'Try To Upload or select an icon from the "Link Settings" under this ' , 'suppa_menu' ); ?>
+                                </div>
 
 
                                 <!-- Menu Type : DropDown -->
@@ -348,6 +360,7 @@ if( !class_exists( 'suppa_menu_backend_walker' ) ){
 
                                     <div class="admin_suppa_clearfix"></div>
                                 </div>
+
 
                             </div>
                         </div>

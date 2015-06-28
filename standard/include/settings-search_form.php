@@ -13,6 +13,7 @@ $this->add_select(
 		'select_options'	=> array(
 			__('Normal','suppa_menu') => 'normal',
 			__('Boxed','suppa_menu') => 'boxed',
+			__('Modern','suppa_menu') => 'modern'
 		),
 		'fetch'				=> 'yes',
 	)
