@@ -54,7 +54,7 @@ you can play with :
 * Italien Language, Thanks to Angelo Giammarresi http://www.laplandinteractive.com/
 * French, Thanks to Google Translate
 
-**Upgrade to Pro Version And Get : **
+**Upgrade to Pro Version And Get**
 
 * Sticky Menu
 * Woocommerce Cart
