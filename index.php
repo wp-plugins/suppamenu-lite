@@ -4,7 +4,7 @@
 Plugin Name: .Suppamenu Lite
 Plugin URI: http://codecanyon.net/item/suppamenu-all-purpose-wordpress-mega-menus/7265033??ref=vamospace
 Description: All-Purpose WordPress Mega Menus Plugin. Please read the <a href="http://vamospace.com/docs/suppa">Guide</a>
-Version: 1.5
+Version: 1.5.1
 Author: Sabri Taieb
 Author URI: http://vamospace.com
 Copyright 2014  Sabri Taieb , Codezag http://vamospace.com
@@ -34,7 +34,7 @@ $suppa_settings = array (
 	// Plugin Settings
 	'default_skin'		=> 'bastlow',
 	'plugin_id'			=> 'CTF_suppa_menu', // Don't ever ever ever change it
-	'version'			=> '1.5',
+	'version'			=> '1.5.1',
 	'guide'				=> 'http://vamospace.com/docs/suppa/',
 	'support_forum'		=> 'http://vamospace.com/support/',
 	'image_resize'		=> true,  // false to disable the image resizing
