@@ -4,7 +4,7 @@
 Plugin Name: .Suppamenu Lite
 Plugin URI: http://codecanyon.net/item/suppamenu-all-purpose-wordpress-mega-menus/7265033??ref=vamospace
 Description: All-Purpose WordPress Mega Menus Plugin. Please read the <a href="http://vamospace.com/docs/suppa">Guide</a>
-Version: 1.5.1
+Version: 1.5.3
 Author: Sabri Taieb
 Author URI: http://vamospace.com
 Copyright 2014  Sabri Taieb , Codezag http://vamospace.com
@@ -34,7 +34,7 @@ $suppa_settings = array (
 	// Plugin Settings
 	'default_skin'		=> 'bastlow',
 	'plugin_id'			=> 'CTF_suppa_menu', // Don't ever ever ever change it
-	'version'			=> '1.5.1',
+	'version'			=> '1.5.3',
 	'guide'				=> 'http://vamospace.com/docs/suppa/',
 	'support_forum'		=> 'http://vamospace.com/support/',
 	'image_resize'		=> true,  // false to disable the image resizing
@@ -80,7 +80,6 @@ class codetemp_suppa_menu extends ctf_setup {
 		if( @$this->groups_db_offline['settings-theme_implement'] == 'on'
 			|| @$this->groups_db_offline['settings-theme_implement_count'] > 0
 		){
-
 			if( @$this->groups_db_offline['settings-theme_implement'] == 'on' ){
 				register_nav_menus( array(
 					'suppa_menu_location' => 'Suppamenu'
@@ -100,7 +99,7 @@ class codetemp_suppa_menu extends ctf_setup {
 
 		/** -------------------------------------------------------------------------------- **/
 
-		/** Thumbnail Resize with Timthumb-Alternative **/
+		/** Thumbnail Resize **/
 		if( is_admin() && $thumbs = get_option('suppa_thumbs_sizes') ) {
 			foreach ( $thumbs as $type => $siz ){
 				$resi = new ctf_resize_thumbnails( $siz['recent'][0], $siz['recent'][1] );
@@ -128,6 +127,10 @@ class codetemp_suppa_menu extends ctf_setup {
 
 		/** Load Skin Options From DB **/
 		add_action('wp_ajax_suppa_load_skin_options', array( $this, 'load_skin_options') );
+
+		/** Add Buttons to WP Bar **/
+        add_action( 'wp_before_admin_bar_render', array( $this, 'add_buttons_to_top_bar' ) );
+
 	}
 
 
@@ -157,6 +160,22 @@ class codetemp_suppa_menu extends ctf_setup {
 	 * ( this function change with every new plugin or theme )
 	**/
 	public function display_admin_page(){
+
+		// Advertisement
+		echo '<div id="message" class="updated notice notice-success below-h2">
+				<p>
+					<h2>Live Build Your Menus <a href="http://livemenuwp.com">( New )</a></h2>
+					<p>
+						Livemenu is an easy to use plugin for building beautiful, customized menus for your site. <br/>
+						With no configuration needed, tons of options to choose from, and the ability to create & style your menu LIVE.<br/><br/>
+						Add, Edit, Remove & Re-order Menu Items on your front-end !
+					</p>
+					<a href="http://livemenuwp.com">
+						<img width="600" src="http://livemenuwp.com/wp-content/themes/livemenu_demo_theme/img/browser-live-builder.png" alt="Try it !" >
+					</a>
+					<h2>Best Choice For Business, Personal, Magazine ...</h2>
+				</p>
+			  </div>';
 
 		// Header
 		$header_desc 	= 'Suppamenu ' . $this->project_settings['version'];
@@ -415,6 +434,61 @@ class codetemp_suppa_menu extends ctf_setup {
 
 	}
 
+
+    /**
+     * Add Buttons to Top Bar
+     * @since 1.0
+    **/
+    function add_buttons_to_top_bar() {
+
+        global $wp_admin_bar;
+
+        $wp_admin_bar->add_menu( array(
+            'id'    => 'suppa-top-bar-suppamenu',
+            'title' => 'Suppamenu',
+            'href'  => admin_url('admin.php') . '?page=CTF_suppa_menu',
+        ));
+
+        $wp_admin_bar->add_menu( array(
+            'parent'  => false, // use 'false' for a root menu, or pass the ID of the parent menu
+            'id'      => 'suppa-top-bar-suppamenu-panel', // link ID, defaults to a sanitized title value
+            'title'   => __('Styling Panel','suppa_menu'), // link title
+            'href'    => admin_url('admin.php') . '?page=CTF_suppa_menu' , // name of file
+            'meta'    => false, // array of any of the following options: array( 'html' => '', 'class' => '', 'onclick' => '', target => '', title => '' );
+            'parent'  => 'suppa-top-bar-suppamenu',
+        ));
+
+        $wp_admin_bar->add_menu( array(
+            'parent'  => false, // use 'false' for a root menu, or pass the ID of the parent menu
+            'id'      => 'suppa-top-bar-structure-link', // link ID, defaults to a sanitized title value
+            'title'   => __('Structure Mode','suppa_menu'), // link title
+            'href'    => admin_url('nav-menus.php') , // name of file
+            'meta'    => false, // array of any of the following options: array( 'html' => '', 'class' => '', 'onclick' => '', target => '', title => '' );
+            'parent'  => 'suppa-top-bar-suppamenu',
+        ));
+
+        $wp_admin_bar->add_menu( array(
+            'parent'  => false, // use 'false' for a root menu, or pass the ID of the parent menu
+            'id'      => 'suppa-top-bar-documentation', // link ID, defaults to a sanitized title value
+            'title'   => __('Documentation','suppa_menu'), // link title
+            'href'    => 'http://vamospace.com/docs/suppa' , // name of file
+            'meta'    => false, // array of any of the following options: array( 'html' => '', 'class' => '', 'onclick' => '', target => '', title => '' );
+            'parent'  => 'suppa-top-bar-suppamenu',
+        ));
+
+        $wp_admin_bar->add_menu( array(
+            'parent'  => false, // use 'false' for a root menu, or pass the ID of the parent menu
+            'id'      => 'suppa-top-bar-livemenu', // link ID, defaults to a sanitized title value
+            'title'   => __('Livemenu - Live Builder','suppa_menu'), // link title
+            'href'    => 'http://livemenuwp.com' , // name of file
+            'meta'    => false, // array of any of the following options: array( 'html' => '', 'class' => '', 'onclick' => '', target => '', title => '' );
+            'parent'  => 'suppa-top-bar-suppamenu',
+        ));
+
+    }// End Func
+
+
+	/** Plugin Install Hook **/
 	static function plugin_install(){
 
 		ob_start();

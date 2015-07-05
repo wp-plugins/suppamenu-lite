@@ -78,6 +78,11 @@ https://www.youtube.com/watch?v=IelbFcyL7sM
 
 == Changelog ==
 
+= 1.5.3 [05/07/2015] =
+
+* New: Add Buttons to Top Bar ( access to admin panel & structure is easier now )
+* Deleted: Unnecessary scripts ( cleaning )
+
 = 1.5.1 [01/07/2015] =
 
 * Fix: Admin Panel Bug
